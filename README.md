@@ -11,7 +11,7 @@
 | **Tên Đề Tài** | Giải Pháp Phân Tích Tình Trạng Giao Thông Dựa Trên Kỹ Thuật Gom Cụm Dữ Liệu |
 | **Năm** | 2026 |
 | **Loại** | Đồ Án Tốt Nghiệp |
-| **Mã Đề Tài** | DATN_172 |
+| **Mã Đề Tài** | 172 |
 
 ### 👨‍🎓 Nhóm Thực Hiện
 
