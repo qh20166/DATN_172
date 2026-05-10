@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">TraffiGo</string>
+
+    <string name="onboarding_title_1">Find Best Route</string>
+    <string name="onboarding_desc_1">Discover the fastest way to your destination</string>
+
+    <string name="onboarding_title_2">Live Traffic</string>
+    <string name="onboarding_desc_2">Get real-time traffic updates</string>
+
+    <string name="onboarding_title_3">Easy Navigation</string>
+    <string name="onboarding_desc_3">Navigate across the city easily</string>
+
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+</resources>

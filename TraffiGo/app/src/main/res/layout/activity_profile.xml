@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/layoutHeader"
+        layout="@layout/layout_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgAvatar"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:padding="2dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_launcher_background"
+                app:shapeAppearanceOverlay="@style/CircleImage"
+                app:strokeColor="#F0F0F0"
+                app:strokeWidth="2dp" />
+
+            <TextView
+                android:id="@+id/btnChangePicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="Đổi ảnh đại diện"
+                android:textColor="#673AB7"
+                android:textStyle="bold" />
+
+            <TextView style="@style/LabelStyle" android:text="Họ và Tên" />
+            <EditText android:id="@+id/edtName" style="@style/FieldStyle" android:hint="Nhập tên của bạn" />
+
+            <TextView style="@style/LabelStyle" android:text="Email" />
+            <EditText android:id="@+id/edtEmail" style="@style/FieldStyle" android:enabled="false" />
+
+            <TextView style="@style/LabelStyle" android:text="Số Điện Thoại" />
+            <EditText android:id="@+id/edtPhone" style="@style/FieldStyle"  android:inputType="phone" />
+
+            <TextView style="@style/LabelStyle" android:text="Mật khẩu" />
+            <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content">
+                <EditText android:id="@+id/edtPassword" style="@style/FieldStyle" android:inputType="textPassword" android:text="******" />
+                <ImageView android:layout_width="24dp" android:layout_height="24dp" android:layout_alignParentEnd="true" android:layout_centerVertical="true" android:layout_marginEnd="12dp" android:src="@android:drawable/ic_menu_view" app:tint="#CCC" />
+            </RelativeLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveChanges"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginTop="32dp"
+                android:backgroundTint="#514291"
+                android:text="Lưu Thay Đổi"
+                android:textAllCaps="false"
+                app:cornerRadius="28dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

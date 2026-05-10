@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_bottom_sheet"
+    android:orientation="vertical"
+    android:paddingTop="16dp"
+    android:paddingBottom="32dp">
+
+    <View
+        android:layout_width="48dp"
+        android:layout_height="5dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/bg_drag_handle" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingHorizontal="24dp"
+        android:layout_marginBottom="16dp"
+        android:text="Cá nhân hóa giao diện"
+        android:textColor="#212121"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:text="Ảnh nền"
+        android:textColor="#212121"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+            <com.google.android.material.imageview.ShapeableImageView android:id="@+id/btnBg1" android:layout_width="80dp" android:layout_height="120dp" android:layout_marginEnd="12dp" android:src="@drawable/bg_gradient_main" app:cornerSize="16dp" android:scaleType="centerCrop"/>
+            <com.google.android.material.imageview.ShapeableImageView android:id="@+id/btnBg2" android:layout_width="80dp" android:layout_height="120dp" android:layout_marginEnd="12dp" android:src="@drawable/bg_white_main" app:cornerSize="16dp" android:scaleType="centerCrop"/>
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Màu ô tính năng"
+        android:textColor="#212121"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+            <View android:id="@+id/btnColorWhite" android:layout_width="56dp" android:layout_height="56dp" android:layout_marginEnd="16dp" android:background="@drawable/bg_circle_icon_grey" />
+            <View android:id="@+id/btnColorBlack" android:layout_width="56dp" android:layout_height="56dp" android:layout_marginEnd="16dp" android:background="@drawable/bg_circle_icon_grey" android:backgroundTint="#80000000" />
+            <View android:id="@+id/btnColorBlue" android:layout_width="56dp" android:layout_height="56dp" android:layout_marginEnd="16dp" android:background="@drawable/bg_circle_icon_grey" android:backgroundTint="#8000BFFF" />
+            <View android:id="@+id/btnColorPurple" android:layout_width="56dp" android:layout_height="56dp" android:layout_marginEnd="16dp" android:background="@drawable/bg_circle_icon_grey" android:backgroundTint="#808A2BE2" />
+        </LinearLayout>
+    </HorizontalScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginTop="16dp"
+        android:text="Màu chữ toàn màn hình"
+        android:textColor="#212121"
+        android:textSize="14sp"
+        android:textStyle="bold"/>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingHorizontal="24dp"
+        android:paddingVertical="12dp">
+        <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal">
+            <View android:id="@+id/btnTextColorWhite" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginEnd="16dp" android:background="@drawable/bg_circle_icon_grey" />
+            <View android:id="@+id/btnTextColorBlack" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginEnd="16dp" android:background="@drawable/bg_circle_icon_grey" android:backgroundTint="#212121" />
+            <View android:id="@+id/btnTextColorYellow" android:layout_width="48dp" android:layout_height="48dp" android:layout_marginEnd="16dp" android:background="@drawable/bg_circle_icon_grey" android:backgroundTint="#FFEB3B" />
+        </LinearLayout>
+    </HorizontalScrollView>
+</LinearLayout>
