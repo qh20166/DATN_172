@@ -1,6 +1,6 @@
 # DATN_172 - Đồ Án Tốt Nghiệp 2024
 
-Đây là dự án đồ án tốt nghiệp (DATN) bao gồm các thành phần: Backend API, Machine Learning Model, ứng dụng Web (dành cho nghiên cứu), và ứng dụng Mobile (dành cho người dùng).
+**TraffiGo** - Hệ thống phân tích và dự báo lưu lượng giao thông sử dụng Machine Learning
 
 ## 📋 Mục Lục
 - [Giới Thiệu](#giới-thiệu)
@@ -9,107 +9,96 @@
 - [Yêu Cầu Hệ Thống](#yêu-cầu-hệ-thống)
 - [Cài Đặt](#cài-đặt)
 - [Sử Dụng](#sử-dụng)
-- [Cấu Trúc Thư Mục](#cấu-trúc-thư-mục)
+- [Cấu Trúc Thư Mục Chi Tiết](#cấu-trúc-thư-mục-chi-tiết)
 - [Đóng Góp](#đóng-góp)
 - [Liên Hệ](#liên-hệ)
 
 ## 🎯 Giới Thiệu
 
-**DATN_172** là một dự án toàn diện kết hợp:
-- 🐍 **Backend**: Xây dựng API sử dụng Python
-- 🤖 **Machine Learning**: Mô hình học máy để xử lý dữ liệu
-- 🌐 **Web Application**: Giao diện web dành cho **nghiên cứu và phân tích dữ liệu** chi tiết
-- 📱 **Mobile App**: Ứng dụng di động dành cho **người dùng cuối** để tương tác với hệ thống
+**DATN_172** là một dự án toàn diện về **dự báo lưu lượng giao thông** bao gồm:
 
-### Phân Biệt Giữa Web và Mobile
+- 🐍 **Backend/ML Model**: Python - Xử lý dữ liệu và Machine Learning
+- 📊 **Data Processing**: Tiền xử lý, làm sạch và phân tích dữ liệu
+- 📱 **Mobile App**: Android Studio (Java) - Ứng dụng di động cho người dùng cuối
 
-| Thành Phần | Đối Tượng | Mục Đích | Tính Năng |
-|-----------|----------|---------|---------|
-| **Web Application** | Nhà nghiên cứu, chuyên gia | Phân tích, nghiên cứu, trực quan hóa dữ liệu | Dashboard chi tiết, thống kê, report, biểu đồ phức tạp |
-| **Mobile App** | Người dùng cuối (end-user) | Sử dụng dễ dàng, tương tác nhanh | Giao diện đơn giản, tính năng cốt lõi, offline mode |
+### Kiến Trúc Hệ Thống
 
-[Thêm mô tả chi tiết về mục đích dự án của bạn ở đây]
+| Thành Phần | Công Nghệ | Mục Đích |
+|-----------|-----------|---------|
+| **Backend ML** | Python (DATN/) | Xây dựng, huấn luyện, và triển khai mô hình ML |
+| **Data Processing** | Python (DATA/) | Tiền xử lý dữ liệu, làm sạch, phân tích EDA |
+| **Mobile App** | Android Studio/Java (TraffiGo/) | Giao diện di động cho người dùng cuối |
 
 ## 📁 Cấu Trúc Dự Án
 
 ```
 DATN_172/
-├── src/
-│   ├── data/              # 📊 Xử lý và quản lý dữ liệu
-│   │   ├── datasets/      # Dataset gốc và xử lý
-│   │   ├── preprocessing/ # Tiền xử lý dữ liệu
-│   │   └── utils/         # Các utility cho dữ liệu
-│   │
-│   ├── model/             # 🤖 Machine Learning Models
-│   │   ├── training/      # Script huấn luyện model
-│   │   ├── evaluation/    # Đánh giá model
-│   │   ├── inference/     # Dự đoán/suy diễn
-│   │   └── saved_models/  # Các model đã huấn luyện
-│   │
-│   ├── web/               # 🌐 Ứng dụng Web (Nghiên cứu & Phân tích)
-│   │   ├── src/           # Source code frontend
-│   │   ├── components/    # React/Vue components
-│   │   ├── pages/         # Các trang web
-│   │   ├── styles/        # CSS/SCSS
-│   │   ├── api/           # API service handlers
-│   │   └── assets/        # Hình ảnh, fonts, etc
-│   │
-│   └── mobile/            # 📱 Ứng dụng Mobile (Người Dùng)
-│       ├── src/           # Source code
-│       ├── assets/        # Hình ảnh, fonts, etc
-│       ├── components/    # Reusable components
-│       └── screens/       # Các màn hình ứng dụng
 │
-├── docs/                  # 📚 Tài liệu
-├── tests/                 # 🧪 Unit tests
-├── requirements.txt       # Python dependencies
-├── README.md             # File này
-└── .gitignore
+├── DATN/                          # 🐍 Backend - Machine Learning & API
+│   ├── main.py                    # Entry point chính
+│   ├── clustering.py              # Thuật toán clustering (K-Means, etc)
+│   ├── traffic.py                 # Mô hình dự báo giao thông
+│   ├── feature_selection.py       # Lựa chọn đặc trưng
+│   ├── preprocessing.py           # Tiền xử lý dữ liệu
+│   ├── config.py                  # Cấu hình hệ thống
+│   ├── reporting.py               # Tạo report kết quả
+│   ├── rule_based.py              # Luật dựa trên heuristic
+│   ├── io_utils.py                # Utility input/output
+│   ├── data.csv                   # Dữ liệu mẫu
+│   └── processed/                 # Thư mục dữ liệu đã xử lý
+│
+├── DATA/                          # 📊 Data Processing & Datasets
+│   ├── main.py                    # Script xử lý dữ liệu chính
+│   ├── README.md                  # Hướng dẫn về dataset
+│   ├── data/                      # Thư mục chứa raw datasets
+│   ├── src/                       # Code xử lý dữ liệu bổ sung
+│   └── DATN/                      # Tài liệu/config liên quan
+│
+├── TraffiGo/                      # 📱 Mobile App - Android Studio
+│   ├── app/                       # Module ứng dụng Android
+│   ├── gradle/                    # Gradle wrapper scripts
+│   ├── build.gradle.kts           # Build configuration (root)
+│   ├── settings.gradle.kts        # Gradle settings
+│   ├── gradle.properties          # Gradle properties
+│   ├── gradlew                    # Gradle wrapper (Linux/macOS)
+│   ├── gradlew.bat                # Gradle wrapper (Windows)
+│   └── .idea/                     # Android Studio configuration
+│
+└── README.md                      # File này
 ```
 
 ## 🛠️ Công Nghệ Sử Dụng
 
-### Backend & Data Processing
+### Backend & Machine Learning
 - **Python 3.8+**
-- **NumPy, Pandas** - Xử lý dữ liệu
-- **Scikit-learn** - Machine Learning
-- **TensorFlow / PyTorch** - Deep Learning (nếu cần)
-- **Flask / FastAPI** - Web Framework
+- **NumPy, Pandas** - Xử lý dữ liệu số
+- **Scikit-learn** - Machine Learning algorithms
+- **Matplotlib, Seaborn** - Trực quan hóa dữ liệu
 
-### Web Application
-- **React / Vue.js** - Frontend framework
-- **HTML5** - Cấu trúc
-- **CSS3 / Tailwind CSS** - Styling
-- **JavaScript / TypeScript** - Tương tác
-- **Chart.js / D3.js** - Trực quan hóa dữ liệu
-- **Axios / Fetch** - HTTP requests
-
-### Mobile App
-- **Java** (Android Native) hoặc **React Native**
-- **XML** (UI Layout)
-- **RESTful API** - Giao tiếp với Backend
+### Mobile Application
+- **Java** - Ngôn ngữ lập trình chính
+- **Android SDK** - Framework phát triển
+- **Gradle** - Build automation
+- **Android Studio** - IDE chính thức
 
 ## 💻 Yêu Cầu Hệ Thống
 
-### Backend
+### Backend & Data Processing
 - Python 3.8 trở lên
 - pip (Python Package Manager)
-- Virtual Environment
+- Virtual Environment (venv)
 
-### Web Application
-- Node.js 14+ (nếu dùng React/Vue)
-- npm hoặc yarn
-- Modern web browser
-
-### Mobile
-- Android Studio (nếu phát triển Android)
-- JDK 8+
-- Gradle
+### Mobile Development
+- Android Studio 4.0+
+- JDK 11+ (hoặc JDK 8 tối thiểu)
+- Android SDK
+- Gradle 7.0+
+- Emulator hoặc thiết bị Android để test
 
 ### Chung
 - Git
-- 2GB RAM tối thiểu
-- 1GB dung lượng ổ cứng
+- 4GB RAM tối thiểu
+- 2GB dung lượng ổ cứng (không tính dataset)
 
 ## 🚀 Cài Đặt
 
@@ -119,9 +108,12 @@ git clone https://github.com/qh20166/DATN_172.git
 cd DATN_172
 ```
 
-### 2. Setup Backend/Data Processing
+### 2. Setup Backend/ML (DATN)
 
 ```bash
+# Vào thư mục backend
+cd DATN
+
 # Tạo virtual environment
 python -m venv venv
 
@@ -131,132 +123,144 @@ venv\Scripts\activate
 # Trên macOS/Linux:
 source venv/bin/activate
 
-# Cài đặt dependencies
-pip install -r requirements.txt
+# Cài đặt dependencies (nếu có requirements.txt)
+# pip install -r requirements.txt
 ```
 
-### 3. Setup Web Application
+### 3. Setup Data Processing (DATA)
 
 ```bash
-cd src/web
+cd ../DATA
 
-# Cài đặt dependencies
-npm install
-# hoặc
-yarn install
+# Dữ liệu thô nên được đặt trong thư mục data/
+# Dataset được xử lý bằng Python scripts
 ```
 
-### 4. Setup Mobile App
+### 4. Setup Mobile App (TraffiGo)
 
+#### Cách 1: Mở trong Android Studio
 ```bash
-cd src/mobile
+cd ../TraffiGo
 
-# Nếu dùng React Native
-npm install
-# hoặc
-yarn install
-
-# Nếu dùng Android Native
-# Mở project trong Android Studio
+# Mở thư mục TraffiGo bằng Android Studio
+# File > Open > chọn thư mục TraffiGo
 ```
 
-### 5. Chuẩn Bị Dữ Liệu
-
+#### Cách 2: Build từ Command Line
 ```bash
-cd src/data
-python preprocessing/prepare_data.py
+cd TraffiGo
+
+# Build debug APK
+./gradlew assembleDebug
+
+# Chạy trên emulator hoặc device
+./gradlew installDebug
+
+# Hoặc build release
+./gradlew assembleRelease
 ```
 
 ## 📖 Sử Dụng
 
-### Chạy Backend API
+### Chạy ML Model
+
 ```bash
-python -m src.api.main
-# API sẽ chạy tại http://localhost:5000
+cd DATN
+
+# Kích hoạt virtual environment
+source venv/bin/activate  # macOS/Linux
+# hoặc
+venv\Scripts\activate    # Windows
+
+# Chạy model chính
+python main.py
 ```
 
-### Huấn Luyện Model
+### Xử Lý Dữ Liệu
+
 ```bash
-python src/model/training/train.py --dataset data/datasets/train.csv
+cd DATA
+
+# Xử lý dataset
+python main.py
 ```
 
-### Chạy Ứng Dụng Web
+### Chạy Mobile App
 
+**Sử dụng Android Studio:**
+1. Mở TraffiGo/ trong Android Studio
+2. Kết nối thiết bị Android hoặc khởi động emulator
+3. Chọn Run > Run 'app'
+
+**Sử dụng Command Line:**
 ```bash
-cd src/web
+cd TraffiGo
 
-# Chế độ development
-npm start
-# Web app sẽ mở tại http://localhost:3000
+# Build và chạy
+./gradlew run
 
-# Build production
-npm run build
-```
-
-### Chạy Ứng Dụng Mobile
-
-**Android:**
-```bash
-cd src/mobile
-gradle assembleDebug
-# hoặc từ Android Studio: Build > Build Bundles/APK
-```
-
-**React Native:**
-```bash
-cd src/mobile
-npm start
-npx react-native run-android
+# Hoặc install APK
+./gradlew installDebug
+adb shell am start -n com.traffigo/.MainActivity
 ```
 
 ## 📊 Cấu Trúc Thư Mục Chi Tiết
 
-### src/data/
-- Chứa tất cả các file dữ liệu, dataset
-- Các script tiền xử lý và làm sạch dữ liệu
-- Utilities để tải và xử lý dữ liệu
+### DATN/ - Backend & ML Model
+- **main.py**: Điểm khởi đầu chính, orchestrate các thành phần
+- **clustering.py**: Triển khai clustering algorithms (K-Means, DBSCAN, etc)
+- **traffic.py**: Mô hình dự báo lưu lượng giao thông chính
+- **feature_selection.py**: Lựa chọn đặc trưng quan trọng
+- **preprocessing.py**: Làm sạch, chuẩn hóa dữ liệu
+- **config.py**: Cấu hình parameters, hyperparameters
+- **reporting.py**: Tạo báo cáo kết quả phân tích
+- **rule_based.py**: Hệ thống luật dựa trên heuristic
+- **io_utils.py**: Các utility cho I/O operations
+- **processed/**: Thư mục chứa dữ liệu sau khi xử lý
 
-### src/model/
-- Mã nguồn training, evaluation, inference
-- Các model đã huấn luyện (saved weights)
-- Configuration cho hyperparameters
-- Scripts để test model
+### DATA/ - Data Management
+- **data/**: Thư mục chứa raw datasets (CSV, Excel, etc)
+- **src/**: Code xử lý, transform dữ liệu
+- **main.py**: Script chính để chạy xử lý dữ liệu
+- **README.md**: Tài liệu về datasets
 
-### src/web/
-- Ứng dụng web đầy đủ cho nhà nghiên cứu
-- Giao diện chi tiết với dashboard, biểu đồ, thống kê
-- Quản lý dự án và dữ liệu
-- Kết nối API backend
-- Export report và data visualization
-
-### src/mobile/
-- Ứng dụng di động cho người dùng cuối
-- Giao diện đơn giản, dễ sử dụng
-- Tính năng cốt lõi của hệ thống
-- Kết nối API backend
-- Local storage và caching
+### TraffiGo/ - Android Mobile App
+- **app/**: Module chứa source code ứng dụng
+  - `src/main/java/`: Code Java
+  - `src/main/res/`: Resource (layout, drawable, string, etc)
+  - `AndroidManifest.xml`: Cấu hình ứng dụng
+- **gradle/**: Gradle wrapper scripts
+- **build.gradle.kts**: Cấu hình build cho project
+- **settings.gradle.kts**: Cấu hình Gradle settings
 
 ## 🧪 Testing
 
+### Test Backend Models
+
 ```bash
-# Chạy unit tests
-python -m pytest tests/
+cd DATN
 
-# Test API endpoints
-python -m pytest tests/test_api.py -v
-
-# Test model accuracy
-python src/model/evaluation/evaluate.py
+# Chạy tests (nếu có)
+# python -m pytest tests/
 ```
 
-## 📝 Tài Liệu
+### Test Mobile App
 
-Chi tiết hơn về từng thành phần:
-- [Data Processing Guide](docs/DATA_GUIDE.md)
-- [Model Training Guide](docs/MODEL_GUIDE.md)
-- [Web Application Guide](docs/WEB_GUIDE.md)
-- [Mobile App Guide](docs/MOBILE_GUIDE.md)
-- [API Documentation](docs/API_DOCS.md)
+```bash
+cd TraffiGo
+
+# Chạy unit tests Android
+./gradlew testDebugUnitTest
+
+# Chạy instrumented tests
+./gradlew connectedAndroidTest
+```
+
+## 📝 Tài Liệu Bổ Sung
+
+- [DATA/README.md](DATA/README.md) - Thông tin về datasets
+- DATN/config.py - Cấu hình mô hình ML
+- TraffiGo/app/ - Android app source code
 
 ## 🤝 Đóng Góp
 
@@ -277,19 +281,20 @@ Dự án này được cấp phép dưới MIT License - xem file [LICENSE](LICE
 - **Tác Giả**: qh20166
 - **GitHub**: [@qh20166](https://github.com/qh20166)
 - **Email**: [Your Email]
+- **Repository**: [qh20166/DATN_172](https://github.com/qh20166/DATN_172)
 
 ---
 
 ## 🗓️ Lộ Trình Phát Triển
 
 - [x] Khởi tạo repository
-- [ ] Chuẩn bị dataset
-- [ ] Xây dựng Backend API
-- [ ] Huấn luyện ML Model
-- [ ] Phát triển Web Application
-- [ ] Phát triển Mobile App
-- [ ] Integration testing
-- [ ] Deployment
+- [x] Chuẩn bị cấu trúc thư mục cơ bản
+- [ ] Hoàn thiện data processing pipeline
+- [ ] Huấn luyện và optimize ML models
+- [ ] Phát triển hoàn chỉnh Mobile App
+- [ ] Integration testing toàn hệ thống
+- [ ] Deployment & Documentation
+- [ ] Performance optimization
 
 ---
 
