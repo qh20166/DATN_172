@@ -246,8 +246,7 @@ cd TraffiGo
 ```bash
 cd DATA
 
-# Kích hoạt virtual environment
-source venv/bin/activate  # macOS/Linux
+cd src
 
 # Thu thập dữ liệu tĩnh (đặc tính không thay đổi của đường)
 python src/h.py static
