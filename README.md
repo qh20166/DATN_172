@@ -1,6 +1,6 @@
 # DATN_172 - Đồ Án Tốt Nghiệp 2024
 
-Đây là dự án đồ án tốt nghiệp (DATN) bao gồm các thành phần: Backend API, Machine Learning Model, và ứng dụng Mobile.
+Đây là dự án đồ án tốt nghiệp (DATN) bao gồm các thành phần: Backend API, Machine Learning Model, ứng dụng Web (dành cho nghiên cứu), và ứng dụng Mobile (dành cho người dùng).
 
 ## 📋 Mục Lục
 - [Giới Thiệu](#giới-thiệu)
@@ -18,7 +18,15 @@
 **DATN_172** là một dự án toàn diện kết hợp:
 - 🐍 **Backend**: Xây dựng API sử dụng Python
 - 🤖 **Machine Learning**: Mô hình học máy để xử lý dữ liệu
-- 📱 **Mobile App**: Ứng dụng di động (Android/iOS) để tương tác với hệ thống
+- 🌐 **Web Application**: Giao diện web dành cho **nghiên cứu và phân tích dữ liệu** chi tiết
+- 📱 **Mobile App**: Ứng dụng di động dành cho **người dùng cuối** để tương tác với hệ thống
+
+### Phân Biệt Giữa Web và Mobile
+
+| Thành Phần | Đối Tượng | Mục Đích | Tính Năng |
+|-----------|----------|---------|---------|
+| **Web Application** | Nhà nghiên cứu, chuyên gia | Phân tích, nghiên cứu, trực quan hóa dữ liệu | Dashboard chi tiết, thống kê, report, biểu đồ phức tạp |
+| **Mobile App** | Người dùng cuối (end-user) | Sử dụng dễ dàng, tương tác nhanh | Giao diện đơn giản, tính năng cốt lõi, offline mode |
 
 [Thêm mô tả chi tiết về mục đích dự án của bạn ở đây]
 
@@ -38,7 +46,15 @@ DATN_172/
 │   │   ├── inference/     # Dự đoán/suy diễn
 │   │   └── saved_models/  # Các model đã huấn luyện
 │   │
-│   └── mobile/            # 📱 Ứng dụng Mobile
+│   ├── web/               # 🌐 Ứng dụng Web (Nghiên cứu & Phân tích)
+│   │   ├── src/           # Source code frontend
+│   │   ├── components/    # React/Vue components
+│   │   ├── pages/         # Các trang web
+│   │   ├── styles/        # CSS/SCSS
+│   │   ├── api/           # API service handlers
+│   │   └── assets/        # Hình ảnh, fonts, etc
+│   │
+│   └── mobile/            # 📱 Ứng dụng Mobile (Người Dùng)
 │       ├── src/           # Source code
 │       ├── assets/        # Hình ảnh, fonts, etc
 │       ├── components/    # Reusable components
@@ -60,15 +76,18 @@ DATN_172/
 - **TensorFlow / PyTorch** - Deep Learning (nếu cần)
 - **Flask / FastAPI** - Web Framework
 
+### Web Application
+- **React / Vue.js** - Frontend framework
+- **HTML5** - Cấu trúc
+- **CSS3 / Tailwind CSS** - Styling
+- **JavaScript / TypeScript** - Tương tác
+- **Chart.js / D3.js** - Trực quan hóa dữ liệu
+- **Axios / Fetch** - HTTP requests
+
 ### Mobile App
-- **Java** (Android Native) hoặc React Native
+- **Java** (Android Native) hoặc **React Native**
 - **XML** (UI Layout)
 - **RESTful API** - Giao tiếp với Backend
-
-### Frontend
-- **HTML5** - Cấu trúc
-- **CSS3** - Styling
-- **JavaScript** - Tương tác
 
 ## 💻 Yêu Cầu Hệ Thống
 
@@ -76,6 +95,11 @@ DATN_172/
 - Python 3.8 trở lên
 - pip (Python Package Manager)
 - Virtual Environment
+
+### Web Application
+- Node.js 14+ (nếu dùng React/Vue)
+- npm hoặc yarn
+- Modern web browser
 
 ### Mobile
 - Android Studio (nếu phát triển Android)
@@ -111,7 +135,18 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 3. Setup Mobile App
+### 3. Setup Web Application
+
+```bash
+cd src/web
+
+# Cài đặt dependencies
+npm install
+# hoặc
+yarn install
+```
+
+### 4. Setup Mobile App
 
 ```bash
 cd src/mobile
@@ -125,7 +160,7 @@ yarn install
 # Mở project trong Android Studio
 ```
 
-### 4. Chuẩn Bị Dữ Liệu
+### 5. Chuẩn Bị Dữ Liệu
 
 ```bash
 cd src/data
@@ -143,6 +178,19 @@ python -m src.api.main
 ### Huấn Luyện Model
 ```bash
 python src/model/training/train.py --dataset data/datasets/train.csv
+```
+
+### Chạy Ứng Dụng Web
+
+```bash
+cd src/web
+
+# Chế độ development
+npm start
+# Web app sẽ mở tại http://localhost:3000
+
+# Build production
+npm run build
 ```
 
 ### Chạy Ứng Dụng Mobile
@@ -174,9 +222,17 @@ npx react-native run-android
 - Configuration cho hyperparameters
 - Scripts để test model
 
+### src/web/
+- Ứng dụng web đầy đủ cho nhà nghiên cứu
+- Giao diện chi tiết với dashboard, biểu đồ, thống kê
+- Quản lý dự án và dữ liệu
+- Kết nối API backend
+- Export report và data visualization
+
 ### src/mobile/
-- Ứng dụng di động hoàn chỉnh
-- Giao diện người dùng (UI/UX)
+- Ứng dụng di động cho người dùng cuối
+- Giao diện đơn giản, dễ sử dụng
+- Tính năng cốt lõi của hệ thống
 - Kết nối API backend
 - Local storage và caching
 
@@ -198,6 +254,7 @@ python src/model/evaluation/evaluate.py
 Chi tiết hơn về từng thành phần:
 - [Data Processing Guide](docs/DATA_GUIDE.md)
 - [Model Training Guide](docs/MODEL_GUIDE.md)
+- [Web Application Guide](docs/WEB_GUIDE.md)
 - [Mobile App Guide](docs/MOBILE_GUIDE.md)
 - [API Documentation](docs/API_DOCS.md)
 
@@ -229,6 +286,7 @@ Dự án này được cấp phép dưới MIT License - xem file [LICENSE](LICE
 - [ ] Chuẩn bị dataset
 - [ ] Xây dựng Backend API
 - [ ] Huấn luyện ML Model
+- [ ] Phát triển Web Application
 - [ ] Phát triển Mobile App
 - [ ] Integration testing
 - [ ] Deployment
