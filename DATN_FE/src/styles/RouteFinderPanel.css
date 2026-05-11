@@ -1,0 +1,276 @@
+.route-finder-panel {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.route-finder-panel h3 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: 18px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--color-border);
+}
+
+/* Route Finder Form */
+.route-finder-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: visible;
+}
+
+.form-group label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+
+.form-group input {
+  padding: 10px 12px;
+  border: 1px solid var(--color-input-border);
+  border-radius: 4px;
+  background-color: var(--color-input-bg);
+  color: var(--color-text-primary);
+  font-size: 13px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--color-button-primary-bg);
+  box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+}
+
+.form-group input:disabled {
+  opacity: 0.6;
+  background-color: var(--color-bg-secondary);
+}
+
+.form-group input::placeholder {
+  color: var(--color-text-secondary);
+}
+
+/* Form Controls */
+.form-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Use Current / Select from Map Button */
+.use-current-btn {
+  align-self: flex-start;
+  padding: 8px 12px;
+  background-color: transparent;
+  color: var(--color-link);
+  border: 1px solid var(--color-link);
+  border-radius: 3px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.use-current-btn:hover {
+  background-color: rgba(0, 102, 204, 0.1);
+  text-decoration: underline;
+}
+
+.use-current-btn.active {
+  background-color: var(--color-button-primary-bg);
+  color: var(--color-button-primary-text);
+  border-color: var(--color-button-primary-bg);
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-primary,
+.btn-secondary {
+  flex: 1;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background-color: var(--color-button-primary-bg);
+  color: var(--color-button-primary-text);
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-button-primary-hover);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background-color: var(--color-button-secondary-bg);
+  color: var(--color-button-secondary-text);
+  border: 1px solid var(--color-border);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-button-secondary-hover);
+}
+
+/* Error Message */
+.error-message {
+  padding: 12px;
+  background-color: rgba(211, 47, 47, 0.1);
+  border: 1px solid var(--color-error);
+  border-radius: 4px;
+  color: var(--color-error);
+  font-size: 13px;
+  line-height: 1.4;
+}
+
+/* Route Result */
+.route-result {
+  padding: 14px;
+  background-color: var(--color-bg-secondary);
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.route-result h4 {
+  margin: 0;
+  color: var(--color-text-primary);
+  font-size: 14px;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.result-places {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 10px;
+  background-color: var(--color-bg-primary);
+  border-radius: 3px;
+}
+
+.result-places p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--color-text-primary);
+  line-height: 1.3;
+}
+
+/* Traffic Status */
+.traffic-status {
+  padding: 12px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.traffic-status strong {
+  font-size: 13px;
+  color: var(--color-text-primary);
+}
+
+.status-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 6px 10px;
+  border-radius: 3px;
+  background-color: var(--color-bg-primary);
+}
+
+.traffic-status.status-smooth {
+  background-color: rgba(45, 122, 68, 0.1);
+  border: 1px solid rgba(45, 122, 68, 0.3);
+}
+
+.traffic-status.status-smooth .status-label {
+  color: #2d7a44;
+}
+
+.traffic-status.status-slow {
+  background-color: rgba(242, 169, 59, 0.1);
+  border: 1px solid rgba(242, 169, 59, 0.3);
+}
+
+.traffic-status.status-slow .status-label {
+  color: #f2a93b;
+}
+
+.traffic-status.status-heavy {
+  background-color: rgba(222, 75, 57, 0.1);
+  border: 1px solid rgba(222, 75, 57, 0.3);
+}
+
+.traffic-status.status-heavy .status-label {
+  color: #de4b39;
+}
+
+/* Route Info */
+.route-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.route-info p {
+  margin: 0;
+  font-size: 13px;
+  color: var(--color-text-primary);
+}
+
+.route-info p strong {
+  color: var(--color-text-primary);
+}
+
+.info-note {
+  padding: 8px;
+  background-color: var(--color-bg-primary);
+  border-radius: 3px;
+  border-left: 3px solid var(--color-button-primary-bg);
+  color: var(--color-text-secondary);
+  font-style: italic;
+}
+
+/* Scrollbar for panel */
+.route-finder-panel::-webkit-scrollbar {
+  width: 6px;
+}
+
+.route-finder-panel::-webkit-scrollbar-thumb {
+  background-color: var(--color-border);
+  border-radius: 3px;
+}
+
+.route-finder-panel::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-text-secondary);
+}

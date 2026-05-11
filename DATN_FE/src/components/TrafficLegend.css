@@ -1,0 +1,84 @@
+.traffic-legend {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  padding: 12px;
+  min-width: 200px;
+  font-family: inherit;
+}
+
+.legend-title {
+  margin: 0 0 12px 0;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 8px;
+}
+
+.legend-title h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.legend-items {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.legend-color {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.legend-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.level-name {
+  font-weight: 600;
+  font-size: 13px;
+  color: #333;
+  min-width: 30px;
+}
+
+.level-speed {
+  font-size: 12px;
+  color: #666;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .traffic-legend {
+    min-width: 180px;
+    padding: 10px;
+  }
+
+  .legend-title h4 {
+    font-size: 13px;
+  }
+
+  .legend-color {
+    width: 20px;
+    height: 20px;
+  }
+
+  .level-name {
+    font-size: 12px;
+  }
+
+  .level-speed {
+    font-size: 11px;
+  }
+}

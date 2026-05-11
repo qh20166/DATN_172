@@ -1,0 +1,287 @@
+{
+  "info": {
+    "name": "Traffic Decision Support System",
+    "description": "ML-powered traffic prediction and route recommendation APIs",
+    "version": "1.0.0"
+  },
+  "item": [
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "Login",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/api/auth/login",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "auth", "login"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"test@example.com\",\n  \"password\": \"password123\"\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ML Prediction",
+      "item": [
+        {
+          "name": "Predict Single Traffic",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_ACCESS_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/api/ml/predict",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "ml", "predict"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"traffic_data\": {\n    \"segmentId\": \"seg001\",\n    \"name_vn\": \"Quach Thi Trang\",\n    \"congestionIndex\": 0.75,\n    \"currentSpeed\": 25,\n    \"speedLimitRatio\": 0.5,\n    \"jamFactor\": 0.6,\n    \"incidentFlag\": 0,\n    \"route_distance_m\": 1000\n  },\n  \"weather_data\": {\n    \"weathercode\": 51,\n    \"precipitation_probability_max\": 80,\n    \"windspeed_10m_max\": 20\n  }\n}"
+            }
+          }
+        },
+        {
+          "name": "Predict Batch Traffic",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_ACCESS_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/api/ml/predict-batch",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "ml", "predict-batch"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"traffic_data_array\": [\n    {\n      \"segmentId\": \"seg001\",\n      \"name_vn\": \"Quach Thi Trang\",\n      \"congestionIndex\": 0.75,\n      \"currentSpeed\": 25,\n      \"speedLimitRatio\": 0.5,\n      \"jamFactor\": 0.6,\n      \"incidentFlag\": 0,\n      \"route_distance_m\": 1000\n    },\n    {\n      \"segmentId\": \"seg002\",\n      \"name_vn\": \"Nguyen Hue\",\n      \"congestionIndex\": 0.4,\n      \"currentSpeed\": 45,\n      \"speedLimitRatio\": 0.9,\n      \"jamFactor\": 0.2,\n      \"incidentFlag\": 0,\n      \"route_distance_m\": 2000\n    }\n  ],\n  \"weather_data\": {}\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Route Recommendation",
+      "item": [
+        {
+          "name": "Recommend Best Route",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_ACCESS_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/api/ml/recommend-route",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "ml", "recommend-route"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"routes\": [\n    {\n      \"segmentId\": \"route_a\",\n      \"name_vn\": \"Route A (via Highway)\",\n      \"distance_m\": 15000\n    },\n    {\n      \"segmentId\": \"route_b\",\n      \"name_vn\": \"Route B (via Arterial)\",\n      \"distance_m\": 18000\n    }\n  ],\n  \"traffic_data_map\": {\n    \"route_a\": {\n      \"segmentId\": \"route_a\",\n      \"congestionIndex\": 0.8,\n      \"currentSpeed\": 15,\n      \"speedLimitRatio\": 0.4,\n      \"jamFactor\": 0.7,\n      \"incidentFlag\": 0,\n      \"route_distance_m\": 15000\n    },\n    \"route_b\": {\n      \"segmentId\": \"route_b\",\n      \"congestionIndex\": 0.4,\n      \"currentSpeed\": 45,\n      \"speedLimitRatio\": 1.1,\n      \"jamFactor\": 0.2,\n      \"incidentFlag\": 0,\n      \"route_distance_m\": 18000\n    }\n  },\n  \"weather_data\": {}\n}"
+            }
+          }
+        },
+        {
+          "name": "Compare Two Routes",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_ACCESS_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/api/ml/compare-routes",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "ml", "compare-routes"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"route1\": {\n    \"segmentId\": \"route_a\",\n    \"name_vn\": \"Route A (via Highway)\",\n    \"distance_m\": 15000\n  },\n  \"route2\": {\n    \"segmentId\": \"route_b\",\n    \"name_vn\": \"Route B (via Arterial)\",\n    \"distance_m\": 18000\n  },\n  \"traffic_data_map\": {\n    \"route_a\": {\n      \"segmentId\": \"route_a\",\n      \"congestionIndex\": 0.8,\n      \"currentSpeed\": 15,\n      \"speedLimitRatio\": 0.4,\n      \"jamFactor\": 0.7,\n      \"incidentFlag\": 0,\n      \"route_distance_m\": 15000\n    },\n    \"route_b\": {\n      \"segmentId\": \"route_b\",\n      \"congestionIndex\": 0.4,\n      \"currentSpeed\": 45,\n      \"speedLimitRatio\": 1.1,\n      \"jamFactor\": 0.2,\n      \"incidentFlag\": 0,\n      \"route_distance_m\": 18000\n    }\n  },\n  \"weather_data\": {}\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Incident Detection",
+      "item": [
+        {
+          "name": "Detect Single Incident",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_ACCESS_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/api/ml/detect-incident",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "ml", "detect-incident"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"traffic_data\": {\n    \"segmentId\": \"seg001\",\n    \"congestionIndex\": 0.95,\n    \"currentSpeed\": 5,\n    \"incidentFlag\": 1,\n    \"jamFactor\": 0.9,\n    \"speedLimitRatio\": 0.1\n  },\n  \"historical_avg\": {\n    \"avgCongestion\": 0.3,\n    \"avgSpeed\": 45\n  }\n}"
+            }
+          }
+        },
+        {
+          "name": "Detect Batch Incidents",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_ACCESS_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/api/ml/detect-incidents",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "ml", "detect-incidents"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"traffic_data_array\": [\n    {\n      \"segmentId\": \"seg001\",\n      \"congestionIndex\": 0.95,\n      \"currentSpeed\": 5,\n      \"incidentFlag\": 1,\n      \"jamFactor\": 0.9,\n      \"speedLimitRatio\": 0.1\n    },\n    {\n      \"segmentId\": \"seg002\",\n      \"congestionIndex\": 0.35,\n      \"currentSpeed\": 50,\n      \"incidentFlag\": 0,\n      \"jamFactor\": 0.1,\n      \"speedLimitRatio\": 1.0\n    },\n    {\n      \"segmentId\": \"seg003\",\n      \"congestionIndex\": 0.88,\n      \"currentSpeed\": 10,\n      \"incidentFlag\": 0,\n      \"jamFactor\": 0.8,\n      \"speedLimitRatio\": 0.2\n    }\n  ],\n  \"historical_avg_map\": {\n    \"seg001\": { \"avgCongestion\": 0.3, \"avgSpeed\": 45 },\n    \"seg002\": { \"avgCongestion\": 0.35, \"avgSpeed\": 50 },\n    \"seg003\": { \"avgCongestion\": 0.4, \"avgSpeed\": 40 }\n  }\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Traffic Status",
+      "item": [
+        {
+          "name": "Get Overall Traffic Status",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_ACCESS_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/api/ml/traffic-status",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "ml", "traffic-status"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"traffic_data_array\": [\n    {\n      \"segmentId\": \"seg001\",\n      \"congestionIndex\": 0.75,\n      \"currentSpeed\": 25,\n      \"speedLimitRatio\": 0.5,\n      \"jamFactor\": 0.6,\n      \"incidentFlag\": 0\n    },\n    {\n      \"segmentId\": \"seg002\",\n      \"congestionIndex\": 0.4,\n      \"currentSpeed\": 45,\n      \"speedLimitRatio\": 0.9,\n      \"jamFactor\": 0.2,\n      \"incidentFlag\": 0\n    },\n    {\n      \"segmentId\": \"seg003\",\n      \"congestionIndex\": 0.88,\n      \"currentSpeed\": 10,\n      \"speedLimitRatio\": 0.2,\n      \"jamFactor\": 0.8,\n      \"incidentFlag\": 1\n    }\n  ],\n  \"period\": \"overall\"\n}"
+            }
+          }
+        },
+        {
+          "name": "Get Traffic Status by Period",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Authorization",
+                "value": "Bearer YOUR_ACCESS_TOKEN"
+              },
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "http://localhost:3000/api/ml/traffic-status",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "ml", "traffic-status"]
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"traffic_data_array\": [\n    {\n      \"segmentId\": \"seg001\",\n      \"congestionIndex\": 0.75,\n      \"currentSpeed\": 25,\n      \"speedLimitRatio\": 0.5,\n      \"jamFactor\": 0.6,\n      \"incidentFlag\": 0,\n      \"hour_of_day\": 8\n    },\n    {\n      \"segmentId\": \"seg002\",\n      \"congestionIndex\": 0.4,\n      \"currentSpeed\": 45,\n      \"speedLimitRatio\": 0.9,\n      \"jamFactor\": 0.2,\n      \"incidentFlag\": 0,\n      \"hour_of_day\": 8\n    }\n  ],\n  \"period\": \"hourly\"\n}"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["health"]
+        }
+      }
+    }
+  ]
+}

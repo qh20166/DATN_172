@@ -1,0 +1,154 @@
+.places-search-container {
+  position: relative;
+  width: 100%;
+  overflow: visible !important;
+}
+
+.places-search-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  overflow: visible;
+}
+
+.places-search-input {
+  width: 100%;
+  padding: 10px 36px 10px 12px;
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: var(--color-input-bg, #f9f9f9);
+  color: var(--color-text-primary, #333);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.places-search-input:focus {
+  outline: none;
+  border-color: var(--color-link, #0066cc);
+  box-shadow: 0 0 0 2px rgba(0, 102, 204, 0.1);
+}
+
+.places-search-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  background-color: var(--color-disabled-bg, #f0f0f0);
+}
+
+.places-search-loading {
+  position: absolute;
+  right: 40px;
+  font-size: 16px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.places-map-select-btn {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.places-map-select-btn:hover:not(:disabled) {
+  background-color: var(--color-button-hover-bg, rgba(0, 102, 204, 0.1));
+}
+
+.places-map-select-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.places-suggestions-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background-color: var(--color-bg-secondary, #fff);
+  border: 1px solid var(--color-border, #ccc);
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  max-height: 300px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+.places-suggestion-item {
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+  border: none;
+  border-bottom: 1px solid var(--color-border-light, #f0f0f0);
+  background: none;
+  width: 100%;
+  text-align: left;
+  color: inherit;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.places-suggestion-item:last-child {
+  border-bottom: none;
+}
+
+.places-suggestion-item:hover {
+  background-color: var(--color-button-hover-bg, #f0f0f0);
+}
+
+.places-suggestion-item:focus {
+  outline: 2px solid var(--color-link, #0066cc);
+  outline-offset: -2px;
+}
+
+.places-suggestion-name {
+  font-weight: 500;
+  color: var(--color-text-primary, #333);
+  margin-bottom: 4px;
+}
+
+.places-suggestion-address {
+  font-size: 12px;
+  color: var(--color-text-secondary, #666);
+}
+
+/* Dark mode support */
+[data-theme='dark'] .places-search-input {
+  background-color: var(--color-input-bg);
+  color: var(--color-text-primary);
+  border-color: var(--color-border);
+}
+
+[data-theme='dark'] .places-suggestions-dropdown {
+  background-color: var(--color-bg-secondary);
+  border-color: var(--color-border);
+}
+
+[data-theme='dark'] .places-suggestion-item:hover {
+  background-color: var(--color-button-hover-bg);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .places-suggestions-dropdown {
+    max-height: 250px;
+  }
+
+  .places-suggestion-item {
+    padding: 12px;
+  }
+}

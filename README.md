@@ -1,6 +1,6 @@
 # GIẢI PHÁP PHÂN TÍCH TÌNH TRẠNG GIAO THÔNG DỰA TRÊN KỸ THUẬT GOM CỤM DỮ LIỆU
 
-**TraffiGo** - Hệ thống phân tích và dự báo lưu lượng giao thông sử dụng Clustering & Machine Learning
+**TraffiGo** - Hệ thống phân tích và dự báo lưu lượng giao thông sử dụng Clustering & Machine Learning, Web Backend và Web Frontend
 
 ---
 
@@ -45,6 +45,8 @@
 
 - 🐍 **Backend/ML Model**: Python - Xử lý dữ liệu, Clustering và Machine Learning
 - 📊 **Data Processing**: Tiền xử lý, làm sạch và phân tích dữ liệu giao thông
+- 🌐 **Web Backend**: Node.js/Express - API, xác thực, xử lý logic nghiệp vụ và tích hợp dữ liệu
+- ⚛️ **Web Frontend**: React/Vite - Giao diện web cho bản đồ, phân tích và tương tác người dùng
 - 📱 **Mobile App**: Android Studio (Java) - Ứng dụng di động cho người dùng cuối
 
 ### 🎯 Mục Tiêu
@@ -61,6 +63,8 @@ Xây dựng một hệ thống thông minh để:
 |-----------|-----------|---------|
 | **Backend ML** | Python (DATN/) | Xây dựng, huấn luyện, và triển khai mô hình ML & Clustering |
 | **Data Processing** | Python (DATA/) | Tiền xử lý dữ liệu, làm sạch, phân tích EDA, thu thập dữ liệu |
+| **Web Backend** | Node.js/Express (DATN_BE/) | Cung cấp API, xác thực người dùng, xử lý nghiệp vụ và tích hợp dữ liệu |
+| **Web Frontend** | React/Vite (DATN_FE/) | Giao diện web hiển thị bản đồ, phân tích và điều hướng người dùng |
 | **Mobile App** | Android Studio/Java (TraffiGo/) | Giao diện di động cho người dùng cuối |
 
 ---
@@ -92,6 +96,30 @@ DATN_172/
 │   │   └── h.py                   # Data Collector - thu thập dữ liệu động/tĩnh
 │   └── DATN/                      # Tài liệu/config liên quan
 │
+├── DATN_BE/                       # 🌐 Web Backend - Node.js/Express API
+│   ├── src/                        # Source code backend
+│   │   ├── controllers/            # Xử lý request/response
+│   │   ├── routes/                 # Định nghĩa API routes
+│   │   ├── services/               # Logic nghiệp vụ và truy xuất dữ liệu
+│   │   ├── middlewares/            # Middleware xác thực, logging, caching
+│   │   ├── config/                 # Kết nối CSDL và cấu hình hệ thống
+│   │   └── index.js                # Entry point của backend
+│   ├── Dockerfile                  # Cấu hình build/deploy Docker
+│   ├── fly.toml                    # Cấu hình triển khai Fly.io
+│   └── postman_collection.json     # Bộ test API bằng Postman
+
+├── DATN_FE/                       # ⚛️ Web Frontend - React/Vite
+│   ├── src/                        # Source code giao diện
+│   │   ├── components/             # Thành phần UI tái sử dụng
+│   │   ├── pages/                  # Các màn hình/chức năng chính
+│   │   ├── context/                # Quản lý state toàn cục
+│   │   ├── hooks/                  # Custom hooks
+│   │   ├── services/               # Gọi API và xử lý dữ liệu
+│   │   └── main.jsx                # Entry point của frontend
+│   ├── public/                     # Tài nguyên tĩnh
+│   ├── index.html                  # File HTML gốc
+│   └── vite.config.js              # Cấu hình Vite
+
 ├── TraffiGo/                      # 📱 Mobile App - Android Studio
 │   ├── app/                       # Module ứng dụng Android
 │   ├── gradle/                    # Gradle wrapper scripts
@@ -209,7 +237,31 @@ MAPBOX_KEY=your_mapbox_key_here
 EOF
 ```
 
-### 4. Setup Mobile App (TraffiGo)
+### 4. Setup Web Backend (DATN_BE)
+
+```bash
+cd ../DATN_BE
+
+# Cài dependencies
+npm install
+
+# Chạy backend ở chế độ development
+npm run dev
+```
+
+### 5. Setup Web Frontend (DATN_FE)
+
+```bash
+cd ../DATN_FE
+
+# Cài dependencies
+npm install
+
+# Chạy frontend ở chế độ development
+npm run dev
+```
+
+### 6. Setup Mobile App (TraffiGo)
 
 #### Cách 1: Mở trong Android Studio
 
@@ -286,6 +338,24 @@ venv\Scripts\activate    # Windows
 python main.py
 ```
 
+### Chạy Web Backend
+
+```bash
+cd DATN_BE
+
+# Chạy server API
+npm run dev
+```
+
+### Chạy Web Frontend
+
+```bash
+cd DATN_FE
+
+# Chạy giao diện web
+npm run dev
+```
+
 ### Xử Lý Dữ Liệu
 
 ```bash
@@ -332,6 +402,28 @@ adb shell am start -n com.traffigo/.MainActivity
 - **rule_based.py**: Hệ thống luật dựa trên heuristic
 - **io_utils.py**: Các utility cho I/O operations
 - **processed/**: Thư mục chứa dữ liệu sau khi xử lý
+
+### DATN_BE/ - Web Backend
+
+- **src/index.js**: Entry point khởi tạo Express server
+- **src/routes/**: Định tuyến các API cho traffic, ML, decision và auth
+- **src/controllers/**: Xử lý request/response cho từng nhóm API
+- **src/services/**: Logic nghiệp vụ, tương tác dữ liệu và mô hình
+- **src/middlewares/**: Auth, logging, caching, upload và error handling
+- **src/config/**: Cấu hình database, validation schema và ML models
+- **Dockerfile**: Cấu hình container để triển khai backend
+- **fly.toml**: Cấu hình triển khai lên Fly.io
+
+### DATN_FE/ - Web Frontend
+
+- **src/main.jsx**: Entry point của React application
+- **src/App.jsx**: Component gốc điều phối layout và routing
+- **src/pages/**: Các trang chính như login, map, dashboard, analysis
+- **src/components/**: UI components dùng lại cho bản đồ, sidebar, form, legend
+- **src/context/**: AuthContext và ThemeContext cho state toàn cục
+- **src/hooks/**: Custom hooks xử lý dữ liệu traffic và DSS
+- **src/services/**: Tầng gọi API và xử lý dữ liệu client-side
+- **public/**: Tài nguyên tĩnh, dữ liệu mẫu và các file cấu hình hiển thị
 
 ### DATA/ - Data Collection & Management
 
@@ -381,11 +473,14 @@ cd TraffiGo
 ## 📝 Tài Liệu Bổ Sung
 
 - [DATA/README.md](DATA/README.md) - Thông tin về datasets và API
+- [DATN_BE/ML_README.md](DATN_BE/ML_README.md) - Tài liệu liên quan backend và ML integration
+- [DATN_BE/postman_collection.json](DATN_BE/postman_collection.json) - Bộ test API
+- [DATN_FE/package.json](DATN_FE/package.json) - Cấu hình và scripts của frontend web
 - DATN/config.py - Cấu hình mô hình ML
 - TraffiGo/app/ - Android app source code
 
 ---
 
-**Last Updated**: 2026-05-10
+**Last Updated**: 2026-05-11
 
 **Năm Học**: 2025-2026
