@@ -1,0 +1,19 @@
+{
+  "selected_model": "KMeans",
+  "cluster_column": "cluster_KMeans",
+  "cluster_counts": {
+    "0": 61275,
+    "1": 21593,
+    "2": 5568,
+    "3": 37446,
+    "4": 23614,
+    "5": 45665
+  },
+  "profile_csv_path": "main2_figure/selected_kmeans_cluster_profile.csv",
+  "figure_paths": [
+    "main2_figure/selected_kmeans_cluster_counts.png",
+    "main2_figure/selected_kmeans_pca_clusters.png",
+    "main2_figure/selected_kmeans_radar.png",
+    "main2_figure/selected_kmeans_feature_distribution.png"
+  ]
+}

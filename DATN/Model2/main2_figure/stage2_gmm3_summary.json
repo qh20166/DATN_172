@@ -1,0 +1,89 @@
+{
+  "stage": "gmm3",
+  "processed_csv_path": "main2_figure/data_processed.csv",
+  "used_features": [
+    "lat_start",
+    "lon_start",
+    "lat_end",
+    "lon_end",
+    "laneCount_aggregated",
+    "curvatureIndex",
+    "bearing",
+    "lengthKm",
+    "intersectionCount",
+    "routeSlopePercent",
+    "startElevation",
+    "endElevation",
+    "timeStamp",
+    "dayOfWeek",
+    "hourOfDay",
+    "currentSpeed",
+    "freeFlowSpeed",
+    "congestionIndex",
+    "trafficVolume",
+    "occupancy",
+    "crossTime",
+    "speedLimitRatio",
+    "relativeCongestionIndex",
+    "route_distance_m",
+    "route_duration_sec",
+    "route_weight",
+    "map_match_confidence",
+    "latitude_lookup",
+    "longitude_lookup",
+    "weathercode",
+    "temperature_2m_max",
+    "temperature_2m_min",
+    "apparent_temperature_max",
+    "apparent_temperature_min",
+    "uv_index_max",
+    "precipitation_sum",
+    "precipitation_probability_max",
+    "windspeed_10m_max",
+    "windgusts_10m_max",
+    "winddirection_10m_dominant"
+  ],
+  "n_used_features": 40,
+  "parameter_selection": {
+    "KMeans": {
+      "selected_k": 6,
+      "criterion": "Elbow Method using inertia on full dataset"
+    },
+    "MiniBatchKMeans": {
+      "selected_k": 5,
+      "criterion": "Elbow Method using inertia on full dataset"
+    },
+    "GMM": {
+      "selected_k": 12,
+      "criterion": "Minimum BIC on full dataset"
+    },
+    "GMM2": {
+      "selected_k": 20,
+      "criterion": "Minimum BIC on full dataset, search range k=12..22"
+    },
+    "GMM3": {
+      "selected_k": 30,
+      "criterion": "Minimum BIC on full dataset, search range k=22..32"
+    },
+    "DBSCAN": {
+      "eps": 4.081574155211346,
+      "min_samples": 12,
+      "criterion": "Selected k-distance graph on DBSCAN parameter sample"
+    },
+    "GMMAIC": {
+      "selected_k": 12,
+      "criterion": "Minimum AIC on full dataset"
+    },
+    "GMMAIC2": {
+      "selected_k": 20,
+      "criterion": "Minimum AIC on full dataset, search range k=12..22"
+    },
+    "GMMAIC3": {
+      "selected_k": 30,
+      "criterion": "Minimum AIC on full dataset, search range k=22..32"
+    }
+  },
+  "figure_paths": [
+    "main2_figure/gmm3_bic.png"
+  ]
+}

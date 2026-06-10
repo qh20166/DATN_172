@@ -1,0 +1,176 @@
+{
+  "stage": "preprocess",
+  "input_path": "data.csv",
+  "processed_csv_path": "main2_figure/data_processed.csv",
+  "preprocessing_summary": {
+    "raw_shape": {
+      "rows": 195161,
+      "cols": 71
+    },
+    "processed_shape": {
+      "rows": 195161,
+      "cols": 51
+    },
+    "removed_exact_duplicates": 0,
+    "dropped_sparse_columns": [
+      "ref",
+      "frc",
+      "roadType"
+    ],
+    "num_dropped_sparse_columns": 3,
+    "dropped_low_value_columns": [
+      "speedLimit",
+      "surface",
+      "jamFactor",
+      "incidentFlag",
+      "congestion_levels",
+      "weathercode_unit",
+      "temperature_2m_max_unit",
+      "temperature_2m_min_unit",
+      "apparent_temperature_max_unit",
+      "apparent_temperature_min_unit",
+      "sunrise_unit",
+      "sunset_unit",
+      "precipitation_sum_unit",
+      "precipitation_probability_max_unit",
+      "windspeed_10m_max_unit",
+      "windgusts_10m_max_unit",
+      "winddirection_10m_dominant_unit",
+      "time_unit"
+    ],
+    "num_dropped_low_value_columns": 18,
+    "low_value_reasons": {
+      "speedLimit": "dominant_value_ratio_too_high",
+      "surface": "dominant_value_ratio_too_high",
+      "jamFactor": "near_constant",
+      "incidentFlag": "near_constant",
+      "congestion_levels": "near_constant",
+      "weathercode_unit": "near_constant",
+      "temperature_2m_max_unit": "near_constant",
+      "temperature_2m_min_unit": "near_constant",
+      "apparent_temperature_max_unit": "near_constant",
+      "apparent_temperature_min_unit": "near_constant",
+      "sunrise_unit": "near_constant",
+      "sunset_unit": "near_constant",
+      "precipitation_sum_unit": "near_constant",
+      "precipitation_probability_max_unit": "near_constant",
+      "windspeed_10m_max_unit": "near_constant",
+      "windgusts_10m_max_unit": "near_constant",
+      "winddirection_10m_dominant_unit": "near_constant",
+      "time_unit": "near_constant"
+    },
+    "imputed_columns": {
+      "crossTime": {
+        "method": "median",
+        "value": 0.0562839598860588,
+        "missing_count": 24103
+      },
+      "route_distance_m": {
+        "method": "median",
+        "value": 571.718,
+        "missing_count": 1446
+      },
+      "route_duration_sec": {
+        "method": "median",
+        "value": 109.338,
+        "missing_count": 1446
+      },
+      "route_weight": {
+        "method": "median",
+        "value": 114.97,
+        "missing_count": 1446
+      },
+      "congestion_levels": {
+        "method": "mode",
+        "value": "[]",
+        "missing_count": 1446
+      },
+      "map_match_confidence": {
+        "method": "median",
+        "value": 0.977307,
+        "missing_count": 12353
+      },
+      "uv_index_max": {
+        "method": "median",
+        "value": 9.3,
+        "missing_count": 2295
+      },
+      "precipitation_probability_max": {
+        "method": "median",
+        "value": 0.0,
+        "missing_count": 2295
+      },
+      "precipitation_probability_max_unit": {
+        "method": "mode",
+        "value": "%",
+        "missing_count": 2295
+      }
+    },
+    "top_20_missing_ratio_before": {
+      "ref": 0.9991289243240197,
+      "frc": 0.997386772972059,
+      "roadType": 0.9571020849452503,
+      "crossTime": 0.12350315893031907,
+      "map_match_confidence": 0.0632964577963835,
+      "precipitation_probability_max_unit": 0.01175952162573465,
+      "uv_index_max": 0.01175952162573465,
+      "precipitation_probability_max": 0.01175952162573465,
+      "route_distance_m": 0.007409267220397518,
+      "route_weight": 0.007409267220397518,
+      "route_duration_sec": 0.007409267220397518,
+      "congestion_levels": 0.007409267220397518,
+      "windspeed_10m_max": 0.0,
+      "temperature_2m_min": 0.0,
+      "time": 0.0,
+      "winddirection_10m_dominant_unit": 0.0,
+      "weather_date": 0.0,
+      "latitude_lookup": 0.0,
+      "longitude_lookup": 0.0,
+      "winddirection_10m_dominant": 0.0
+    },
+    "top_20_zero_ratio_after_impute": {
+      "incidentFlag": 1.0,
+      "jamFactor": 1.0,
+      "precipitation_sum": 0.7963373829812309,
+      "precipitation_probability_max": 0.5255711950645877,
+      "routeSlopePercent": 0.2504137609460907,
+      "relativeCongestionIndex": 0.25004995875200475,
+      "occupancy": 0.25004995875200475,
+      "currentSpeed": 0.12350315893031907,
+      "speedLimitRatio": 0.12350315893031907,
+      "freeFlowSpeed": 0.12350315893031907,
+      "dayOfWeek": 0.12348266303206071,
+      "map_match_confidence": 0.10818759895675878,
+      "route_duration_sec": 0.030349301346068117,
+      "route_distance_m": 0.030349301346068117,
+      "route_weight": 0.030349301346068117,
+      "bearing": 0.02023457555556694,
+      "curvatureIndex": 0.02023457555556694,
+      "lengthKm": 0.02023457555556694,
+      "crossTime": 0.017739199942611486,
+      "hourOfDay": 0.00587207485102044
+    },
+    "top_20_dominant_ratio_after_impute": {
+      "time_unit": 1.0,
+      "windspeed_10m_max_unit": 1.0,
+      "congestion_levels": 1.0,
+      "sunrise_unit": 1.0,
+      "incidentFlag": 1.0,
+      "jamFactor": 1.0,
+      "sunset_unit": 1.0,
+      "precipitation_probability_max_unit": 1.0,
+      "precipitation_sum_unit": 1.0,
+      "temperature_2m_max_unit": 1.0,
+      "weathercode_unit": 1.0,
+      "temperature_2m_min_unit": 1.0,
+      "apparent_temperature_min_unit": 1.0,
+      "winddirection_10m_dominant_unit": 1.0,
+      "apparent_temperature_max_unit": 1.0,
+      "windgusts_10m_max_unit": 1.0,
+      "surface": 0.9991289243240197,
+      "speedLimit": 0.992160318916177,
+      "oneway": 0.9773520324245111,
+      "laneCount_aggregated": 0.9727814471128965
+    }
+  }
+}

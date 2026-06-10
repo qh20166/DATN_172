@@ -1,0 +1,11 @@
+{
+  "stage": "selected_model_figures",
+  "processed_csv_path": "main2_figure/data_processed.csv",
+  "comparison_csv_path": "main2_figure/model_results.csv",
+  "figure_paths": [
+    "main2_figure/selected_kmeans_cluster_counts.png",
+    "main2_figure/selected_kmeans_pca_clusters.png",
+    "main2_figure/selected_kmeans_radar.png",
+    "main2_figure/selected_kmeans_feature_distribution.png"
+  ]
+}

@@ -1,0 +1,6275 @@
+{
+  "raw_shape": {
+    "rows": 195161,
+    "cols": 71
+  },
+  "processed_shape": {
+    "rows": 195161,
+    "cols": 41
+  },
+  "removed_exact_duplicates": 0,
+  "dropped_sparse_columns": [
+    "congestion_levels",
+    "ref",
+    "frc",
+    "roadType"
+  ],
+  "num_dropped_sparse_columns": 4,
+  "dropped_low_value_columns": [
+    "LOS",
+    "apparent_temperature_max_unit",
+    "apparent_temperature_min_unit",
+    "dayType",
+    "incidentFlag",
+    "jamFactor",
+    "laneCount_aggregated",
+    "name_vn",
+    "oneway",
+    "precipitation_probability_max_unit",
+    "precipitation_sum_unit",
+    "segmentId",
+    "speedLimit",
+    "sunrise",
+    "sunrise_unit",
+    "sunset",
+    "sunset_unit",
+    "surface",
+    "temperature_2m_max_unit",
+    "temperature_2m_min_unit",
+    "time",
+    "time_unit",
+    "weather_date",
+    "weather_description",
+    "weathercode_unit",
+    "winddirection_10m_dominant_unit",
+    "windgusts_10m_max_unit",
+    "windspeed_10m_max_unit"
+  ],
+  "num_dropped_low_value_columns": 28,
+  "low_value_reasons": {
+    "segmentId": "non_cluster_metadata",
+    "name_vn": "non_cluster_metadata",
+    "laneCount_aggregated": "dominant_ratio>=0.9",
+    "speedLimit": "dominant_ratio>=0.9",
+    "surface": "non_cluster_metadata",
+    "oneway": "non_cluster_metadata",
+    "dayType": "non_cluster_metadata",
+    "jamFactor": "constant_or_single_value",
+    "incidentFlag": "constant_or_single_value",
+    "LOS": "non_cluster_metadata",
+    "weather_date": "non_cluster_metadata",
+    "weathercode_unit": "non_cluster_metadata",
+    "weather_description": "non_cluster_metadata",
+    "temperature_2m_max_unit": "non_cluster_metadata",
+    "temperature_2m_min_unit": "non_cluster_metadata",
+    "apparent_temperature_max_unit": "non_cluster_metadata",
+    "apparent_temperature_min_unit": "non_cluster_metadata",
+    "sunrise": "non_cluster_metadata",
+    "sunrise_unit": "non_cluster_metadata",
+    "sunset": "non_cluster_metadata",
+    "sunset_unit": "non_cluster_metadata",
+    "precipitation_sum_unit": "non_cluster_metadata",
+    "precipitation_probability_max_unit": "non_cluster_metadata",
+    "windspeed_10m_max_unit": "non_cluster_metadata",
+    "windgusts_10m_max_unit": "non_cluster_metadata",
+    "winddirection_10m_dominant_unit": "non_cluster_metadata",
+    "time": "non_cluster_metadata",
+    "time_unit": "non_cluster_metadata"
+  },
+  "top_20_missing_ratio_before": {
+    "congestion_levels": 1.0,
+    "ref": 0.9991289243240197,
+    "frc": 0.997386772972059,
+    "roadType": 0.9571020849452503,
+    "crossTime": 0.12350315893031907,
+    "map_match_confidence": 0.0632964577963835,
+    "precipitation_probability_max_unit": 0.01175952162573465,
+    "uv_index_max": 0.01175952162573465,
+    "precipitation_probability_max": 0.01175952162573465,
+    "route_weight": 0.007409267220397518,
+    "route_duration_sec": 0.007409267220397518,
+    "route_distance_m": 0.007409267220397518,
+    "windspeed_10m_max": 0.0,
+    "temperature_2m_min": 0.0,
+    "time": 0.0,
+    "winddirection_10m_dominant_unit": 0.0,
+    "weather_date": 0.0,
+    "latitude_lookup": 0.0,
+    "longitude_lookup": 0.0,
+    "winddirection_10m_dominant": 0.0
+  },
+  "top_20_zero_ratio_after_impute": {
+    "jamFactor": 1.0,
+    "incidentFlag": 1.0,
+    "precipitation_sum": 0.7963373829812309,
+    "precipitation_probability_max": 0.5255711950645877,
+    "routeSlopePercent": 0.2504137609460907,
+    "relativeCongestionIndex": 0.25004995875200475,
+    "occupancy": 0.25004995875200475,
+    "freeFlowSpeed": 0.12350315893031907,
+    "currentSpeed": 0.12350315893031907,
+    "speedLimitRatio": 0.12350315893031907,
+    "dayOfWeek": 0.12348266303206071,
+    "map_match_confidence": 0.10818759895675878,
+    "route_duration_sec": 0.030349301346068117,
+    "route_weight": 0.030349301346068117,
+    "route_distance_m": 0.030349301346068117,
+    "lengthKm": 0.02023457555556694,
+    "bearing": 0.02023457555556694,
+    "curvatureIndex": 0.02023457555556694,
+    "crossTime": 0.017739199942611486,
+    "hourOfDay": 0.00587207485102044
+  },
+  "top_20_dominant_ratio_after_impute": {
+    "time_unit": 1.0,
+    "temperature_2m_min_unit": 1.0,
+    "precipitation_sum_unit": 1.0,
+    "sunrise_unit": 1.0,
+    "sunset_unit": 1.0,
+    "precipitation_probability_max_unit": 1.0,
+    "weathercode_unit": 1.0,
+    "incidentFlag": 1.0,
+    "windspeed_10m_max_unit": 1.0,
+    "temperature_2m_max_unit": 1.0,
+    "windgusts_10m_max_unit": 1.0,
+    "apparent_temperature_max_unit": 1.0,
+    "winddirection_10m_dominant_unit": 1.0,
+    "apparent_temperature_min_unit": 1.0,
+    "jamFactor": 1.0,
+    "surface": 0.9991289243240197,
+    "speedLimit": 0.992160318916177,
+    "oneway": 0.9773520324245111,
+    "laneCount_aggregated": 0.9727814471128965,
+    "precipitation_sum": 0.7963373829812309
+  },
+  "imputed_columns": {
+    "crossTime": "median=0.0562839598860588",
+    "route_distance_m": "median=571.718",
+    "route_duration_sec": "median=109.338",
+    "route_weight": "median=114.97",
+    "map_match_confidence": "median=0.977307",
+    "uv_index_max": "median=9.3",
+    "precipitation_probability_max": "median=0.0"
+  },
+  "suggested_cluster_features": [
+    "curvatureIndex",
+    "lengthKm",
+    "intersectionCount",
+    "routeSlopePercent",
+    "currentSpeed",
+    "freeFlowSpeed",
+    "congestionIndex",
+    "trafficVolume",
+    "occupancy",
+    "crossTime",
+    "speedLimitRatio",
+    "relativeCongestionIndex",
+    "route_distance_m",
+    "route_duration_sec",
+    "route_weight",
+    "map_match_confidence",
+    "weathercode",
+    "temperature_2m_max",
+    "temperature_2m_min",
+    "apparent_temperature_max",
+    "apparent_temperature_min",
+    "uv_index_max",
+    "precipitation_sum",
+    "precipitation_probability_max",
+    "windspeed_10m_max",
+    "windgusts_10m_max",
+    "winddirection_10m_dominant"
+  ],
+  "feature_selection": {
+    "target_column": "currentSpeed",
+    "selection_strategy": "cumulative_score",
+    "cumulative_threshold": 0.85,
+    "methods": {
+      "mutual_information": {
+        "selected_features": [
+          "speedLimitRatio",
+          "crossTime",
+          "trafficVolume",
+          "congestionIndex",
+          "occupancy",
+          "relativeCongestionIndex",
+          "freeFlowSpeed",
+          "lengthKm",
+          "route_distance_m",
+          "curvatureIndex"
+        ],
+        "n_selected_features": 10,
+        "threshold": null,
+        "max_score": 3.984104393604972,
+        "quality_metrics": {
+          "n_selected_features": 10,
+          "mean_relevance_score": 2.5492606553653614,
+          "median_relevance_score": 3.017203835795429,
+          "target_abs_corr_mean": 0.3364619231335827,
+          "target_abs_corr_median": 0.13057889154080377,
+          "mean_abs_feature_correlation": 0.3436434323592509,
+          "max_abs_feature_correlation": 0.9999999999999986,
+          "redundant_pair_ratio": 0.2,
+          "completeness_ratio": 1.0,
+          "missing_ratio_mean": 0.0,
+          "zero_ratio_mean": 0.08356638877644612,
+          "dominant_ratio_mean": 0.13169536946418597,
+          "dimension_reduction_ratio": 0.736842105263158
+        }
+      },
+      "random_forest": {
+        "selected_features": [
+          "speedLimitRatio",
+          "trafficVolume",
+          "freeFlowSpeed",
+          "intersectionCount",
+          "map_match_confidence",
+          "relativeCongestionIndex",
+          "congestionIndex",
+          "occupancy",
+          "crossTime",
+          "routeSlopePercent"
+        ],
+        "n_selected_features": 10,
+        "threshold": null,
+        "max_score": 0.9995436842197976,
+        "quality_metrics": {
+          "n_selected_features": 10,
+          "mean_relevance_score": 0.09999736526284643,
+          "median_relevance_score": 2.3145907065076963e-05,
+          "target_abs_corr_mean": 0.3096576594391479,
+          "target_abs_corr_median": 0.13057889154080377,
+          "mean_abs_feature_correlation": 0.19834508797738282,
+          "max_abs_feature_correlation": 0.9999999999999988,
+          "redundant_pair_ratio": 0.08888888888888889,
+          "completeness_ratio": 1.0,
+          "missing_ratio_mean": 0.0,
+          "zero_ratio_mean": 0.11234467952101088,
+          "dominant_ratio_mean": 0.18275270161558915,
+          "dimension_reduction_ratio": 0.736842105263158
+        }
+      }
+    },
+    "selected_method": "mutual_information",
+    "best_k": 10,
+    "top_k_candidates": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "selected_features": [
+      "speedLimitRatio",
+      "crossTime",
+      "trafficVolume",
+      "congestionIndex",
+      "occupancy",
+      "relativeCongestionIndex",
+      "freeFlowSpeed",
+      "lengthKm",
+      "route_distance_m",
+      "curvatureIndex"
+    ],
+    "selection_reason": "Chọn feature bằng cách thử nhiều top-k (10→15), đánh giá chất lượng dữ liệu và chọn k + phương pháp tốt nhất; không dùng clustering để chọn feature set.",
+    "score_csv_path": "processed/feature_selection_outputs/feature_selection_scores.csv",
+    "quality_csv_path": "processed/feature_selection_outputs/feature_selection_data_quality.csv",
+    "comparison_csv_path": "processed/feature_selection_outputs/feature_selection_quality_comparison.csv",
+    "selected_features_csv_path": "processed/feature_selection_outputs/selected_features.csv"
+  },
+  "speed_cluster_rule_distribution": {
+    "B": 81198,
+    "D": 40060,
+    "C": 26916,
+    "A": 24418,
+    "E": 19985,
+    "F": 2584
+  },
+  "speed_cluster_rule_definition": {
+    "A": "<= 10 km/h",
+    "B": "> 10 và <= 25 km/h",
+    "C": "> 25 và <= 30 km/h",
+    "D": "> 30 và <= 40 km/h",
+    "E": "> 40 và <= 60 km/h",
+    "F": "> 60 km/h"
+  },
+  "kmeans_clustering": {
+    "selected_k": 6,
+    "used_features": [
+      "speedLimitRatio",
+      "crossTime",
+      "trafficVolume",
+      "congestionIndex",
+      "occupancy",
+      "relativeCongestionIndex",
+      "freeFlowSpeed",
+      "lengthKm",
+      "route_distance_m",
+      "curvatureIndex"
+    ],
+    "cluster_sizes": {
+      "0": 34339,
+      "1": 9732,
+      "2": 57388,
+      "3": 23540,
+      "4": 4088,
+      "5": 66074
+    },
+    "final_metrics": {
+      "n_clusters": 6,
+      "inertia": 408205.3965208044,
+      "silhouette": 0.4182938746333402,
+      "davies_bouldin": 0.8063191343878272,
+      "calinski_harabasz": 147574.62690363897,
+      "mae": 0.28852409758535147,
+      "mse": 0.20916340689010754,
+      "rmse": 0.4573438606673403,
+      "rae": 0.42961396078517977,
+      "rrse": 0.45734386066734023
+    },
+    "internal_evaluation": {
+      "silhouette": 0.4182938746333402,
+      "davies_bouldin": 0.8063191343878272,
+      "calinski_harabasz": 147574.62690363897
+    },
+    "external_evaluation": {
+      "reference_label_column": "speed_cluster_rule",
+      "ari": 0.3925920490885632,
+      "nmi": 0.47925458313564717,
+      "fmi": 0.5475648262002298,
+      "f_measure": 0.42896451057729773,
+      "entropy": 1.1358337481400183
+    },
+    "overall_evaluation": {
+      "n_rows": 195161,
+      "n_features": 10,
+      "cluster_size_min": 4088,
+      "cluster_size_max": 66074,
+      "mae": 0.28852409758535147,
+      "rmse": 0.4573438606673403
+    },
+    "candidate_metrics": [
+      {
+        "k": 6,
+        "inertia": 408205.3965208044,
+        "cluster_size_min": 4088,
+        "cluster_size_max": 66074,
+        "mae": 0.28852409758535147,
+        "mse": 0.20916340689010754,
+        "rmse": 0.4573438606673403,
+        "rae": 0.42961396078517977,
+        "rrse": 0.45734386066734023
+      }
+    ],
+    "figure_paths": [
+      "processed/clustering_outputs/figure_cluster_distribution.png",
+      "processed/clustering_outputs/figure_cluster_scatter.png",
+      "processed/clustering_outputs/figure_dbscan_k_distance.png"
+    ],
+    "clustered_csv_path": "processed/clustering_outputs/traffic_clustered_kmeans.csv",
+    "evaluation_csv_path": "processed/clustering_outputs/clustering_metrics.csv",
+    "methods_comparison": {
+      "kmeans": {
+        "method": "KMeans",
+        "used_features": [
+          "speedLimitRatio",
+          "crossTime",
+          "trafficVolume",
+          "congestionIndex",
+          "occupancy",
+          "relativeCongestionIndex",
+          "freeFlowSpeed",
+          "lengthKm",
+          "route_distance_m",
+          "curvatureIndex"
+        ],
+        "cluster_sizes": {
+          "0": 34339,
+          "1": 9732,
+          "2": 57388,
+          "3": 23540,
+          "4": 4088,
+          "5": 66074
+        },
+        "final_metrics": {
+          "n_clusters": 6,
+          "inertia": 408205.3965208044,
+          "silhouette": 0.4182938746333402,
+          "davies_bouldin": 0.8063191343878272,
+          "calinski_harabasz": 147574.62690363897,
+          "mae": 0.28852409758535147,
+          "mse": 0.20916340689010754,
+          "rmse": 0.4573438606673403,
+          "rae": 0.42961396078517977,
+          "rrse": 0.45734386066734023
+        },
+        "internal_evaluation": {
+          "silhouette": 0.4182938746333402,
+          "davies_bouldin": 0.8063191343878272,
+          "calinski_harabasz": 147574.62690363897
+        },
+        "external_evaluation": {
+          "reference_label_column": "speed_cluster_rule",
+          "ari": 0.3925920490885632,
+          "nmi": 0.47925458313564717,
+          "fmi": 0.5475648262002298,
+          "f_measure": 0.42896451057729773,
+          "entropy": 1.1358337481400183
+        },
+        "overall_evaluation": {
+          "n_rows": 195161,
+          "n_features": 10,
+          "cluster_size_min": 4088,
+          "cluster_size_max": 66074,
+          "mae": 0.28852409758535147,
+          "rmse": 0.4573438606673403
+        },
+        "semantic_mapping": {
+          "3": "A",
+          "2": "B",
+          "5": "C",
+          "4": "D",
+          "1": "E",
+          "0": "F"
+        },
+        "semantic_profile": [
+          {
+            "cluster": 3,
+            "semantic_label": "A",
+            "semantic_definition": "<= 10 km/h",
+            "avg_currentSpeed": 0.0006584536958368734,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 15.5,
+            "sample_count": 23540
+          },
+          {
+            "cluster": 2,
+            "semantic_label": "B",
+            "semantic_definition": "> 10 và <= 25 km/h",
+            "avg_currentSpeed": 20.08493936014498,
+            "min_currentSpeed": 3.0,
+            "max_currentSpeed": 48.0,
+            "sample_count": 57388
+          },
+          {
+            "cluster": 5,
+            "semantic_label": "C",
+            "semantic_definition": "> 25 và <= 30 km/h",
+            "avg_currentSpeed": 28.346028695099434,
+            "min_currentSpeed": 12.5,
+            "max_currentSpeed": 58.0,
+            "sample_count": 66074
+          },
+          {
+            "cluster": 4,
+            "semantic_label": "D",
+            "semantic_definition": "> 30 và <= 40 km/h",
+            "avg_currentSpeed": 30.770303326810176,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 47.0,
+            "sample_count": 4088
+          },
+          {
+            "cluster": 1,
+            "semantic_label": "E",
+            "semantic_definition": "> 40 và <= 60 km/h",
+            "avg_currentSpeed": 30.822390053431977,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 73.0,
+            "sample_count": 9732
+          },
+          {
+            "cluster": 0,
+            "semantic_label": "F",
+            "semantic_definition": "> 60 km/h",
+            "avg_currentSpeed": 42.432889717231134,
+            "min_currentSpeed": 17.5,
+            "max_currentSpeed": 80.0,
+            "sample_count": 34339
+          }
+        ],
+        "cluster_profile": {
+          "csv_path": "processed/clustering_outputs/selected_kmeans_cluster_profile.csv",
+          "profile": [
+            {
+              "cluster": 3,
+              "semantic_label": "A",
+              "traffic_state": "<= 10 km/h",
+              "sample_count": 23540,
+              "currentSpeed": 0.0006584536958368734,
+              "freeFlowSpeed": 0.0007221750212404418,
+              "trafficVolume": 917.7429405267629,
+              "occupancy": 0.0003748313259033436,
+              "congestionIndex": 0.9999962516867409,
+              "crossTime": 0.05628205401527828,
+              "speedLimitRatio": 1.3169073916737467e-05,
+              "relativeCongestionIndex": 3.748313259033432e-06,
+              "lengthKm": 0.8756842052367548,
+              "route_distance_m": 1282.9008475361088,
+              "curvatureIndex": 0.010288497196261683
+            },
+            {
+              "cluster": 2,
+              "semantic_label": "B",
+              "traffic_state": "> 10 và <= 25 km/h",
+              "sample_count": 57388,
+              "currentSpeed": 20.08493936014498,
+              "freeFlowSpeed": 32.36596501010664,
+              "trafficVolume": 1072.8646412141911,
+              "occupancy": 38.04893521228901,
+              "congestionIndex": 0.6195106478771099,
+              "crossTime": 0.09894338114510756,
+              "speedLimitRatio": 0.4015789062513116,
+              "relativeCongestionIndex": 0.3804893521228901,
+              "lengthKm": 0.5455269410400305,
+              "route_distance_m": 725.2642693071723,
+              "curvatureIndex": 0.006381827786296787
+            },
+            {
+              "cluster": 5,
+              "semantic_label": "C",
+              "traffic_state": "> 25 và <= 30 km/h",
+              "sample_count": 66074,
+              "currentSpeed": 28.346028695099434,
+              "freeFlowSpeed": 36.98677240669552,
+              "trafficVolume": 787.4181882434846,
+              "occupancy": 23.394194929989773,
+              "congestionIndex": 0.7660580507001022,
+              "crossTime": 0.0741625471265989,
+              "speedLimitRatio": 0.5663501051151262,
+              "relativeCongestionIndex": 0.2339419492998977,
+              "lengthKm": 0.57763772599677,
+              "route_distance_m": 864.8771721705965,
+              "curvatureIndex": 0.006743888216242395
+            },
+            {
+              "cluster": 4,
+              "semantic_label": "D",
+              "traffic_state": "> 30 và <= 40 km/h",
+              "sample_count": 4088,
+              "currentSpeed": 30.770303326810176,
+              "freeFlowSpeed": 37.83023483365949,
+              "trafficVolume": 724.3809026418786,
+              "occupancy": 17.498764530235054,
+              "congestionIndex": 0.8250123546976496,
+              "crossTime": 1.613837880228401,
+              "speedLimitRatio": 0.6154060665362036,
+              "relativeCongestionIndex": 0.1749876453023505,
+              "lengthKm": 15.945683503358692,
+              "route_distance_m": 27298.672568003916,
+              "curvatureIndex": 0.18244752862035227
+            },
+            {
+              "cluster": 1,
+              "semantic_label": "E",
+              "traffic_state": "> 40 và <= 60 km/h",
+              "sample_count": 9732,
+              "currentSpeed": 30.822390053431977,
+              "freeFlowSpeed": 38.87541101520756,
+              "trafficVolume": 788.2115043156597,
+              "occupancy": 21.243531521266352,
+              "congestionIndex": 0.7875646847873364,
+              "crossTime": 0.6488170377418,
+              "speedLimitRatio": 0.6139615542698157,
+              "relativeCongestionIndex": 0.21243531521266348,
+              "lengthKm": 5.651111527919758,
+              "route_distance_m": 7280.172817920264,
+              "curvatureIndex": 0.06684691399506781
+            },
+            {
+              "cluster": 0,
+              "semantic_label": "F",
+              "traffic_state": "> 60 km/h",
+              "sample_count": 34339,
+              "currentSpeed": 42.432889717231134,
+              "freeFlowSpeed": 43.78008969393401,
+              "trafficVolume": 420.8231124959958,
+              "occupancy": 3.114156305285216,
+              "congestionIndex": 0.9688584369471479,
+              "crossTime": 0.06623217243291694,
+              "speedLimitRatio": 0.8469493782828474,
+              "relativeCongestionIndex": 0.031141563052852143,
+              "lengthKm": 0.7990238797005432,
+              "route_distance_m": 1474.5808084102625,
+              "curvatureIndex": 0.009295451935117506
+            }
+          ]
+        }
+      },
+      "minibatch_kmeans": {
+        "method": "MiniBatchKMeans",
+        "used_features": [
+          "speedLimitRatio",
+          "crossTime",
+          "trafficVolume",
+          "congestionIndex",
+          "occupancy",
+          "relativeCongestionIndex",
+          "freeFlowSpeed",
+          "lengthKm",
+          "route_distance_m",
+          "curvatureIndex"
+        ],
+        "cluster_sizes": {
+          "0": 31775,
+          "1": 72017,
+          "2": 23456,
+          "3": 2436,
+          "4": 5582,
+          "5": 59895
+        },
+        "final_metrics": {
+          "n_clusters": 6,
+          "inertia": 428029.2901970141,
+          "silhouette": 0.40812556808293055,
+          "davies_bouldin": 0.9040068235939406,
+          "calinski_harabasz": 139501.49098873674,
+          "mae": 0.2991470493041702,
+          "mse": 0.21932111958691278,
+          "rmse": 0.4683173278738603,
+          "rae": 0.44543159404820865,
+          "rrse": 0.46831732787386027
+        },
+        "internal_evaluation": {
+          "silhouette": 0.40812556808293055,
+          "davies_bouldin": 0.9040068235939406,
+          "calinski_harabasz": 139501.49098873674
+        },
+        "external_evaluation": {
+          "reference_label_column": "speed_cluster_rule",
+          "ari": 0.5013120287464155,
+          "nmi": 0.519558149202332,
+          "fmi": 0.6342647549009786,
+          "f_measure": 0.4969862293679294,
+          "entropy": 1.0780484708889289
+        },
+        "overall_evaluation": {
+          "n_rows": 195161,
+          "n_features": 10,
+          "cluster_size_min": 2436,
+          "cluster_size_max": 72017,
+          "mae": 0.2991470493041702,
+          "rmse": 0.4683173278738603
+        },
+        "semantic_mapping": {
+          "2": "A",
+          "1": "B",
+          "5": "C",
+          "3": "D",
+          "4": "E",
+          "0": "F"
+        },
+        "semantic_profile": [
+          {
+            "cluster": 2,
+            "semantic_label": "A",
+            "semantic_definition": "<= 10 km/h",
+            "avg_currentSpeed": 0.0006608117326057299,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 15.5,
+            "sample_count": 23456
+          },
+          {
+            "cluster": 1,
+            "semantic_label": "B",
+            "semantic_definition": "> 10 và <= 25 km/h",
+            "avg_currentSpeed": 20.838552008553535,
+            "min_currentSpeed": 3.0,
+            "max_currentSpeed": 48.5,
+            "sample_count": 72017
+          },
+          {
+            "cluster": 5,
+            "semantic_label": "C",
+            "semantic_definition": "> 25 và <= 30 km/h",
+            "avg_currentSpeed": 29.78538275315135,
+            "min_currentSpeed": 12.5,
+            "max_currentSpeed": 63.0,
+            "sample_count": 59895
+          },
+          {
+            "cluster": 3,
+            "semantic_label": "D",
+            "semantic_definition": "> 30 và <= 40 km/h",
+            "avg_currentSpeed": 30.85406403940887,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 46.0,
+            "sample_count": 2436
+          },
+          {
+            "cluster": 4,
+            "semantic_label": "E",
+            "semantic_definition": "> 40 và <= 60 km/h",
+            "avg_currentSpeed": 33.87656753851666,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 79.0,
+            "sample_count": 5582
+          },
+          {
+            "cluster": 0,
+            "semantic_label": "F",
+            "semantic_definition": "> 60 km/h",
+            "avg_currentSpeed": 42.7833359559402,
+            "min_currentSpeed": 17.5,
+            "max_currentSpeed": 80.0,
+            "sample_count": 31775
+          }
+        ]
+      },
+      "gaussian_mixture": {
+        "method": "GaussianMixture",
+        "used_features": [
+          "speedLimitRatio",
+          "crossTime",
+          "trafficVolume",
+          "congestionIndex",
+          "occupancy",
+          "relativeCongestionIndex",
+          "freeFlowSpeed",
+          "lengthKm",
+          "route_distance_m",
+          "curvatureIndex"
+        ],
+        "cluster_sizes": {
+          "0": 84290,
+          "1": 9548,
+          "2": 10291,
+          "3": 6509,
+          "4": 22989,
+          "5": 61534
+        },
+        "final_metrics": {
+          "n_clusters": 6,
+          "inertia": 750572.3511151532,
+          "silhouette": 0.2621765114224582,
+          "davies_bouldin": 1.5710575238669913,
+          "calinski_harabasz": 62459.08027301115,
+          "bic": -8483901.26644319,
+          "aic": -8487922.990597667,
+          "mae": 0.3885342813145484,
+          "mse": 0.38459136359987556,
+          "rmse": 0.620154306281812,
+          "rae": 0.578529671848252,
+          "rrse": 0.620154306281812
+        },
+        "internal_evaluation": {
+          "silhouette": 0.2621765114224582,
+          "davies_bouldin": 1.5710575238669913,
+          "calinski_harabasz": 62459.08027301115
+        },
+        "external_evaluation": {
+          "reference_label_column": "speed_cluster_rule",
+          "ari": 0.4270586790074409,
+          "nmi": 0.4665281706491527,
+          "fmi": 0.5902564267556676,
+          "f_measure": 0.4018190815422928,
+          "entropy": 1.205145006466504
+        },
+        "overall_evaluation": {
+          "n_rows": 195161,
+          "n_features": 10,
+          "cluster_size_min": 6509,
+          "cluster_size_max": 84290,
+          "mae": 0.3885342813145484,
+          "rmse": 0.620154306281812
+        },
+        "semantic_mapping": {
+          "4": "A",
+          "1": "B",
+          "0": "C",
+          "3": "D",
+          "2": "E",
+          "5": "F"
+        },
+        "semantic_profile": [
+          {
+            "cluster": 4,
+            "semantic_label": "A",
+            "semantic_definition": "<= 10 km/h",
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 22989
+          },
+          {
+            "cluster": 1,
+            "semantic_label": "B",
+            "semantic_definition": "> 10 và <= 25 km/h",
+            "avg_currentSpeed": 18.675953079178885,
+            "min_currentSpeed": 4.0,
+            "max_currentSpeed": 29.5,
+            "sample_count": 9548
+          },
+          {
+            "cluster": 0,
+            "semantic_label": "C",
+            "semantic_definition": "> 25 và <= 30 km/h",
+            "avg_currentSpeed": 22.659995254478584,
+            "min_currentSpeed": 8.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 84290
+          },
+          {
+            "cluster": 3,
+            "semantic_label": "D",
+            "semantic_definition": "> 30 và <= 40 km/h",
+            "avg_currentSpeed": 28.490090643724074,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 47.5,
+            "sample_count": 6509
+          },
+          {
+            "cluster": 2,
+            "semantic_label": "E",
+            "semantic_definition": "> 40 và <= 60 km/h",
+            "avg_currentSpeed": 32.598775629190555,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 79.0,
+            "sample_count": 10291
+          },
+          {
+            "cluster": 5,
+            "semantic_label": "F",
+            "semantic_definition": "> 60 km/h",
+            "avg_currentSpeed": 37.36464393668541,
+            "min_currentSpeed": 11.0,
+            "max_currentSpeed": 80.0,
+            "sample_count": 61534
+          }
+        ]
+      },
+      "dbscan": {
+        "method": "DBSCAN",
+        "used_features": [
+          "speedLimitRatio",
+          "crossTime",
+          "trafficVolume",
+          "congestionIndex",
+          "occupancy",
+          "relativeCongestionIndex",
+          "freeFlowSpeed",
+          "lengthKm",
+          "route_distance_m",
+          "curvatureIndex"
+        ],
+        "cluster_sizes": {
+          "-1": 1934,
+          "0": 128337,
+          "1": 139,
+          "2": 635,
+          "3": 17775,
+          "4": 565,
+          "5": 997,
+          "6": 65,
+          "7": 232,
+          "8": 60,
+          "9": 134,
+          "10": 1212,
+          "11": 141,
+          "12": 155,
+          "13": 140,
+          "14": 244,
+          "15": 133,
+          "16": 122,
+          "17": 144,
+          "18": 551,
+          "19": 112,
+          "20": 1016,
+          "21": 130,
+          "22": 65,
+          "23": 252,
+          "24": 257,
+          "25": 103,
+          "26": 214,
+          "27": 276,
+          "28": 101,
+          "29": 422,
+          "30": 90,
+          "31": 228,
+          "32": 95,
+          "33": 110,
+          "34": 129,
+          "35": 54,
+          "36": 109,
+          "37": 76,
+          "38": 217,
+          "39": 130,
+          "40": 113,
+          "41": 125,
+          "42": 240,
+          "43": 111,
+          "44": 120,
+          "45": 290,
+          "46": 260,
+          "47": 25,
+          "48": 39,
+          "49": 78,
+          "50": 218,
+          "51": 102,
+          "52": 117,
+          "53": 583,
+          "54": 139,
+          "55": 267,
+          "56": 44,
+          "57": 119,
+          "58": 61,
+          "59": 104,
+          "60": 137,
+          "61": 116,
+          "62": 111,
+          "63": 212,
+          "64": 108,
+          "65": 144,
+          "66": 78,
+          "67": 204,
+          "68": 110,
+          "69": 274,
+          "70": 49,
+          "71": 90,
+          "72": 74,
+          "73": 53,
+          "74": 132,
+          "75": 117,
+          "76": 274,
+          "77": 111,
+          "78": 135,
+          "79": 17,
+          "80": 85,
+          "81": 110,
+          "82": 87,
+          "83": 30,
+          "84": 59,
+          "85": 433,
+          "86": 75,
+          "87": 142,
+          "88": 106,
+          "89": 59,
+          "90": 290,
+          "91": 30,
+          "92": 103,
+          "93": 314,
+          "94": 143,
+          "95": 15,
+          "96": 58,
+          "97": 108,
+          "98": 133,
+          "99": 61,
+          "100": 18,
+          "101": 30,
+          "102": 140,
+          "103": 14,
+          "104": 33,
+          "105": 135,
+          "106": 140,
+          "107": 114,
+          "108": 34,
+          "109": 17,
+          "110": 23,
+          "111": 280,
+          "112": 17,
+          "113": 198,
+          "114": 11,
+          "115": 84,
+          "116": 42,
+          "117": 22,
+          "118": 27,
+          "119": 29,
+          "120": 42,
+          "121": 16,
+          "122": 66,
+          "123": 39,
+          "124": 131,
+          "125": 64,
+          "126": 17,
+          "127": 63,
+          "128": 50,
+          "129": 30,
+          "130": 35,
+          "131": 75,
+          "132": 39,
+          "133": 72,
+          "134": 182,
+          "135": 84,
+          "136": 71,
+          "137": 15,
+          "138": 30,
+          "139": 73,
+          "140": 38,
+          "141": 82,
+          "142": 32,
+          "143": 12,
+          "144": 63,
+          "145": 45,
+          "146": 53,
+          "147": 22309,
+          "148": 320,
+          "149": 42,
+          "150": 21,
+          "151": 15,
+          "152": 21,
+          "153": 21,
+          "154": 42,
+          "155": 21,
+          "156": 20,
+          "157": 21,
+          "158": 21,
+          "159": 42,
+          "160": 83,
+          "161": 21,
+          "162": 82,
+          "163": 21,
+          "164": 21,
+          "165": 21,
+          "166": 40,
+          "167": 21,
+          "168": 21,
+          "169": 20,
+          "170": 63,
+          "171": 42,
+          "172": 21,
+          "173": 42,
+          "174": 42,
+          "175": 42,
+          "176": 21,
+          "177": 21,
+          "178": 21,
+          "179": 21,
+          "180": 21,
+          "181": 21,
+          "182": 42,
+          "183": 21,
+          "184": 21,
+          "185": 21,
+          "186": 42,
+          "187": 42,
+          "188": 21,
+          "189": 42,
+          "190": 20,
+          "191": 21,
+          "192": 42,
+          "193": 21,
+          "194": 21,
+          "195": 21,
+          "196": 20,
+          "197": 21,
+          "198": 36,
+          "199": 26,
+          "200": 69,
+          "201": 18,
+          "202": 21,
+          "203": 63,
+          "204": 51,
+          "205": 51,
+          "206": 14,
+          "207": 26,
+          "208": 14,
+          "209": 26,
+          "210": 20,
+          "211": 20,
+          "212": 24,
+          "213": 39,
+          "214": 31,
+          "215": 32,
+          "216": 48,
+          "217": 18,
+          "218": 76,
+          "219": 25,
+          "220": 33,
+          "221": 26,
+          "222": 40,
+          "223": 44,
+          "224": 24,
+          "225": 48,
+          "226": 15,
+          "227": 27,
+          "228": 77,
+          "229": 15,
+          "230": 81,
+          "231": 11,
+          "232": 11,
+          "233": 33,
+          "234": 36,
+          "235": 27,
+          "236": 37,
+          "237": 13,
+          "238": 21,
+          "239": 18,
+          "240": 76,
+          "241": 16,
+          "242": 13,
+          "243": 13,
+          "244": 21,
+          "245": 46,
+          "246": 40,
+          "247": 40,
+          "248": 14,
+          "249": 21,
+          "250": 23,
+          "251": 20,
+          "252": 19,
+          "253": 56,
+          "254": 18,
+          "255": 20,
+          "256": 11,
+          "257": 11,
+          "258": 7,
+          "259": 15,
+          "260": 30,
+          "261": 16,
+          "262": 27,
+          "263": 13,
+          "264": 16,
+          "265": 11,
+          "266": 12,
+          "267": 39,
+          "268": 11,
+          "269": 5,
+          "270": 18,
+          "271": 12,
+          "272": 12
+        },
+        "final_metrics": {
+          "n_clusters": 273,
+          "n_noise": 1934,
+          "inertia": 369870.4471975367,
+          "silhouette": -0.1368128390736192,
+          "davies_bouldin": 0.7448650006037947,
+          "calinski_harabasz": 2838.3684896163804,
+          "eps": 0.2895626437290459,
+          "min_samples": 11,
+          "parameter_selection": {
+            "eps": 0.2895626437290459,
+            "min_samples": 11,
+            "criterion": "k-distance knee",
+            "n_features": 10,
+            "n_total_samples": 195161,
+            "n_param_samples": 195161,
+            "figure_path": "processed/clustering_outputs/figure_dbscan_k_distance.png",
+            "csv_path": "processed/clustering_outputs/dbscan_parameter_selection.csv"
+          },
+          "mae": 0.2810456837969175,
+          "mse": 0.18952067636338035,
+          "rmse": 0.43533972523005565,
+          "rae": 0.4184785617147809,
+          "rrse": 0.4353397252300556
+        },
+        "internal_evaluation": {
+          "silhouette": -0.1368128390736192,
+          "davies_bouldin": 0.7448650006037947,
+          "calinski_harabasz": 2838.3684896163804
+        },
+        "external_evaluation": {
+          "reference_label_column": "speed_cluster_rule",
+          "ari": 0.3337912888884821,
+          "nmi": 0.42735449086769245,
+          "fmi": 0.5759095978002813,
+          "f_measure": 0.6382011463631797,
+          "entropy": 1.1994185794952048
+        },
+        "overall_evaluation": {
+          "n_rows": 195161,
+          "n_features": 10,
+          "cluster_size_min": 5,
+          "cluster_size_max": 128337,
+          "mae": 0.2810456837969175,
+          "rmse": 0.43533972523005565
+        },
+        "semantic_mapping": {},
+        "semantic_profile": [
+          {
+            "cluster": 179,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 171,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 172,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 173,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 174,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 197,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 175,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 196,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 195,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 194,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 176,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 193,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 184,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 177,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 192,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 191,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 190,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 189,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 180,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 188,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 181,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 182,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 187,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 186,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 183,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 178,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 169,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 170,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 63
+          },
+          {
+            "cluster": 168,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 147,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 22309
+          },
+          {
+            "cluster": 148,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 320
+          },
+          {
+            "cluster": 149,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 150,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 151,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 15
+          },
+          {
+            "cluster": 152,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 153,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 154,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 155,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 156,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 157,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 159,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 158,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 161,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 162,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 82
+          },
+          {
+            "cluster": 163,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 164,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 165,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 166,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 40
+          },
+          {
+            "cluster": 167,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 160,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 83
+          },
+          {
+            "cluster": 185,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 231,
+            "avg_currentSpeed": 12.454545454545455,
+            "min_currentSpeed": 12.0,
+            "max_currentSpeed": 13.0,
+            "sample_count": 11
+          },
+          {
+            "cluster": 79,
+            "avg_currentSpeed": 14.0,
+            "min_currentSpeed": 14.0,
+            "max_currentSpeed": 14.0,
+            "sample_count": 17
+          },
+          {
+            "cluster": 206,
+            "avg_currentSpeed": 15.321428571428571,
+            "min_currentSpeed": 15.0,
+            "max_currentSpeed": 15.5,
+            "sample_count": 14
+          },
+          {
+            "cluster": 92,
+            "avg_currentSpeed": 15.805825242718447,
+            "min_currentSpeed": 13.5,
+            "max_currentSpeed": 17.5,
+            "sample_count": 103
+          },
+          {
+            "cluster": 18,
+            "avg_currentSpeed": 16.43103448275862,
+            "min_currentSpeed": 13.0,
+            "max_currentSpeed": 23.0,
+            "sample_count": 551
+          },
+          {
+            "cluster": 34,
+            "avg_currentSpeed": 17.813953488372093,
+            "min_currentSpeed": 17.5,
+            "max_currentSpeed": 18.0,
+            "sample_count": 129
+          },
+          {
+            "cluster": 65,
+            "avg_currentSpeed": 18.30902777777778,
+            "min_currentSpeed": 15.5,
+            "max_currentSpeed": 21.5,
+            "sample_count": 144
+          },
+          {
+            "cluster": 271,
+            "avg_currentSpeed": 18.708333333333332,
+            "min_currentSpeed": 18.5,
+            "max_currentSpeed": 19.0,
+            "sample_count": 12
+          },
+          {
+            "cluster": 5,
+            "avg_currentSpeed": 19.14493480441324,
+            "min_currentSpeed": 13.5,
+            "max_currentSpeed": 25.5,
+            "sample_count": 997
+          },
+          {
+            "cluster": 118,
+            "avg_currentSpeed": 19.425925925925927,
+            "min_currentSpeed": 18.5,
+            "max_currentSpeed": 20.5,
+            "sample_count": 27
+          },
+          {
+            "cluster": 24,
+            "avg_currentSpeed": 19.527237354085603,
+            "min_currentSpeed": 15.5,
+            "max_currentSpeed": 23.0,
+            "sample_count": 257
+          },
+          {
+            "cluster": 39,
+            "avg_currentSpeed": 19.573076923076922,
+            "min_currentSpeed": 16.5,
+            "max_currentSpeed": 23.0,
+            "sample_count": 130
+          },
+          {
+            "cluster": 126,
+            "avg_currentSpeed": 20.852941176470587,
+            "min_currentSpeed": 20.0,
+            "max_currentSpeed": 21.5,
+            "sample_count": 17
+          },
+          {
+            "cluster": 69,
+            "avg_currentSpeed": 21.394160583941606,
+            "min_currentSpeed": 17.5,
+            "max_currentSpeed": 24.5,
+            "sample_count": 274
+          },
+          {
+            "cluster": 4,
+            "avg_currentSpeed": 21.474336283185842,
+            "min_currentSpeed": 17.0,
+            "max_currentSpeed": 26.0,
+            "sample_count": 565
+          },
+          {
+            "cluster": 17,
+            "avg_currentSpeed": 21.74652777777778,
+            "min_currentSpeed": 18.5,
+            "max_currentSpeed": 26.0,
+            "sample_count": 144
+          },
+          {
+            "cluster": 261,
+            "avg_currentSpeed": 21.96875,
+            "min_currentSpeed": 21.5,
+            "max_currentSpeed": 22.5,
+            "sample_count": 16
+          },
+          {
+            "cluster": 113,
+            "avg_currentSpeed": 22.12121212121212,
+            "min_currentSpeed": 19.0,
+            "max_currentSpeed": 25.5,
+            "sample_count": 198
+          },
+          {
+            "cluster": 76,
+            "avg_currentSpeed": 22.175182481751825,
+            "min_currentSpeed": 19.0,
+            "max_currentSpeed": 25.5,
+            "sample_count": 274
+          },
+          {
+            "cluster": 97,
+            "avg_currentSpeed": 22.74074074074074,
+            "min_currentSpeed": 20.0,
+            "max_currentSpeed": 25.5,
+            "sample_count": 108
+          },
+          {
+            "cluster": 119,
+            "avg_currentSpeed": 23.03448275862069,
+            "min_currentSpeed": 23.0,
+            "max_currentSpeed": 23.5,
+            "sample_count": 29
+          },
+          {
+            "cluster": 75,
+            "avg_currentSpeed": 23.14957264957265,
+            "min_currentSpeed": 20.5,
+            "max_currentSpeed": 25.5,
+            "sample_count": 117
+          },
+          {
+            "cluster": 41,
+            "avg_currentSpeed": 23.344,
+            "min_currentSpeed": 20.0,
+            "max_currentSpeed": 26.0,
+            "sample_count": 125
+          },
+          {
+            "cluster": 258,
+            "avg_currentSpeed": 23.357142857142858,
+            "min_currentSpeed": 23.0,
+            "max_currentSpeed": 24.0,
+            "sample_count": 7
+          },
+          {
+            "cluster": 200,
+            "avg_currentSpeed": 24.268115942028984,
+            "min_currentSpeed": 22.5,
+            "max_currentSpeed": 25.5,
+            "sample_count": 69
+          },
+          {
+            "cluster": 61,
+            "avg_currentSpeed": 24.594827586206897,
+            "min_currentSpeed": 23.0,
+            "max_currentSpeed": 26.0,
+            "sample_count": 116
+          },
+          {
+            "cluster": 22,
+            "avg_currentSpeed": 24.923076923076923,
+            "min_currentSpeed": 22.0,
+            "max_currentSpeed": 28.5,
+            "sample_count": 65
+          },
+          {
+            "cluster": 28,
+            "avg_currentSpeed": 25.178217821782177,
+            "min_currentSpeed": 22.0,
+            "max_currentSpeed": 28.5,
+            "sample_count": 101
+          },
+          {
+            "cluster": 0,
+            "avg_currentSpeed": 25.39239658087691,
+            "min_currentSpeed": 6.0,
+            "max_currentSpeed": 52.5,
+            "sample_count": 128337
+          },
+          {
+            "cluster": 15,
+            "avg_currentSpeed": 25.51127819548872,
+            "min_currentSpeed": 22.5,
+            "max_currentSpeed": 29.5,
+            "sample_count": 133
+          },
+          {
+            "cluster": 86,
+            "avg_currentSpeed": 25.566666666666666,
+            "min_currentSpeed": 23.0,
+            "max_currentSpeed": 28.0,
+            "sample_count": 75
+          },
+          {
+            "cluster": 129,
+            "avg_currentSpeed": 25.7,
+            "min_currentSpeed": 24.0,
+            "max_currentSpeed": 27.0,
+            "sample_count": 30
+          },
+          {
+            "cluster": 244,
+            "avg_currentSpeed": 26.0,
+            "min_currentSpeed": 26.0,
+            "max_currentSpeed": 26.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 237,
+            "avg_currentSpeed": 26.307692307692307,
+            "min_currentSpeed": 26.0,
+            "max_currentSpeed": 27.0,
+            "sample_count": 13
+          },
+          {
+            "cluster": 103,
+            "avg_currentSpeed": 26.821428571428573,
+            "min_currentSpeed": 26.0,
+            "max_currentSpeed": 27.0,
+            "sample_count": 14
+          },
+          {
+            "cluster": 114,
+            "avg_currentSpeed": 26.90909090909091,
+            "min_currentSpeed": 26.0,
+            "max_currentSpeed": 27.0,
+            "sample_count": 11
+          },
+          {
+            "cluster": 33,
+            "avg_currentSpeed": 27.45,
+            "min_currentSpeed": 24.5,
+            "max_currentSpeed": 31.5,
+            "sample_count": 110
+          },
+          {
+            "cluster": 112,
+            "avg_currentSpeed": 27.705882352941178,
+            "min_currentSpeed": 27.0,
+            "max_currentSpeed": 28.0,
+            "sample_count": 17
+          },
+          {
+            "cluster": 109,
+            "avg_currentSpeed": 27.764705882352942,
+            "min_currentSpeed": 27.0,
+            "max_currentSpeed": 28.0,
+            "sample_count": 17
+          },
+          {
+            "cluster": 100,
+            "avg_currentSpeed": 27.77777777777778,
+            "min_currentSpeed": 27.0,
+            "max_currentSpeed": 28.0,
+            "sample_count": 18
+          },
+          {
+            "cluster": 72,
+            "avg_currentSpeed": 27.91891891891892,
+            "min_currentSpeed": 26.0,
+            "max_currentSpeed": 29.5,
+            "sample_count": 74
+          },
+          {
+            "cluster": 263,
+            "avg_currentSpeed": 28.0,
+            "min_currentSpeed": 28.0,
+            "max_currentSpeed": 28.0,
+            "sample_count": 13
+          },
+          {
+            "cluster": 16,
+            "avg_currentSpeed": 28.139344262295083,
+            "min_currentSpeed": 24.5,
+            "max_currentSpeed": 31.5,
+            "sample_count": 122
+          },
+          {
+            "cluster": 60,
+            "avg_currentSpeed": 28.142335766423358,
+            "min_currentSpeed": 23.5,
+            "max_currentSpeed": 32.5,
+            "sample_count": 137
+          },
+          {
+            "cluster": 55,
+            "avg_currentSpeed": 28.48314606741573,
+            "min_currentSpeed": 25.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 267
+          },
+          {
+            "cluster": 268,
+            "avg_currentSpeed": 28.5,
+            "min_currentSpeed": 27.5,
+            "max_currentSpeed": 29.0,
+            "sample_count": 11
+          },
+          {
+            "cluster": 143,
+            "avg_currentSpeed": 28.5,
+            "min_currentSpeed": 28.5,
+            "max_currentSpeed": 28.5,
+            "sample_count": 12
+          },
+          {
+            "cluster": 98,
+            "avg_currentSpeed": 28.657894736842106,
+            "min_currentSpeed": 25.5,
+            "max_currentSpeed": 32.0,
+            "sample_count": 133
+          },
+          {
+            "cluster": 2,
+            "avg_currentSpeed": 28.69685039370079,
+            "min_currentSpeed": 22.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 635
+          },
+          {
+            "cluster": 82,
+            "avg_currentSpeed": 28.74712643678161,
+            "min_currentSpeed": 27.0,
+            "max_currentSpeed": 31.0,
+            "sample_count": 87
+          },
+          {
+            "cluster": 90,
+            "avg_currentSpeed": 28.837931034482757,
+            "min_currentSpeed": 23.5,
+            "max_currentSpeed": 33.5,
+            "sample_count": 290
+          },
+          {
+            "cluster": 239,
+            "avg_currentSpeed": 29.0,
+            "min_currentSpeed": 29.0,
+            "max_currentSpeed": 29.0,
+            "sample_count": 18
+          },
+          {
+            "cluster": 14,
+            "avg_currentSpeed": 29.53893442622951,
+            "min_currentSpeed": 24.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 244
+          },
+          {
+            "cluster": 8,
+            "avg_currentSpeed": 29.566666666666666,
+            "min_currentSpeed": 29.0,
+            "max_currentSpeed": 30.0,
+            "sample_count": 60
+          },
+          {
+            "cluster": 13,
+            "avg_currentSpeed": 29.689285714285713,
+            "min_currentSpeed": 25.5,
+            "max_currentSpeed": 34.0,
+            "sample_count": 140
+          },
+          {
+            "cluster": 48,
+            "avg_currentSpeed": 29.858974358974358,
+            "min_currentSpeed": 28.5,
+            "max_currentSpeed": 31.5,
+            "sample_count": 39
+          },
+          {
+            "cluster": 265,
+            "avg_currentSpeed": 29.863636363636363,
+            "min_currentSpeed": 29.5,
+            "max_currentSpeed": 30.5,
+            "sample_count": 11
+          },
+          {
+            "cluster": 71,
+            "avg_currentSpeed": 29.905555555555555,
+            "min_currentSpeed": 27.5,
+            "max_currentSpeed": 32.5,
+            "sample_count": 90
+          },
+          {
+            "cluster": -1,
+            "avg_currentSpeed": 29.913650465356774,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 74.0,
+            "sample_count": 1934
+          },
+          {
+            "cluster": 204,
+            "avg_currentSpeed": 30.274509803921568,
+            "min_currentSpeed": 29.0,
+            "max_currentSpeed": 33.0,
+            "sample_count": 51
+          },
+          {
+            "cluster": 44,
+            "avg_currentSpeed": 30.4,
+            "min_currentSpeed": 29.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 120
+          },
+          {
+            "cluster": 122,
+            "avg_currentSpeed": 30.46212121212121,
+            "min_currentSpeed": 28.5,
+            "max_currentSpeed": 32.0,
+            "sample_count": 66
+          },
+          {
+            "cluster": 255,
+            "avg_currentSpeed": 30.7,
+            "min_currentSpeed": 30.0,
+            "max_currentSpeed": 31.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 111,
+            "avg_currentSpeed": 30.817857142857143,
+            "min_currentSpeed": 26.5,
+            "max_currentSpeed": 35.5,
+            "sample_count": 280
+          },
+          {
+            "cluster": 51,
+            "avg_currentSpeed": 30.941176470588236,
+            "min_currentSpeed": 27.0,
+            "max_currentSpeed": 34.5,
+            "sample_count": 102
+          },
+          {
+            "cluster": 70,
+            "avg_currentSpeed": 30.989795918367346,
+            "min_currentSpeed": 28.5,
+            "max_currentSpeed": 34.0,
+            "sample_count": 49
+          },
+          {
+            "cluster": 198,
+            "avg_currentSpeed": 31.02777777777778,
+            "min_currentSpeed": 31.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 36
+          },
+          {
+            "cluster": 21,
+            "avg_currentSpeed": 31.08076923076923,
+            "min_currentSpeed": 25.5,
+            "max_currentSpeed": 35.0,
+            "sample_count": 130
+          },
+          {
+            "cluster": 88,
+            "avg_currentSpeed": 31.221698113207548,
+            "min_currentSpeed": 27.0,
+            "max_currentSpeed": 35.0,
+            "sample_count": 106
+          },
+          {
+            "cluster": 264,
+            "avg_currentSpeed": 31.25,
+            "min_currentSpeed": 31.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 16
+          },
+          {
+            "cluster": 232,
+            "avg_currentSpeed": 31.727272727272727,
+            "min_currentSpeed": 31.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 11
+          },
+          {
+            "cluster": 83,
+            "avg_currentSpeed": 32.0,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 30
+          },
+          {
+            "cluster": 95,
+            "avg_currentSpeed": 32.0,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 15
+          },
+          {
+            "cluster": 208,
+            "avg_currentSpeed": 32.0,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 14
+          },
+          {
+            "cluster": 256,
+            "avg_currentSpeed": 32.0,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 11
+          },
+          {
+            "cluster": 101,
+            "avg_currentSpeed": 32.0,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 30
+          },
+          {
+            "cluster": 215,
+            "avg_currentSpeed": 32.09375,
+            "min_currentSpeed": 31.0,
+            "max_currentSpeed": 33.5,
+            "sample_count": 32
+          },
+          {
+            "cluster": 107,
+            "avg_currentSpeed": 32.20175438596491,
+            "min_currentSpeed": 29.0,
+            "max_currentSpeed": 36.5,
+            "sample_count": 114
+          },
+          {
+            "cluster": 254,
+            "avg_currentSpeed": 32.22222222222222,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 32.5,
+            "sample_count": 18
+          },
+          {
+            "cluster": 67,
+            "avg_currentSpeed": 32.46078431372549,
+            "min_currentSpeed": 28.0,
+            "max_currentSpeed": 37.5,
+            "sample_count": 204
+          },
+          {
+            "cluster": 42,
+            "avg_currentSpeed": 32.6125,
+            "min_currentSpeed": 26.5,
+            "max_currentSpeed": 37.5,
+            "sample_count": 240
+          },
+          {
+            "cluster": 220,
+            "avg_currentSpeed": 32.63636363636363,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 33.0,
+            "sample_count": 33
+          },
+          {
+            "cluster": 50,
+            "avg_currentSpeed": 32.73853211009175,
+            "min_currentSpeed": 29.0,
+            "max_currentSpeed": 37.0,
+            "sample_count": 218
+          },
+          {
+            "cluster": 137,
+            "avg_currentSpeed": 32.8,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 33.0,
+            "sample_count": 15
+          },
+          {
+            "cluster": 211,
+            "avg_currentSpeed": 32.975,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 34.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 120,
+            "avg_currentSpeed": 33.0,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 33.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 260,
+            "avg_currentSpeed": 33.0,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 33.0,
+            "sample_count": 30
+          },
+          {
+            "cluster": 116,
+            "avg_currentSpeed": 33.0,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 33.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 117,
+            "avg_currentSpeed": 33.0,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 33.0,
+            "sample_count": 22
+          },
+          {
+            "cluster": 11,
+            "avg_currentSpeed": 33.0177304964539,
+            "min_currentSpeed": 28.5,
+            "max_currentSpeed": 38.0,
+            "sample_count": 141
+          },
+          {
+            "cluster": 121,
+            "avg_currentSpeed": 33.3125,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 34.5,
+            "sample_count": 16
+          },
+          {
+            "cluster": 52,
+            "avg_currentSpeed": 33.35897435897436,
+            "min_currentSpeed": 29.0,
+            "max_currentSpeed": 38.0,
+            "sample_count": 117
+          },
+          {
+            "cluster": 136,
+            "avg_currentSpeed": 33.359154929577464,
+            "min_currentSpeed": 30.0,
+            "max_currentSpeed": 35.5,
+            "sample_count": 71
+          },
+          {
+            "cluster": 77,
+            "avg_currentSpeed": 33.527027027027025,
+            "min_currentSpeed": 30.5,
+            "max_currentSpeed": 36.0,
+            "sample_count": 111
+          },
+          {
+            "cluster": 229,
+            "avg_currentSpeed": 33.666666666666664,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 34.0,
+            "sample_count": 15
+          },
+          {
+            "cluster": 7,
+            "avg_currentSpeed": 33.84698275862069,
+            "min_currentSpeed": 30.0,
+            "max_currentSpeed": 36.5,
+            "sample_count": 232
+          },
+          {
+            "cluster": 19,
+            "avg_currentSpeed": 33.888392857142854,
+            "min_currentSpeed": 30.5,
+            "max_currentSpeed": 36.5,
+            "sample_count": 112
+          },
+          {
+            "cluster": 81,
+            "avg_currentSpeed": 33.95909090909091,
+            "min_currentSpeed": 31.0,
+            "max_currentSpeed": 36.5,
+            "sample_count": 110
+          },
+          {
+            "cluster": 35,
+            "avg_currentSpeed": 34.0,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 34.0,
+            "sample_count": 54
+          },
+          {
+            "cluster": 56,
+            "avg_currentSpeed": 34.0,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 34.0,
+            "sample_count": 44
+          },
+          {
+            "cluster": 47,
+            "avg_currentSpeed": 34.0,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 34.0,
+            "sample_count": 25
+          },
+          {
+            "cluster": 30,
+            "avg_currentSpeed": 34.0,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 34.0,
+            "sample_count": 90
+          },
+          {
+            "cluster": 58,
+            "avg_currentSpeed": 34.19672131147541,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 35.0,
+            "sample_count": 61
+          },
+          {
+            "cluster": 59,
+            "avg_currentSpeed": 34.23557692307692,
+            "min_currentSpeed": 31.0,
+            "max_currentSpeed": 37.5,
+            "sample_count": 104
+          },
+          {
+            "cluster": 124,
+            "avg_currentSpeed": 34.25190839694657,
+            "min_currentSpeed": 30.0,
+            "max_currentSpeed": 40.5,
+            "sample_count": 131
+          },
+          {
+            "cluster": 205,
+            "avg_currentSpeed": 34.38235294117647,
+            "min_currentSpeed": 32.5,
+            "max_currentSpeed": 36.5,
+            "sample_count": 51
+          },
+          {
+            "cluster": 219,
+            "avg_currentSpeed": 34.58,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 25
+          },
+          {
+            "cluster": 235,
+            "avg_currentSpeed": 34.629629629629626,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 27
+          },
+          {
+            "cluster": 108,
+            "avg_currentSpeed": 34.705882352941174,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 35.0,
+            "sample_count": 34
+          },
+          {
+            "cluster": 223,
+            "avg_currentSpeed": 35.0,
+            "min_currentSpeed": 35.0,
+            "max_currentSpeed": 35.0,
+            "sample_count": 44
+          },
+          {
+            "cluster": 225,
+            "avg_currentSpeed": 35.0,
+            "min_currentSpeed": 35.0,
+            "max_currentSpeed": 35.0,
+            "sample_count": 48
+          },
+          {
+            "cluster": 238,
+            "avg_currentSpeed": 35.0,
+            "min_currentSpeed": 35.0,
+            "max_currentSpeed": 35.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 32,
+            "avg_currentSpeed": 35.247368421052634,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 38.5,
+            "sample_count": 95
+          },
+          {
+            "cluster": 66,
+            "avg_currentSpeed": 35.47435897435897,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 38.0,
+            "sample_count": 78
+          },
+          {
+            "cluster": 132,
+            "avg_currentSpeed": 35.48717948717949,
+            "min_currentSpeed": 35.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 39
+          },
+          {
+            "cluster": 99,
+            "avg_currentSpeed": 35.78688524590164,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 37.0,
+            "sample_count": 61
+          },
+          {
+            "cluster": 202,
+            "avg_currentSpeed": 35.80952380952381,
+            "min_currentSpeed": 35.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 222,
+            "avg_currentSpeed": 36.0,
+            "min_currentSpeed": 36.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 40
+          },
+          {
+            "cluster": 201,
+            "avg_currentSpeed": 36.0,
+            "min_currentSpeed": 36.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 18
+          },
+          {
+            "cluster": 234,
+            "avg_currentSpeed": 36.0,
+            "min_currentSpeed": 36.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 36
+          },
+          {
+            "cluster": 199,
+            "avg_currentSpeed": 36.0,
+            "min_currentSpeed": 36.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 26
+          },
+          {
+            "cluster": 241,
+            "avg_currentSpeed": 36.15625,
+            "min_currentSpeed": 35.5,
+            "max_currentSpeed": 37.0,
+            "sample_count": 16
+          },
+          {
+            "cluster": 10,
+            "avg_currentSpeed": 36.19018151815182,
+            "min_currentSpeed": 25.0,
+            "max_currentSpeed": 43.5,
+            "sample_count": 1212
+          },
+          {
+            "cluster": 102,
+            "avg_currentSpeed": 36.225,
+            "min_currentSpeed": 32.5,
+            "max_currentSpeed": 39.0,
+            "sample_count": 140
+          },
+          {
+            "cluster": 257,
+            "avg_currentSpeed": 36.45454545454545,
+            "min_currentSpeed": 36.0,
+            "max_currentSpeed": 37.0,
+            "sample_count": 11
+          },
+          {
+            "cluster": 73,
+            "avg_currentSpeed": 36.5,
+            "min_currentSpeed": 36.5,
+            "max_currentSpeed": 36.5,
+            "sample_count": 53
+          },
+          {
+            "cluster": 29,
+            "avg_currentSpeed": 36.541469194312796,
+            "min_currentSpeed": 30.0,
+            "max_currentSpeed": 43.5,
+            "sample_count": 422
+          },
+          {
+            "cluster": 259,
+            "avg_currentSpeed": 36.766666666666666,
+            "min_currentSpeed": 36.0,
+            "max_currentSpeed": 37.5,
+            "sample_count": 15
+          },
+          {
+            "cluster": 49,
+            "avg_currentSpeed": 36.80128205128205,
+            "min_currentSpeed": 32.5,
+            "max_currentSpeed": 41.5,
+            "sample_count": 78
+          },
+          {
+            "cluster": 242,
+            "avg_currentSpeed": 37.0,
+            "min_currentSpeed": 37.0,
+            "max_currentSpeed": 37.0,
+            "sample_count": 13
+          },
+          {
+            "cluster": 227,
+            "avg_currentSpeed": 37.03703703703704,
+            "min_currentSpeed": 37.0,
+            "max_currentSpeed": 38.0,
+            "sample_count": 27
+          },
+          {
+            "cluster": 37,
+            "avg_currentSpeed": 37.13157894736842,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 41.5,
+            "sample_count": 76
+          },
+          {
+            "cluster": 217,
+            "avg_currentSpeed": 37.22222222222222,
+            "min_currentSpeed": 36.5,
+            "max_currentSpeed": 38.0,
+            "sample_count": 18
+          },
+          {
+            "cluster": 105,
+            "avg_currentSpeed": 37.266666666666666,
+            "min_currentSpeed": 35.5,
+            "max_currentSpeed": 39.5,
+            "sample_count": 135
+          },
+          {
+            "cluster": 38,
+            "avg_currentSpeed": 37.49308755760369,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 45.0,
+            "sample_count": 217
+          },
+          {
+            "cluster": 142,
+            "avg_currentSpeed": 37.5,
+            "min_currentSpeed": 37.5,
+            "max_currentSpeed": 37.5,
+            "sample_count": 32
+          },
+          {
+            "cluster": 89,
+            "avg_currentSpeed": 37.5,
+            "min_currentSpeed": 37.5,
+            "max_currentSpeed": 37.5,
+            "sample_count": 59
+          },
+          {
+            "cluster": 269,
+            "avg_currentSpeed": 37.5,
+            "min_currentSpeed": 37.0,
+            "max_currentSpeed": 38.0,
+            "sample_count": 5
+          },
+          {
+            "cluster": 9,
+            "avg_currentSpeed": 37.985074626865675,
+            "min_currentSpeed": 36.0,
+            "max_currentSpeed": 38.0,
+            "sample_count": 134
+          },
+          {
+            "cluster": 127,
+            "avg_currentSpeed": 38.37301587301587,
+            "min_currentSpeed": 36.5,
+            "max_currentSpeed": 38.5,
+            "sample_count": 63
+          },
+          {
+            "cluster": 138,
+            "avg_currentSpeed": 38.5,
+            "min_currentSpeed": 38.5,
+            "max_currentSpeed": 38.5,
+            "sample_count": 30
+          },
+          {
+            "cluster": 207,
+            "avg_currentSpeed": 38.67307692307692,
+            "min_currentSpeed": 37.5,
+            "max_currentSpeed": 39.5,
+            "sample_count": 26
+          },
+          {
+            "cluster": 212,
+            "avg_currentSpeed": 38.729166666666664,
+            "min_currentSpeed": 38.0,
+            "max_currentSpeed": 39.5,
+            "sample_count": 24
+          },
+          {
+            "cluster": 128,
+            "avg_currentSpeed": 38.81,
+            "min_currentSpeed": 37.5,
+            "max_currentSpeed": 40.5,
+            "sample_count": 50
+          },
+          {
+            "cluster": 270,
+            "avg_currentSpeed": 39.0,
+            "min_currentSpeed": 39.0,
+            "max_currentSpeed": 39.0,
+            "sample_count": 18
+          },
+          {
+            "cluster": 221,
+            "avg_currentSpeed": 39.19230769230769,
+            "min_currentSpeed": 38.0,
+            "max_currentSpeed": 40.5,
+            "sample_count": 26
+          },
+          {
+            "cluster": 139,
+            "avg_currentSpeed": 39.54794520547945,
+            "min_currentSpeed": 37.0,
+            "max_currentSpeed": 42.5,
+            "sample_count": 73
+          },
+          {
+            "cluster": 236,
+            "avg_currentSpeed": 39.891891891891895,
+            "min_currentSpeed": 38.0,
+            "max_currentSpeed": 41.0,
+            "sample_count": 37
+          },
+          {
+            "cluster": 209,
+            "avg_currentSpeed": 40.0,
+            "min_currentSpeed": 40.0,
+            "max_currentSpeed": 40.0,
+            "sample_count": 26
+          },
+          {
+            "cluster": 233,
+            "avg_currentSpeed": 40.06060606060606,
+            "min_currentSpeed": 39.0,
+            "max_currentSpeed": 41.5,
+            "sample_count": 33
+          },
+          {
+            "cluster": 224,
+            "avg_currentSpeed": 40.4375,
+            "min_currentSpeed": 39.0,
+            "max_currentSpeed": 42.5,
+            "sample_count": 24
+          },
+          {
+            "cluster": 3,
+            "avg_currentSpeed": 40.460365682137834,
+            "min_currentSpeed": 22.0,
+            "max_currentSpeed": 57.0,
+            "sample_count": 17775
+          },
+          {
+            "cluster": 23,
+            "avg_currentSpeed": 40.607142857142854,
+            "min_currentSpeed": 35.0,
+            "max_currentSpeed": 49.0,
+            "sample_count": 252
+          },
+          {
+            "cluster": 40,
+            "avg_currentSpeed": 40.95132743362832,
+            "min_currentSpeed": 34.5,
+            "max_currentSpeed": 48.0,
+            "sample_count": 113
+          },
+          {
+            "cluster": 246,
+            "avg_currentSpeed": 41.0,
+            "min_currentSpeed": 41.0,
+            "max_currentSpeed": 41.0,
+            "sample_count": 40
+          },
+          {
+            "cluster": 243,
+            "avg_currentSpeed": 41.0,
+            "min_currentSpeed": 41.0,
+            "max_currentSpeed": 41.0,
+            "sample_count": 13
+          },
+          {
+            "cluster": 226,
+            "avg_currentSpeed": 41.06666666666667,
+            "min_currentSpeed": 41.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 15
+          },
+          {
+            "cluster": 53,
+            "avg_currentSpeed": 41.19382504288165,
+            "min_currentSpeed": 35.0,
+            "max_currentSpeed": 46.5,
+            "sample_count": 583
+          },
+          {
+            "cluster": 46,
+            "avg_currentSpeed": 41.21153846153846,
+            "min_currentSpeed": 37.0,
+            "max_currentSpeed": 44.5,
+            "sample_count": 260
+          },
+          {
+            "cluster": 115,
+            "avg_currentSpeed": 41.375,
+            "min_currentSpeed": 38.5,
+            "max_currentSpeed": 44.0,
+            "sample_count": 84
+          },
+          {
+            "cluster": 123,
+            "avg_currentSpeed": 41.87179487179487,
+            "min_currentSpeed": 41.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 39
+          },
+          {
+            "cluster": 144,
+            "avg_currentSpeed": 42.0,
+            "min_currentSpeed": 42.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 63
+          },
+          {
+            "cluster": 125,
+            "avg_currentSpeed": 42.0,
+            "min_currentSpeed": 42.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 64
+          },
+          {
+            "cluster": 130,
+            "avg_currentSpeed": 42.0,
+            "min_currentSpeed": 42.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 35
+          },
+          {
+            "cluster": 133,
+            "avg_currentSpeed": 42.0,
+            "min_currentSpeed": 42.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 72
+          },
+          {
+            "cluster": 131,
+            "avg_currentSpeed": 42.0,
+            "min_currentSpeed": 42.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 75
+          },
+          {
+            "cluster": 91,
+            "avg_currentSpeed": 42.733333333333334,
+            "min_currentSpeed": 40.0,
+            "max_currentSpeed": 45.0,
+            "sample_count": 30
+          },
+          {
+            "cluster": 146,
+            "avg_currentSpeed": 42.81132075471698,
+            "min_currentSpeed": 41.0,
+            "max_currentSpeed": 43.0,
+            "sample_count": 53
+          },
+          {
+            "cluster": 104,
+            "avg_currentSpeed": 42.92424242424242,
+            "min_currentSpeed": 41.5,
+            "max_currentSpeed": 44.5,
+            "sample_count": 33
+          },
+          {
+            "cluster": 84,
+            "avg_currentSpeed": 43.0,
+            "min_currentSpeed": 43.0,
+            "max_currentSpeed": 43.0,
+            "sample_count": 59
+          },
+          {
+            "cluster": 96,
+            "avg_currentSpeed": 43.0,
+            "min_currentSpeed": 43.0,
+            "max_currentSpeed": 43.0,
+            "sample_count": 58
+          },
+          {
+            "cluster": 110,
+            "avg_currentSpeed": 43.08695652173913,
+            "min_currentSpeed": 42.0,
+            "max_currentSpeed": 44.0,
+            "sample_count": 23
+          },
+          {
+            "cluster": 248,
+            "avg_currentSpeed": 43.5,
+            "min_currentSpeed": 43.5,
+            "max_currentSpeed": 43.5,
+            "sample_count": 14
+          },
+          {
+            "cluster": 210,
+            "avg_currentSpeed": 44.0,
+            "min_currentSpeed": 44.0,
+            "max_currentSpeed": 44.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 252,
+            "avg_currentSpeed": 44.0,
+            "min_currentSpeed": 44.0,
+            "max_currentSpeed": 44.0,
+            "sample_count": 19
+          },
+          {
+            "cluster": 267,
+            "avg_currentSpeed": 44.56410256410256,
+            "min_currentSpeed": 43.0,
+            "max_currentSpeed": 45.0,
+            "sample_count": 39
+          },
+          {
+            "cluster": 250,
+            "avg_currentSpeed": 45.0,
+            "min_currentSpeed": 45.0,
+            "max_currentSpeed": 45.0,
+            "sample_count": 23
+          },
+          {
+            "cluster": 85,
+            "avg_currentSpeed": 45.0,
+            "min_currentSpeed": 45.0,
+            "max_currentSpeed": 45.0,
+            "sample_count": 433
+          },
+          {
+            "cluster": 80,
+            "avg_currentSpeed": 45.15294117647059,
+            "min_currentSpeed": 40.0,
+            "max_currentSpeed": 49.0,
+            "sample_count": 85
+          },
+          {
+            "cluster": 134,
+            "avg_currentSpeed": 45.1978021978022,
+            "min_currentSpeed": 45.0,
+            "max_currentSpeed": 46.0,
+            "sample_count": 182
+          },
+          {
+            "cluster": 87,
+            "avg_currentSpeed": 45.5,
+            "min_currentSpeed": 45.5,
+            "max_currentSpeed": 45.5,
+            "sample_count": 142
+          },
+          {
+            "cluster": 247,
+            "avg_currentSpeed": 45.5,
+            "min_currentSpeed": 45.5,
+            "max_currentSpeed": 45.5,
+            "sample_count": 40
+          },
+          {
+            "cluster": 228,
+            "avg_currentSpeed": 45.52597402597402,
+            "min_currentSpeed": 43.5,
+            "max_currentSpeed": 47.0,
+            "sample_count": 77
+          },
+          {
+            "cluster": 57,
+            "avg_currentSpeed": 45.99579831932773,
+            "min_currentSpeed": 45.5,
+            "max_currentSpeed": 46.0,
+            "sample_count": 119
+          },
+          {
+            "cluster": 251,
+            "avg_currentSpeed": 46.0,
+            "min_currentSpeed": 46.0,
+            "max_currentSpeed": 46.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 64,
+            "avg_currentSpeed": 46.004629629629626,
+            "min_currentSpeed": 46.0,
+            "max_currentSpeed": 46.5,
+            "sample_count": 108
+          },
+          {
+            "cluster": 240,
+            "avg_currentSpeed": 46.10526315789474,
+            "min_currentSpeed": 45.5,
+            "max_currentSpeed": 47.5,
+            "sample_count": 76
+          },
+          {
+            "cluster": 249,
+            "avg_currentSpeed": 47.0,
+            "min_currentSpeed": 47.0,
+            "max_currentSpeed": 47.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 93,
+            "avg_currentSpeed": 47.0,
+            "min_currentSpeed": 47.0,
+            "max_currentSpeed": 47.0,
+            "sample_count": 314
+          },
+          {
+            "cluster": 213,
+            "avg_currentSpeed": 47.14102564102564,
+            "min_currentSpeed": 44.0,
+            "max_currentSpeed": 48.5,
+            "sample_count": 39
+          },
+          {
+            "cluster": 27,
+            "avg_currentSpeed": 47.583333333333336,
+            "min_currentSpeed": 44.5,
+            "max_currentSpeed": 50.0,
+            "sample_count": 276
+          },
+          {
+            "cluster": 78,
+            "avg_currentSpeed": 47.96666666666667,
+            "min_currentSpeed": 45.5,
+            "max_currentSpeed": 50.0,
+            "sample_count": 135
+          },
+          {
+            "cluster": 135,
+            "avg_currentSpeed": 48.0,
+            "min_currentSpeed": 48.0,
+            "max_currentSpeed": 48.0,
+            "sample_count": 84
+          },
+          {
+            "cluster": 140,
+            "avg_currentSpeed": 48.5,
+            "min_currentSpeed": 48.5,
+            "max_currentSpeed": 48.5,
+            "sample_count": 38
+          },
+          {
+            "cluster": 230,
+            "avg_currentSpeed": 48.93827160493827,
+            "min_currentSpeed": 47.0,
+            "max_currentSpeed": 52.0,
+            "sample_count": 81
+          },
+          {
+            "cluster": 25,
+            "avg_currentSpeed": 49.0,
+            "min_currentSpeed": 49.0,
+            "max_currentSpeed": 49.0,
+            "sample_count": 103
+          },
+          {
+            "cluster": 253,
+            "avg_currentSpeed": 49.0,
+            "min_currentSpeed": 49.0,
+            "max_currentSpeed": 49.0,
+            "sample_count": 56
+          },
+          {
+            "cluster": 62,
+            "avg_currentSpeed": 49.009009009009006,
+            "min_currentSpeed": 49.0,
+            "max_currentSpeed": 50.0,
+            "sample_count": 111
+          },
+          {
+            "cluster": 68,
+            "avg_currentSpeed": 49.00909090909091,
+            "min_currentSpeed": 49.0,
+            "max_currentSpeed": 50.0,
+            "sample_count": 110
+          },
+          {
+            "cluster": 36,
+            "avg_currentSpeed": 49.00917431192661,
+            "min_currentSpeed": 49.0,
+            "max_currentSpeed": 50.0,
+            "sample_count": 109
+          },
+          {
+            "cluster": 6,
+            "avg_currentSpeed": 50.00769230769231,
+            "min_currentSpeed": 50.0,
+            "max_currentSpeed": 50.5,
+            "sample_count": 65
+          },
+          {
+            "cluster": 214,
+            "avg_currentSpeed": 51.0,
+            "min_currentSpeed": 51.0,
+            "max_currentSpeed": 51.0,
+            "sample_count": 31
+          },
+          {
+            "cluster": 26,
+            "avg_currentSpeed": 51.08878504672897,
+            "min_currentSpeed": 47.5,
+            "max_currentSpeed": 54.0,
+            "sample_count": 214
+          },
+          {
+            "cluster": 245,
+            "avg_currentSpeed": 51.5,
+            "min_currentSpeed": 51.5,
+            "max_currentSpeed": 51.5,
+            "sample_count": 46
+          },
+          {
+            "cluster": 218,
+            "avg_currentSpeed": 51.921052631578945,
+            "min_currentSpeed": 51.5,
+            "max_currentSpeed": 52.5,
+            "sample_count": 76
+          },
+          {
+            "cluster": 74,
+            "avg_currentSpeed": 52.015151515151516,
+            "min_currentSpeed": 52.0,
+            "max_currentSpeed": 54.0,
+            "sample_count": 132
+          },
+          {
+            "cluster": 145,
+            "avg_currentSpeed": 54.0,
+            "min_currentSpeed": 54.0,
+            "max_currentSpeed": 54.0,
+            "sample_count": 45
+          },
+          {
+            "cluster": 262,
+            "avg_currentSpeed": 54.407407407407405,
+            "min_currentSpeed": 53.0,
+            "max_currentSpeed": 56.0,
+            "sample_count": 27
+          },
+          {
+            "cluster": 141,
+            "avg_currentSpeed": 55.5,
+            "min_currentSpeed": 55.5,
+            "max_currentSpeed": 55.5,
+            "sample_count": 82
+          },
+          {
+            "cluster": 203,
+            "avg_currentSpeed": 57.0,
+            "min_currentSpeed": 57.0,
+            "max_currentSpeed": 57.0,
+            "sample_count": 63
+          },
+          {
+            "cluster": 266,
+            "avg_currentSpeed": 61.791666666666664,
+            "min_currentSpeed": 61.0,
+            "max_currentSpeed": 63.0,
+            "sample_count": 12
+          },
+          {
+            "cluster": 12,
+            "avg_currentSpeed": 62.670967741935485,
+            "min_currentSpeed": 57.0,
+            "max_currentSpeed": 73.0,
+            "sample_count": 155
+          },
+          {
+            "cluster": 45,
+            "avg_currentSpeed": 62.97931034482759,
+            "min_currentSpeed": 62.0,
+            "max_currentSpeed": 65.0,
+            "sample_count": 290
+          },
+          {
+            "cluster": 1,
+            "avg_currentSpeed": 64.00719424460432,
+            "min_currentSpeed": 64.0,
+            "max_currentSpeed": 65.0,
+            "sample_count": 139
+          },
+          {
+            "cluster": 54,
+            "avg_currentSpeed": 64.00719424460432,
+            "min_currentSpeed": 64.0,
+            "max_currentSpeed": 65.0,
+            "sample_count": 139
+          },
+          {
+            "cluster": 216,
+            "avg_currentSpeed": 67.77083333333333,
+            "min_currentSpeed": 65.0,
+            "max_currentSpeed": 70.5,
+            "sample_count": 48
+          },
+          {
+            "cluster": 43,
+            "avg_currentSpeed": 69.01351351351352,
+            "min_currentSpeed": 69.0,
+            "max_currentSpeed": 70.5,
+            "sample_count": 111
+          },
+          {
+            "cluster": 94,
+            "avg_currentSpeed": 71.0,
+            "min_currentSpeed": 71.0,
+            "max_currentSpeed": 71.0,
+            "sample_count": 143
+          },
+          {
+            "cluster": 106,
+            "avg_currentSpeed": 71.0,
+            "min_currentSpeed": 71.0,
+            "max_currentSpeed": 71.0,
+            "sample_count": 140
+          },
+          {
+            "cluster": 20,
+            "avg_currentSpeed": 74.01377952755905,
+            "min_currentSpeed": 74.0,
+            "max_currentSpeed": 76.0,
+            "sample_count": 1016
+          },
+          {
+            "cluster": 272,
+            "avg_currentSpeed": 77.5,
+            "min_currentSpeed": 77.5,
+            "max_currentSpeed": 77.5,
+            "sample_count": 12
+          },
+          {
+            "cluster": 31,
+            "avg_currentSpeed": 77.51315789473684,
+            "min_currentSpeed": 77.5,
+            "max_currentSpeed": 79.0,
+            "sample_count": 228
+          },
+          {
+            "cluster": 63,
+            "avg_currentSpeed": 79.00943396226415,
+            "min_currentSpeed": 79.0,
+            "max_currentSpeed": 80.0,
+            "sample_count": 212
+          }
+        ]
+      },
+      "agglomerative": {
+        "method": "AgglomerativeClustering",
+        "used_features": [
+          "speedLimitRatio",
+          "crossTime",
+          "trafficVolume",
+          "congestionIndex",
+          "occupancy",
+          "relativeCongestionIndex",
+          "freeFlowSpeed",
+          "lengthKm",
+          "route_distance_m",
+          "curvatureIndex"
+        ],
+        "cluster_sizes": {
+          "0": 69583,
+          "1": 5724,
+          "2": 26552,
+          "3": 23581,
+          "4": 34232,
+          "5": 35489
+        },
+        "final_metrics": {
+          "n_clusters": 6,
+          "fit_samples": 20000,
+          "inertia": 444774.4571079061,
+          "silhouette": 0.36012386842999394,
+          "davies_bouldin": 0.9272838612689284,
+          "calinski_harabasz": 133440.476854944,
+          "mae": 0.28188708948472413,
+          "mse": 0.22790130052003532,
+          "rmse": 0.4773900926077492,
+          "rae": 0.41973141939007036,
+          "rrse": 0.4773900926077491
+        },
+        "internal_evaluation": {
+          "silhouette": 0.36012386842999394,
+          "davies_bouldin": 0.9272838612689284,
+          "calinski_harabasz": 133440.476854944
+        },
+        "external_evaluation": {
+          "reference_label_column": "speed_cluster_rule",
+          "ari": 0.36921184794703427,
+          "nmi": 0.4931727481953743,
+          "fmi": 0.5229192593218916,
+          "f_measure": 0.5093115469955142,
+          "entropy": 1.0714912788482451
+        },
+        "overall_evaluation": {
+          "n_rows": 195161,
+          "n_features": 10,
+          "cluster_size_min": 5724,
+          "cluster_size_max": 69583,
+          "mae": 0.28188708948472413,
+          "rmse": 0.4773900926077492
+        },
+        "semantic_mapping": {
+          "3": "A",
+          "4": "B",
+          "0": "C",
+          "1": "D",
+          "5": "E",
+          "2": "F"
+        },
+        "semantic_profile": [
+          {
+            "cluster": 3,
+            "semantic_label": "A",
+            "semantic_definition": "<= 10 km/h",
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 23581
+          },
+          {
+            "cluster": 4,
+            "semantic_label": "B",
+            "semantic_definition": "> 10 và <= 25 km/h",
+            "avg_currentSpeed": 18.47144484692685,
+            "min_currentSpeed": 3.0,
+            "max_currentSpeed": 44.5,
+            "sample_count": 34232
+          },
+          {
+            "cluster": 0,
+            "semantic_label": "C",
+            "semantic_definition": "> 25 và <= 30 km/h",
+            "avg_currentSpeed": 24.768291105586133,
+            "min_currentSpeed": 11.5,
+            "max_currentSpeed": 52.0,
+            "sample_count": 69583
+          },
+          {
+            "cluster": 1,
+            "semantic_label": "D",
+            "semantic_definition": "> 30 và <= 40 km/h",
+            "avg_currentSpeed": 30.75672606568833,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 52.5,
+            "sample_count": 5724
+          },
+          {
+            "cluster": 5,
+            "semantic_label": "E",
+            "semantic_definition": "> 40 và <= 60 km/h",
+            "avg_currentSpeed": 33.86502860041139,
+            "min_currentSpeed": 14.5,
+            "max_currentSpeed": 67.0,
+            "sample_count": 35489
+          },
+          {
+            "cluster": 2,
+            "semantic_label": "F",
+            "semantic_definition": "> 60 km/h",
+            "avg_currentSpeed": 44.24476498945465,
+            "min_currentSpeed": 17.5,
+            "max_currentSpeed": 80.0,
+            "sample_count": 26552
+          }
+        ]
+      }
+    },
+    "cluster_profile": {
+      "csv_path": "processed/clustering_outputs/selected_kmeans_cluster_profile.csv",
+      "profile": [
+        {
+          "cluster": 3,
+          "semantic_label": "A",
+          "traffic_state": "<= 10 km/h",
+          "sample_count": 23540,
+          "currentSpeed": 0.0006584536958368734,
+          "freeFlowSpeed": 0.0007221750212404418,
+          "trafficVolume": 917.7429405267629,
+          "occupancy": 0.0003748313259033436,
+          "congestionIndex": 0.9999962516867409,
+          "crossTime": 0.05628205401527828,
+          "speedLimitRatio": 1.3169073916737467e-05,
+          "relativeCongestionIndex": 3.748313259033432e-06,
+          "lengthKm": 0.8756842052367548,
+          "route_distance_m": 1282.9008475361088,
+          "curvatureIndex": 0.010288497196261683
+        },
+        {
+          "cluster": 2,
+          "semantic_label": "B",
+          "traffic_state": "> 10 và <= 25 km/h",
+          "sample_count": 57388,
+          "currentSpeed": 20.08493936014498,
+          "freeFlowSpeed": 32.36596501010664,
+          "trafficVolume": 1072.8646412141911,
+          "occupancy": 38.04893521228901,
+          "congestionIndex": 0.6195106478771099,
+          "crossTime": 0.09894338114510756,
+          "speedLimitRatio": 0.4015789062513116,
+          "relativeCongestionIndex": 0.3804893521228901,
+          "lengthKm": 0.5455269410400305,
+          "route_distance_m": 725.2642693071723,
+          "curvatureIndex": 0.006381827786296787
+        },
+        {
+          "cluster": 5,
+          "semantic_label": "C",
+          "traffic_state": "> 25 và <= 30 km/h",
+          "sample_count": 66074,
+          "currentSpeed": 28.346028695099434,
+          "freeFlowSpeed": 36.98677240669552,
+          "trafficVolume": 787.4181882434846,
+          "occupancy": 23.394194929989773,
+          "congestionIndex": 0.7660580507001022,
+          "crossTime": 0.0741625471265989,
+          "speedLimitRatio": 0.5663501051151262,
+          "relativeCongestionIndex": 0.2339419492998977,
+          "lengthKm": 0.57763772599677,
+          "route_distance_m": 864.8771721705965,
+          "curvatureIndex": 0.006743888216242395
+        },
+        {
+          "cluster": 4,
+          "semantic_label": "D",
+          "traffic_state": "> 30 và <= 40 km/h",
+          "sample_count": 4088,
+          "currentSpeed": 30.770303326810176,
+          "freeFlowSpeed": 37.83023483365949,
+          "trafficVolume": 724.3809026418786,
+          "occupancy": 17.498764530235054,
+          "congestionIndex": 0.8250123546976496,
+          "crossTime": 1.613837880228401,
+          "speedLimitRatio": 0.6154060665362036,
+          "relativeCongestionIndex": 0.1749876453023505,
+          "lengthKm": 15.945683503358692,
+          "route_distance_m": 27298.672568003916,
+          "curvatureIndex": 0.18244752862035227
+        },
+        {
+          "cluster": 1,
+          "semantic_label": "E",
+          "traffic_state": "> 40 và <= 60 km/h",
+          "sample_count": 9732,
+          "currentSpeed": 30.822390053431977,
+          "freeFlowSpeed": 38.87541101520756,
+          "trafficVolume": 788.2115043156597,
+          "occupancy": 21.243531521266352,
+          "congestionIndex": 0.7875646847873364,
+          "crossTime": 0.6488170377418,
+          "speedLimitRatio": 0.6139615542698157,
+          "relativeCongestionIndex": 0.21243531521266348,
+          "lengthKm": 5.651111527919758,
+          "route_distance_m": 7280.172817920264,
+          "curvatureIndex": 0.06684691399506781
+        },
+        {
+          "cluster": 0,
+          "semantic_label": "F",
+          "traffic_state": "> 60 km/h",
+          "sample_count": 34339,
+          "currentSpeed": 42.432889717231134,
+          "freeFlowSpeed": 43.78008969393401,
+          "trafficVolume": 420.8231124959958,
+          "occupancy": 3.114156305285216,
+          "congestionIndex": 0.9688584369471479,
+          "crossTime": 0.06623217243291694,
+          "speedLimitRatio": 0.8469493782828474,
+          "relativeCongestionIndex": 0.031141563052852143,
+          "lengthKm": 0.7990238797005432,
+          "route_distance_m": 1474.5808084102625,
+          "curvatureIndex": 0.009295451935117506
+        }
+      ]
+    },
+    "comparison_csv_path": "processed/clustering_outputs/clustering_methods_comparison.csv",
+    "research_figure_paths": [
+      "processed/research_figures/01_missing_ratio_before.png",
+      "processed/research_figures/02_missing_ratio_after.png",
+      "processed/research_figures/03a_distribution_currentSpeed.png",
+      "processed/research_figures/03a_distribution_freeFlowSpeed.png",
+      "processed/research_figures/03a_distribution_congestionIndex.png",
+      "processed/research_figures/03a_distribution_trafficVolume.png",
+      "processed/research_figures/03a_distribution_occupancy.png",
+      "processed/research_figures/03a_distribution_crossTime.png",
+      "processed/research_figures/03a_distribution_speedLimitRatio.png",
+      "processed/research_figures/03a_distribution_relativeCongestionIndex.png",
+      "processed/research_figures/04_correlation_heatmap.png",
+      "processed/research_figures/05a_boxplot_before_after_currentSpeed.png",
+      "processed/research_figures/05a_boxplot_before_after_freeFlowSpeed.png",
+      "processed/research_figures/05a_boxplot_before_after_congestionIndex.png",
+      "processed/research_figures/05a_boxplot_before_after_trafficVolume.png",
+      "processed/research_figures/05a_boxplot_before_after_occupancy.png",
+      "processed/research_figures/05a_boxplot_before_after_crossTime.png",
+      "processed/research_figures/08_final_selected_features.png",
+      "processed/research_figures/09_cluster_size_distribution.png",
+      "processed/research_figures/10_cluster_scatter_speed_congestion.png",
+      "processed/research_figures/16a_cluster_relationship_currentSpeed_trafficVolume.png",
+      "processed/research_figures/16a_cluster_relationship_currentSpeed_occupancy.png",
+      "processed/research_figures/16a_cluster_relationship_trafficVolume_congestionIndex.png",
+      "processed/research_figures/16a_cluster_relationship_occupancy_congestionIndex.png",
+      "processed/research_figures/11_pca_2d_cluster_visualization.png",
+      "processed/research_figures/12_pca_explained_variance.png",
+      "processed/research_figures/13_cluster_centroid_profile_heatmap.png",
+      "processed/research_figures/17_cluster_radar_profiles.png",
+      "processed/research_figures/14_silhouette_analysis.png",
+      "processed/research_figures/18_cluster_distance_distribution.png",
+      "processed/research_figures/19_kmeans_cluster_balance_summary.png"
+    ]
+  },
+  "result_table": {
+    "internal_evaluation": {
+      "silhouette": 0.4182938746333402,
+      "davies_bouldin": 0.8063191343878272,
+      "calinski_harabasz": 147574.62690363897
+    },
+    "external_evaluation": {
+      "reference_label_column": "speed_cluster_rule",
+      "ari": 0.3925920490885632,
+      "nmi": 0.47925458313564717,
+      "fmi": 0.5475648262002298,
+      "f_measure": 0.42896451057729773,
+      "entropy": 1.1358337481400183
+    },
+    "overall_evaluation": {
+      "n_rows": 195161,
+      "n_features": 10,
+      "cluster_size_min": 4088,
+      "cluster_size_max": 66074,
+      "mae": 0.28852409758535147,
+      "rmse": 0.4573438606673403
+    },
+    "figure_paths": [
+      "processed/clustering_outputs/figure_cluster_distribution.png",
+      "processed/clustering_outputs/figure_cluster_scatter.png",
+      "processed/clustering_outputs/figure_dbscan_k_distance.png"
+    ],
+    "research_figure_paths": [
+      "processed/research_figures/01_missing_ratio_before.png",
+      "processed/research_figures/02_missing_ratio_after.png",
+      "processed/research_figures/03a_distribution_currentSpeed.png",
+      "processed/research_figures/03a_distribution_freeFlowSpeed.png",
+      "processed/research_figures/03a_distribution_congestionIndex.png",
+      "processed/research_figures/03a_distribution_trafficVolume.png",
+      "processed/research_figures/03a_distribution_occupancy.png",
+      "processed/research_figures/03a_distribution_crossTime.png",
+      "processed/research_figures/03a_distribution_speedLimitRatio.png",
+      "processed/research_figures/03a_distribution_relativeCongestionIndex.png",
+      "processed/research_figures/04_correlation_heatmap.png",
+      "processed/research_figures/05a_boxplot_before_after_currentSpeed.png",
+      "processed/research_figures/05a_boxplot_before_after_freeFlowSpeed.png",
+      "processed/research_figures/05a_boxplot_before_after_congestionIndex.png",
+      "processed/research_figures/05a_boxplot_before_after_trafficVolume.png",
+      "processed/research_figures/05a_boxplot_before_after_occupancy.png",
+      "processed/research_figures/05a_boxplot_before_after_crossTime.png",
+      "processed/research_figures/08_final_selected_features.png",
+      "processed/research_figures/09_cluster_size_distribution.png",
+      "processed/research_figures/10_cluster_scatter_speed_congestion.png",
+      "processed/research_figures/16a_cluster_relationship_currentSpeed_trafficVolume.png",
+      "processed/research_figures/16a_cluster_relationship_currentSpeed_occupancy.png",
+      "processed/research_figures/16a_cluster_relationship_trafficVolume_congestionIndex.png",
+      "processed/research_figures/16a_cluster_relationship_occupancy_congestionIndex.png",
+      "processed/research_figures/11_pca_2d_cluster_visualization.png",
+      "processed/research_figures/12_pca_explained_variance.png",
+      "processed/research_figures/13_cluster_centroid_profile_heatmap.png",
+      "processed/research_figures/17_cluster_radar_profiles.png",
+      "processed/research_figures/14_silhouette_analysis.png",
+      "processed/research_figures/18_cluster_distance_distribution.png",
+      "processed/research_figures/19_kmeans_cluster_balance_summary.png"
+    ],
+    "methods_comparison": {
+      "kmeans": {
+        "method": "KMeans",
+        "used_features": [
+          "speedLimitRatio",
+          "crossTime",
+          "trafficVolume",
+          "congestionIndex",
+          "occupancy",
+          "relativeCongestionIndex",
+          "freeFlowSpeed",
+          "lengthKm",
+          "route_distance_m",
+          "curvatureIndex"
+        ],
+        "cluster_sizes": {
+          "0": 34339,
+          "1": 9732,
+          "2": 57388,
+          "3": 23540,
+          "4": 4088,
+          "5": 66074
+        },
+        "final_metrics": {
+          "n_clusters": 6,
+          "inertia": 408205.3965208044,
+          "silhouette": 0.4182938746333402,
+          "davies_bouldin": 0.8063191343878272,
+          "calinski_harabasz": 147574.62690363897,
+          "mae": 0.28852409758535147,
+          "mse": 0.20916340689010754,
+          "rmse": 0.4573438606673403,
+          "rae": 0.42961396078517977,
+          "rrse": 0.45734386066734023
+        },
+        "internal_evaluation": {
+          "silhouette": 0.4182938746333402,
+          "davies_bouldin": 0.8063191343878272,
+          "calinski_harabasz": 147574.62690363897
+        },
+        "external_evaluation": {
+          "reference_label_column": "speed_cluster_rule",
+          "ari": 0.3925920490885632,
+          "nmi": 0.47925458313564717,
+          "fmi": 0.5475648262002298,
+          "f_measure": 0.42896451057729773,
+          "entropy": 1.1358337481400183
+        },
+        "overall_evaluation": {
+          "n_rows": 195161,
+          "n_features": 10,
+          "cluster_size_min": 4088,
+          "cluster_size_max": 66074,
+          "mae": 0.28852409758535147,
+          "rmse": 0.4573438606673403
+        },
+        "semantic_mapping": {
+          "3": "A",
+          "2": "B",
+          "5": "C",
+          "4": "D",
+          "1": "E",
+          "0": "F"
+        },
+        "semantic_profile": [
+          {
+            "cluster": 3,
+            "semantic_label": "A",
+            "semantic_definition": "<= 10 km/h",
+            "avg_currentSpeed": 0.0006584536958368734,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 15.5,
+            "sample_count": 23540
+          },
+          {
+            "cluster": 2,
+            "semantic_label": "B",
+            "semantic_definition": "> 10 và <= 25 km/h",
+            "avg_currentSpeed": 20.08493936014498,
+            "min_currentSpeed": 3.0,
+            "max_currentSpeed": 48.0,
+            "sample_count": 57388
+          },
+          {
+            "cluster": 5,
+            "semantic_label": "C",
+            "semantic_definition": "> 25 và <= 30 km/h",
+            "avg_currentSpeed": 28.346028695099434,
+            "min_currentSpeed": 12.5,
+            "max_currentSpeed": 58.0,
+            "sample_count": 66074
+          },
+          {
+            "cluster": 4,
+            "semantic_label": "D",
+            "semantic_definition": "> 30 và <= 40 km/h",
+            "avg_currentSpeed": 30.770303326810176,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 47.0,
+            "sample_count": 4088
+          },
+          {
+            "cluster": 1,
+            "semantic_label": "E",
+            "semantic_definition": "> 40 và <= 60 km/h",
+            "avg_currentSpeed": 30.822390053431977,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 73.0,
+            "sample_count": 9732
+          },
+          {
+            "cluster": 0,
+            "semantic_label": "F",
+            "semantic_definition": "> 60 km/h",
+            "avg_currentSpeed": 42.432889717231134,
+            "min_currentSpeed": 17.5,
+            "max_currentSpeed": 80.0,
+            "sample_count": 34339
+          }
+        ],
+        "cluster_profile": {
+          "csv_path": "processed/clustering_outputs/selected_kmeans_cluster_profile.csv",
+          "profile": [
+            {
+              "cluster": 3,
+              "semantic_label": "A",
+              "traffic_state": "<= 10 km/h",
+              "sample_count": 23540,
+              "currentSpeed": 0.0006584536958368734,
+              "freeFlowSpeed": 0.0007221750212404418,
+              "trafficVolume": 917.7429405267629,
+              "occupancy": 0.0003748313259033436,
+              "congestionIndex": 0.9999962516867409,
+              "crossTime": 0.05628205401527828,
+              "speedLimitRatio": 1.3169073916737467e-05,
+              "relativeCongestionIndex": 3.748313259033432e-06,
+              "lengthKm": 0.8756842052367548,
+              "route_distance_m": 1282.9008475361088,
+              "curvatureIndex": 0.010288497196261683
+            },
+            {
+              "cluster": 2,
+              "semantic_label": "B",
+              "traffic_state": "> 10 và <= 25 km/h",
+              "sample_count": 57388,
+              "currentSpeed": 20.08493936014498,
+              "freeFlowSpeed": 32.36596501010664,
+              "trafficVolume": 1072.8646412141911,
+              "occupancy": 38.04893521228901,
+              "congestionIndex": 0.6195106478771099,
+              "crossTime": 0.09894338114510756,
+              "speedLimitRatio": 0.4015789062513116,
+              "relativeCongestionIndex": 0.3804893521228901,
+              "lengthKm": 0.5455269410400305,
+              "route_distance_m": 725.2642693071723,
+              "curvatureIndex": 0.006381827786296787
+            },
+            {
+              "cluster": 5,
+              "semantic_label": "C",
+              "traffic_state": "> 25 và <= 30 km/h",
+              "sample_count": 66074,
+              "currentSpeed": 28.346028695099434,
+              "freeFlowSpeed": 36.98677240669552,
+              "trafficVolume": 787.4181882434846,
+              "occupancy": 23.394194929989773,
+              "congestionIndex": 0.7660580507001022,
+              "crossTime": 0.0741625471265989,
+              "speedLimitRatio": 0.5663501051151262,
+              "relativeCongestionIndex": 0.2339419492998977,
+              "lengthKm": 0.57763772599677,
+              "route_distance_m": 864.8771721705965,
+              "curvatureIndex": 0.006743888216242395
+            },
+            {
+              "cluster": 4,
+              "semantic_label": "D",
+              "traffic_state": "> 30 và <= 40 km/h",
+              "sample_count": 4088,
+              "currentSpeed": 30.770303326810176,
+              "freeFlowSpeed": 37.83023483365949,
+              "trafficVolume": 724.3809026418786,
+              "occupancy": 17.498764530235054,
+              "congestionIndex": 0.8250123546976496,
+              "crossTime": 1.613837880228401,
+              "speedLimitRatio": 0.6154060665362036,
+              "relativeCongestionIndex": 0.1749876453023505,
+              "lengthKm": 15.945683503358692,
+              "route_distance_m": 27298.672568003916,
+              "curvatureIndex": 0.18244752862035227
+            },
+            {
+              "cluster": 1,
+              "semantic_label": "E",
+              "traffic_state": "> 40 và <= 60 km/h",
+              "sample_count": 9732,
+              "currentSpeed": 30.822390053431977,
+              "freeFlowSpeed": 38.87541101520756,
+              "trafficVolume": 788.2115043156597,
+              "occupancy": 21.243531521266352,
+              "congestionIndex": 0.7875646847873364,
+              "crossTime": 0.6488170377418,
+              "speedLimitRatio": 0.6139615542698157,
+              "relativeCongestionIndex": 0.21243531521266348,
+              "lengthKm": 5.651111527919758,
+              "route_distance_m": 7280.172817920264,
+              "curvatureIndex": 0.06684691399506781
+            },
+            {
+              "cluster": 0,
+              "semantic_label": "F",
+              "traffic_state": "> 60 km/h",
+              "sample_count": 34339,
+              "currentSpeed": 42.432889717231134,
+              "freeFlowSpeed": 43.78008969393401,
+              "trafficVolume": 420.8231124959958,
+              "occupancy": 3.114156305285216,
+              "congestionIndex": 0.9688584369471479,
+              "crossTime": 0.06623217243291694,
+              "speedLimitRatio": 0.8469493782828474,
+              "relativeCongestionIndex": 0.031141563052852143,
+              "lengthKm": 0.7990238797005432,
+              "route_distance_m": 1474.5808084102625,
+              "curvatureIndex": 0.009295451935117506
+            }
+          ]
+        }
+      },
+      "minibatch_kmeans": {
+        "method": "MiniBatchKMeans",
+        "used_features": [
+          "speedLimitRatio",
+          "crossTime",
+          "trafficVolume",
+          "congestionIndex",
+          "occupancy",
+          "relativeCongestionIndex",
+          "freeFlowSpeed",
+          "lengthKm",
+          "route_distance_m",
+          "curvatureIndex"
+        ],
+        "cluster_sizes": {
+          "0": 31775,
+          "1": 72017,
+          "2": 23456,
+          "3": 2436,
+          "4": 5582,
+          "5": 59895
+        },
+        "final_metrics": {
+          "n_clusters": 6,
+          "inertia": 428029.2901970141,
+          "silhouette": 0.40812556808293055,
+          "davies_bouldin": 0.9040068235939406,
+          "calinski_harabasz": 139501.49098873674,
+          "mae": 0.2991470493041702,
+          "mse": 0.21932111958691278,
+          "rmse": 0.4683173278738603,
+          "rae": 0.44543159404820865,
+          "rrse": 0.46831732787386027
+        },
+        "internal_evaluation": {
+          "silhouette": 0.40812556808293055,
+          "davies_bouldin": 0.9040068235939406,
+          "calinski_harabasz": 139501.49098873674
+        },
+        "external_evaluation": {
+          "reference_label_column": "speed_cluster_rule",
+          "ari": 0.5013120287464155,
+          "nmi": 0.519558149202332,
+          "fmi": 0.6342647549009786,
+          "f_measure": 0.4969862293679294,
+          "entropy": 1.0780484708889289
+        },
+        "overall_evaluation": {
+          "n_rows": 195161,
+          "n_features": 10,
+          "cluster_size_min": 2436,
+          "cluster_size_max": 72017,
+          "mae": 0.2991470493041702,
+          "rmse": 0.4683173278738603
+        },
+        "semantic_mapping": {
+          "2": "A",
+          "1": "B",
+          "5": "C",
+          "3": "D",
+          "4": "E",
+          "0": "F"
+        },
+        "semantic_profile": [
+          {
+            "cluster": 2,
+            "semantic_label": "A",
+            "semantic_definition": "<= 10 km/h",
+            "avg_currentSpeed": 0.0006608117326057299,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 15.5,
+            "sample_count": 23456
+          },
+          {
+            "cluster": 1,
+            "semantic_label": "B",
+            "semantic_definition": "> 10 và <= 25 km/h",
+            "avg_currentSpeed": 20.838552008553535,
+            "min_currentSpeed": 3.0,
+            "max_currentSpeed": 48.5,
+            "sample_count": 72017
+          },
+          {
+            "cluster": 5,
+            "semantic_label": "C",
+            "semantic_definition": "> 25 và <= 30 km/h",
+            "avg_currentSpeed": 29.78538275315135,
+            "min_currentSpeed": 12.5,
+            "max_currentSpeed": 63.0,
+            "sample_count": 59895
+          },
+          {
+            "cluster": 3,
+            "semantic_label": "D",
+            "semantic_definition": "> 30 và <= 40 km/h",
+            "avg_currentSpeed": 30.85406403940887,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 46.0,
+            "sample_count": 2436
+          },
+          {
+            "cluster": 4,
+            "semantic_label": "E",
+            "semantic_definition": "> 40 và <= 60 km/h",
+            "avg_currentSpeed": 33.87656753851666,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 79.0,
+            "sample_count": 5582
+          },
+          {
+            "cluster": 0,
+            "semantic_label": "F",
+            "semantic_definition": "> 60 km/h",
+            "avg_currentSpeed": 42.7833359559402,
+            "min_currentSpeed": 17.5,
+            "max_currentSpeed": 80.0,
+            "sample_count": 31775
+          }
+        ]
+      },
+      "gaussian_mixture": {
+        "method": "GaussianMixture",
+        "used_features": [
+          "speedLimitRatio",
+          "crossTime",
+          "trafficVolume",
+          "congestionIndex",
+          "occupancy",
+          "relativeCongestionIndex",
+          "freeFlowSpeed",
+          "lengthKm",
+          "route_distance_m",
+          "curvatureIndex"
+        ],
+        "cluster_sizes": {
+          "0": 84290,
+          "1": 9548,
+          "2": 10291,
+          "3": 6509,
+          "4": 22989,
+          "5": 61534
+        },
+        "final_metrics": {
+          "n_clusters": 6,
+          "inertia": 750572.3511151532,
+          "silhouette": 0.2621765114224582,
+          "davies_bouldin": 1.5710575238669913,
+          "calinski_harabasz": 62459.08027301115,
+          "bic": -8483901.26644319,
+          "aic": -8487922.990597667,
+          "mae": 0.3885342813145484,
+          "mse": 0.38459136359987556,
+          "rmse": 0.620154306281812,
+          "rae": 0.578529671848252,
+          "rrse": 0.620154306281812
+        },
+        "internal_evaluation": {
+          "silhouette": 0.2621765114224582,
+          "davies_bouldin": 1.5710575238669913,
+          "calinski_harabasz": 62459.08027301115
+        },
+        "external_evaluation": {
+          "reference_label_column": "speed_cluster_rule",
+          "ari": 0.4270586790074409,
+          "nmi": 0.4665281706491527,
+          "fmi": 0.5902564267556676,
+          "f_measure": 0.4018190815422928,
+          "entropy": 1.205145006466504
+        },
+        "overall_evaluation": {
+          "n_rows": 195161,
+          "n_features": 10,
+          "cluster_size_min": 6509,
+          "cluster_size_max": 84290,
+          "mae": 0.3885342813145484,
+          "rmse": 0.620154306281812
+        },
+        "semantic_mapping": {
+          "4": "A",
+          "1": "B",
+          "0": "C",
+          "3": "D",
+          "2": "E",
+          "5": "F"
+        },
+        "semantic_profile": [
+          {
+            "cluster": 4,
+            "semantic_label": "A",
+            "semantic_definition": "<= 10 km/h",
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 22989
+          },
+          {
+            "cluster": 1,
+            "semantic_label": "B",
+            "semantic_definition": "> 10 và <= 25 km/h",
+            "avg_currentSpeed": 18.675953079178885,
+            "min_currentSpeed": 4.0,
+            "max_currentSpeed": 29.5,
+            "sample_count": 9548
+          },
+          {
+            "cluster": 0,
+            "semantic_label": "C",
+            "semantic_definition": "> 25 và <= 30 km/h",
+            "avg_currentSpeed": 22.659995254478584,
+            "min_currentSpeed": 8.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 84290
+          },
+          {
+            "cluster": 3,
+            "semantic_label": "D",
+            "semantic_definition": "> 30 và <= 40 km/h",
+            "avg_currentSpeed": 28.490090643724074,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 47.5,
+            "sample_count": 6509
+          },
+          {
+            "cluster": 2,
+            "semantic_label": "E",
+            "semantic_definition": "> 40 và <= 60 km/h",
+            "avg_currentSpeed": 32.598775629190555,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 79.0,
+            "sample_count": 10291
+          },
+          {
+            "cluster": 5,
+            "semantic_label": "F",
+            "semantic_definition": "> 60 km/h",
+            "avg_currentSpeed": 37.36464393668541,
+            "min_currentSpeed": 11.0,
+            "max_currentSpeed": 80.0,
+            "sample_count": 61534
+          }
+        ]
+      },
+      "dbscan": {
+        "method": "DBSCAN",
+        "used_features": [
+          "speedLimitRatio",
+          "crossTime",
+          "trafficVolume",
+          "congestionIndex",
+          "occupancy",
+          "relativeCongestionIndex",
+          "freeFlowSpeed",
+          "lengthKm",
+          "route_distance_m",
+          "curvatureIndex"
+        ],
+        "cluster_sizes": {
+          "-1": 1934,
+          "0": 128337,
+          "1": 139,
+          "2": 635,
+          "3": 17775,
+          "4": 565,
+          "5": 997,
+          "6": 65,
+          "7": 232,
+          "8": 60,
+          "9": 134,
+          "10": 1212,
+          "11": 141,
+          "12": 155,
+          "13": 140,
+          "14": 244,
+          "15": 133,
+          "16": 122,
+          "17": 144,
+          "18": 551,
+          "19": 112,
+          "20": 1016,
+          "21": 130,
+          "22": 65,
+          "23": 252,
+          "24": 257,
+          "25": 103,
+          "26": 214,
+          "27": 276,
+          "28": 101,
+          "29": 422,
+          "30": 90,
+          "31": 228,
+          "32": 95,
+          "33": 110,
+          "34": 129,
+          "35": 54,
+          "36": 109,
+          "37": 76,
+          "38": 217,
+          "39": 130,
+          "40": 113,
+          "41": 125,
+          "42": 240,
+          "43": 111,
+          "44": 120,
+          "45": 290,
+          "46": 260,
+          "47": 25,
+          "48": 39,
+          "49": 78,
+          "50": 218,
+          "51": 102,
+          "52": 117,
+          "53": 583,
+          "54": 139,
+          "55": 267,
+          "56": 44,
+          "57": 119,
+          "58": 61,
+          "59": 104,
+          "60": 137,
+          "61": 116,
+          "62": 111,
+          "63": 212,
+          "64": 108,
+          "65": 144,
+          "66": 78,
+          "67": 204,
+          "68": 110,
+          "69": 274,
+          "70": 49,
+          "71": 90,
+          "72": 74,
+          "73": 53,
+          "74": 132,
+          "75": 117,
+          "76": 274,
+          "77": 111,
+          "78": 135,
+          "79": 17,
+          "80": 85,
+          "81": 110,
+          "82": 87,
+          "83": 30,
+          "84": 59,
+          "85": 433,
+          "86": 75,
+          "87": 142,
+          "88": 106,
+          "89": 59,
+          "90": 290,
+          "91": 30,
+          "92": 103,
+          "93": 314,
+          "94": 143,
+          "95": 15,
+          "96": 58,
+          "97": 108,
+          "98": 133,
+          "99": 61,
+          "100": 18,
+          "101": 30,
+          "102": 140,
+          "103": 14,
+          "104": 33,
+          "105": 135,
+          "106": 140,
+          "107": 114,
+          "108": 34,
+          "109": 17,
+          "110": 23,
+          "111": 280,
+          "112": 17,
+          "113": 198,
+          "114": 11,
+          "115": 84,
+          "116": 42,
+          "117": 22,
+          "118": 27,
+          "119": 29,
+          "120": 42,
+          "121": 16,
+          "122": 66,
+          "123": 39,
+          "124": 131,
+          "125": 64,
+          "126": 17,
+          "127": 63,
+          "128": 50,
+          "129": 30,
+          "130": 35,
+          "131": 75,
+          "132": 39,
+          "133": 72,
+          "134": 182,
+          "135": 84,
+          "136": 71,
+          "137": 15,
+          "138": 30,
+          "139": 73,
+          "140": 38,
+          "141": 82,
+          "142": 32,
+          "143": 12,
+          "144": 63,
+          "145": 45,
+          "146": 53,
+          "147": 22309,
+          "148": 320,
+          "149": 42,
+          "150": 21,
+          "151": 15,
+          "152": 21,
+          "153": 21,
+          "154": 42,
+          "155": 21,
+          "156": 20,
+          "157": 21,
+          "158": 21,
+          "159": 42,
+          "160": 83,
+          "161": 21,
+          "162": 82,
+          "163": 21,
+          "164": 21,
+          "165": 21,
+          "166": 40,
+          "167": 21,
+          "168": 21,
+          "169": 20,
+          "170": 63,
+          "171": 42,
+          "172": 21,
+          "173": 42,
+          "174": 42,
+          "175": 42,
+          "176": 21,
+          "177": 21,
+          "178": 21,
+          "179": 21,
+          "180": 21,
+          "181": 21,
+          "182": 42,
+          "183": 21,
+          "184": 21,
+          "185": 21,
+          "186": 42,
+          "187": 42,
+          "188": 21,
+          "189": 42,
+          "190": 20,
+          "191": 21,
+          "192": 42,
+          "193": 21,
+          "194": 21,
+          "195": 21,
+          "196": 20,
+          "197": 21,
+          "198": 36,
+          "199": 26,
+          "200": 69,
+          "201": 18,
+          "202": 21,
+          "203": 63,
+          "204": 51,
+          "205": 51,
+          "206": 14,
+          "207": 26,
+          "208": 14,
+          "209": 26,
+          "210": 20,
+          "211": 20,
+          "212": 24,
+          "213": 39,
+          "214": 31,
+          "215": 32,
+          "216": 48,
+          "217": 18,
+          "218": 76,
+          "219": 25,
+          "220": 33,
+          "221": 26,
+          "222": 40,
+          "223": 44,
+          "224": 24,
+          "225": 48,
+          "226": 15,
+          "227": 27,
+          "228": 77,
+          "229": 15,
+          "230": 81,
+          "231": 11,
+          "232": 11,
+          "233": 33,
+          "234": 36,
+          "235": 27,
+          "236": 37,
+          "237": 13,
+          "238": 21,
+          "239": 18,
+          "240": 76,
+          "241": 16,
+          "242": 13,
+          "243": 13,
+          "244": 21,
+          "245": 46,
+          "246": 40,
+          "247": 40,
+          "248": 14,
+          "249": 21,
+          "250": 23,
+          "251": 20,
+          "252": 19,
+          "253": 56,
+          "254": 18,
+          "255": 20,
+          "256": 11,
+          "257": 11,
+          "258": 7,
+          "259": 15,
+          "260": 30,
+          "261": 16,
+          "262": 27,
+          "263": 13,
+          "264": 16,
+          "265": 11,
+          "266": 12,
+          "267": 39,
+          "268": 11,
+          "269": 5,
+          "270": 18,
+          "271": 12,
+          "272": 12
+        },
+        "final_metrics": {
+          "n_clusters": 273,
+          "n_noise": 1934,
+          "inertia": 369870.4471975367,
+          "silhouette": -0.1368128390736192,
+          "davies_bouldin": 0.7448650006037947,
+          "calinski_harabasz": 2838.3684896163804,
+          "eps": 0.2895626437290459,
+          "min_samples": 11,
+          "parameter_selection": {
+            "eps": 0.2895626437290459,
+            "min_samples": 11,
+            "criterion": "k-distance knee",
+            "n_features": 10,
+            "n_total_samples": 195161,
+            "n_param_samples": 195161,
+            "figure_path": "processed/clustering_outputs/figure_dbscan_k_distance.png",
+            "csv_path": "processed/clustering_outputs/dbscan_parameter_selection.csv"
+          },
+          "mae": 0.2810456837969175,
+          "mse": 0.18952067636338035,
+          "rmse": 0.43533972523005565,
+          "rae": 0.4184785617147809,
+          "rrse": 0.4353397252300556
+        },
+        "internal_evaluation": {
+          "silhouette": -0.1368128390736192,
+          "davies_bouldin": 0.7448650006037947,
+          "calinski_harabasz": 2838.3684896163804
+        },
+        "external_evaluation": {
+          "reference_label_column": "speed_cluster_rule",
+          "ari": 0.3337912888884821,
+          "nmi": 0.42735449086769245,
+          "fmi": 0.5759095978002813,
+          "f_measure": 0.6382011463631797,
+          "entropy": 1.1994185794952048
+        },
+        "overall_evaluation": {
+          "n_rows": 195161,
+          "n_features": 10,
+          "cluster_size_min": 5,
+          "cluster_size_max": 128337,
+          "mae": 0.2810456837969175,
+          "rmse": 0.43533972523005565
+        },
+        "semantic_mapping": {},
+        "semantic_profile": [
+          {
+            "cluster": 179,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 171,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 172,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 173,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 174,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 197,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 175,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 196,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 195,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 194,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 176,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 193,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 184,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 177,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 192,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 191,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 190,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 189,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 180,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 188,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 181,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 182,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 187,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 186,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 183,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 178,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 169,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 170,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 63
+          },
+          {
+            "cluster": 168,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 147,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 22309
+          },
+          {
+            "cluster": 148,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 320
+          },
+          {
+            "cluster": 149,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 150,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 151,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 15
+          },
+          {
+            "cluster": 152,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 153,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 154,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 155,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 156,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 157,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 159,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 158,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 161,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 162,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 82
+          },
+          {
+            "cluster": 163,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 164,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 165,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 166,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 40
+          },
+          {
+            "cluster": 167,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 160,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 83
+          },
+          {
+            "cluster": 185,
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 231,
+            "avg_currentSpeed": 12.454545454545455,
+            "min_currentSpeed": 12.0,
+            "max_currentSpeed": 13.0,
+            "sample_count": 11
+          },
+          {
+            "cluster": 79,
+            "avg_currentSpeed": 14.0,
+            "min_currentSpeed": 14.0,
+            "max_currentSpeed": 14.0,
+            "sample_count": 17
+          },
+          {
+            "cluster": 206,
+            "avg_currentSpeed": 15.321428571428571,
+            "min_currentSpeed": 15.0,
+            "max_currentSpeed": 15.5,
+            "sample_count": 14
+          },
+          {
+            "cluster": 92,
+            "avg_currentSpeed": 15.805825242718447,
+            "min_currentSpeed": 13.5,
+            "max_currentSpeed": 17.5,
+            "sample_count": 103
+          },
+          {
+            "cluster": 18,
+            "avg_currentSpeed": 16.43103448275862,
+            "min_currentSpeed": 13.0,
+            "max_currentSpeed": 23.0,
+            "sample_count": 551
+          },
+          {
+            "cluster": 34,
+            "avg_currentSpeed": 17.813953488372093,
+            "min_currentSpeed": 17.5,
+            "max_currentSpeed": 18.0,
+            "sample_count": 129
+          },
+          {
+            "cluster": 65,
+            "avg_currentSpeed": 18.30902777777778,
+            "min_currentSpeed": 15.5,
+            "max_currentSpeed": 21.5,
+            "sample_count": 144
+          },
+          {
+            "cluster": 271,
+            "avg_currentSpeed": 18.708333333333332,
+            "min_currentSpeed": 18.5,
+            "max_currentSpeed": 19.0,
+            "sample_count": 12
+          },
+          {
+            "cluster": 5,
+            "avg_currentSpeed": 19.14493480441324,
+            "min_currentSpeed": 13.5,
+            "max_currentSpeed": 25.5,
+            "sample_count": 997
+          },
+          {
+            "cluster": 118,
+            "avg_currentSpeed": 19.425925925925927,
+            "min_currentSpeed": 18.5,
+            "max_currentSpeed": 20.5,
+            "sample_count": 27
+          },
+          {
+            "cluster": 24,
+            "avg_currentSpeed": 19.527237354085603,
+            "min_currentSpeed": 15.5,
+            "max_currentSpeed": 23.0,
+            "sample_count": 257
+          },
+          {
+            "cluster": 39,
+            "avg_currentSpeed": 19.573076923076922,
+            "min_currentSpeed": 16.5,
+            "max_currentSpeed": 23.0,
+            "sample_count": 130
+          },
+          {
+            "cluster": 126,
+            "avg_currentSpeed": 20.852941176470587,
+            "min_currentSpeed": 20.0,
+            "max_currentSpeed": 21.5,
+            "sample_count": 17
+          },
+          {
+            "cluster": 69,
+            "avg_currentSpeed": 21.394160583941606,
+            "min_currentSpeed": 17.5,
+            "max_currentSpeed": 24.5,
+            "sample_count": 274
+          },
+          {
+            "cluster": 4,
+            "avg_currentSpeed": 21.474336283185842,
+            "min_currentSpeed": 17.0,
+            "max_currentSpeed": 26.0,
+            "sample_count": 565
+          },
+          {
+            "cluster": 17,
+            "avg_currentSpeed": 21.74652777777778,
+            "min_currentSpeed": 18.5,
+            "max_currentSpeed": 26.0,
+            "sample_count": 144
+          },
+          {
+            "cluster": 261,
+            "avg_currentSpeed": 21.96875,
+            "min_currentSpeed": 21.5,
+            "max_currentSpeed": 22.5,
+            "sample_count": 16
+          },
+          {
+            "cluster": 113,
+            "avg_currentSpeed": 22.12121212121212,
+            "min_currentSpeed": 19.0,
+            "max_currentSpeed": 25.5,
+            "sample_count": 198
+          },
+          {
+            "cluster": 76,
+            "avg_currentSpeed": 22.175182481751825,
+            "min_currentSpeed": 19.0,
+            "max_currentSpeed": 25.5,
+            "sample_count": 274
+          },
+          {
+            "cluster": 97,
+            "avg_currentSpeed": 22.74074074074074,
+            "min_currentSpeed": 20.0,
+            "max_currentSpeed": 25.5,
+            "sample_count": 108
+          },
+          {
+            "cluster": 119,
+            "avg_currentSpeed": 23.03448275862069,
+            "min_currentSpeed": 23.0,
+            "max_currentSpeed": 23.5,
+            "sample_count": 29
+          },
+          {
+            "cluster": 75,
+            "avg_currentSpeed": 23.14957264957265,
+            "min_currentSpeed": 20.5,
+            "max_currentSpeed": 25.5,
+            "sample_count": 117
+          },
+          {
+            "cluster": 41,
+            "avg_currentSpeed": 23.344,
+            "min_currentSpeed": 20.0,
+            "max_currentSpeed": 26.0,
+            "sample_count": 125
+          },
+          {
+            "cluster": 258,
+            "avg_currentSpeed": 23.357142857142858,
+            "min_currentSpeed": 23.0,
+            "max_currentSpeed": 24.0,
+            "sample_count": 7
+          },
+          {
+            "cluster": 200,
+            "avg_currentSpeed": 24.268115942028984,
+            "min_currentSpeed": 22.5,
+            "max_currentSpeed": 25.5,
+            "sample_count": 69
+          },
+          {
+            "cluster": 61,
+            "avg_currentSpeed": 24.594827586206897,
+            "min_currentSpeed": 23.0,
+            "max_currentSpeed": 26.0,
+            "sample_count": 116
+          },
+          {
+            "cluster": 22,
+            "avg_currentSpeed": 24.923076923076923,
+            "min_currentSpeed": 22.0,
+            "max_currentSpeed": 28.5,
+            "sample_count": 65
+          },
+          {
+            "cluster": 28,
+            "avg_currentSpeed": 25.178217821782177,
+            "min_currentSpeed": 22.0,
+            "max_currentSpeed": 28.5,
+            "sample_count": 101
+          },
+          {
+            "cluster": 0,
+            "avg_currentSpeed": 25.39239658087691,
+            "min_currentSpeed": 6.0,
+            "max_currentSpeed": 52.5,
+            "sample_count": 128337
+          },
+          {
+            "cluster": 15,
+            "avg_currentSpeed": 25.51127819548872,
+            "min_currentSpeed": 22.5,
+            "max_currentSpeed": 29.5,
+            "sample_count": 133
+          },
+          {
+            "cluster": 86,
+            "avg_currentSpeed": 25.566666666666666,
+            "min_currentSpeed": 23.0,
+            "max_currentSpeed": 28.0,
+            "sample_count": 75
+          },
+          {
+            "cluster": 129,
+            "avg_currentSpeed": 25.7,
+            "min_currentSpeed": 24.0,
+            "max_currentSpeed": 27.0,
+            "sample_count": 30
+          },
+          {
+            "cluster": 244,
+            "avg_currentSpeed": 26.0,
+            "min_currentSpeed": 26.0,
+            "max_currentSpeed": 26.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 237,
+            "avg_currentSpeed": 26.307692307692307,
+            "min_currentSpeed": 26.0,
+            "max_currentSpeed": 27.0,
+            "sample_count": 13
+          },
+          {
+            "cluster": 103,
+            "avg_currentSpeed": 26.821428571428573,
+            "min_currentSpeed": 26.0,
+            "max_currentSpeed": 27.0,
+            "sample_count": 14
+          },
+          {
+            "cluster": 114,
+            "avg_currentSpeed": 26.90909090909091,
+            "min_currentSpeed": 26.0,
+            "max_currentSpeed": 27.0,
+            "sample_count": 11
+          },
+          {
+            "cluster": 33,
+            "avg_currentSpeed": 27.45,
+            "min_currentSpeed": 24.5,
+            "max_currentSpeed": 31.5,
+            "sample_count": 110
+          },
+          {
+            "cluster": 112,
+            "avg_currentSpeed": 27.705882352941178,
+            "min_currentSpeed": 27.0,
+            "max_currentSpeed": 28.0,
+            "sample_count": 17
+          },
+          {
+            "cluster": 109,
+            "avg_currentSpeed": 27.764705882352942,
+            "min_currentSpeed": 27.0,
+            "max_currentSpeed": 28.0,
+            "sample_count": 17
+          },
+          {
+            "cluster": 100,
+            "avg_currentSpeed": 27.77777777777778,
+            "min_currentSpeed": 27.0,
+            "max_currentSpeed": 28.0,
+            "sample_count": 18
+          },
+          {
+            "cluster": 72,
+            "avg_currentSpeed": 27.91891891891892,
+            "min_currentSpeed": 26.0,
+            "max_currentSpeed": 29.5,
+            "sample_count": 74
+          },
+          {
+            "cluster": 263,
+            "avg_currentSpeed": 28.0,
+            "min_currentSpeed": 28.0,
+            "max_currentSpeed": 28.0,
+            "sample_count": 13
+          },
+          {
+            "cluster": 16,
+            "avg_currentSpeed": 28.139344262295083,
+            "min_currentSpeed": 24.5,
+            "max_currentSpeed": 31.5,
+            "sample_count": 122
+          },
+          {
+            "cluster": 60,
+            "avg_currentSpeed": 28.142335766423358,
+            "min_currentSpeed": 23.5,
+            "max_currentSpeed": 32.5,
+            "sample_count": 137
+          },
+          {
+            "cluster": 55,
+            "avg_currentSpeed": 28.48314606741573,
+            "min_currentSpeed": 25.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 267
+          },
+          {
+            "cluster": 268,
+            "avg_currentSpeed": 28.5,
+            "min_currentSpeed": 27.5,
+            "max_currentSpeed": 29.0,
+            "sample_count": 11
+          },
+          {
+            "cluster": 143,
+            "avg_currentSpeed": 28.5,
+            "min_currentSpeed": 28.5,
+            "max_currentSpeed": 28.5,
+            "sample_count": 12
+          },
+          {
+            "cluster": 98,
+            "avg_currentSpeed": 28.657894736842106,
+            "min_currentSpeed": 25.5,
+            "max_currentSpeed": 32.0,
+            "sample_count": 133
+          },
+          {
+            "cluster": 2,
+            "avg_currentSpeed": 28.69685039370079,
+            "min_currentSpeed": 22.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 635
+          },
+          {
+            "cluster": 82,
+            "avg_currentSpeed": 28.74712643678161,
+            "min_currentSpeed": 27.0,
+            "max_currentSpeed": 31.0,
+            "sample_count": 87
+          },
+          {
+            "cluster": 90,
+            "avg_currentSpeed": 28.837931034482757,
+            "min_currentSpeed": 23.5,
+            "max_currentSpeed": 33.5,
+            "sample_count": 290
+          },
+          {
+            "cluster": 239,
+            "avg_currentSpeed": 29.0,
+            "min_currentSpeed": 29.0,
+            "max_currentSpeed": 29.0,
+            "sample_count": 18
+          },
+          {
+            "cluster": 14,
+            "avg_currentSpeed": 29.53893442622951,
+            "min_currentSpeed": 24.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 244
+          },
+          {
+            "cluster": 8,
+            "avg_currentSpeed": 29.566666666666666,
+            "min_currentSpeed": 29.0,
+            "max_currentSpeed": 30.0,
+            "sample_count": 60
+          },
+          {
+            "cluster": 13,
+            "avg_currentSpeed": 29.689285714285713,
+            "min_currentSpeed": 25.5,
+            "max_currentSpeed": 34.0,
+            "sample_count": 140
+          },
+          {
+            "cluster": 48,
+            "avg_currentSpeed": 29.858974358974358,
+            "min_currentSpeed": 28.5,
+            "max_currentSpeed": 31.5,
+            "sample_count": 39
+          },
+          {
+            "cluster": 265,
+            "avg_currentSpeed": 29.863636363636363,
+            "min_currentSpeed": 29.5,
+            "max_currentSpeed": 30.5,
+            "sample_count": 11
+          },
+          {
+            "cluster": 71,
+            "avg_currentSpeed": 29.905555555555555,
+            "min_currentSpeed": 27.5,
+            "max_currentSpeed": 32.5,
+            "sample_count": 90
+          },
+          {
+            "cluster": -1,
+            "avg_currentSpeed": 29.913650465356774,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 74.0,
+            "sample_count": 1934
+          },
+          {
+            "cluster": 204,
+            "avg_currentSpeed": 30.274509803921568,
+            "min_currentSpeed": 29.0,
+            "max_currentSpeed": 33.0,
+            "sample_count": 51
+          },
+          {
+            "cluster": 44,
+            "avg_currentSpeed": 30.4,
+            "min_currentSpeed": 29.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 120
+          },
+          {
+            "cluster": 122,
+            "avg_currentSpeed": 30.46212121212121,
+            "min_currentSpeed": 28.5,
+            "max_currentSpeed": 32.0,
+            "sample_count": 66
+          },
+          {
+            "cluster": 255,
+            "avg_currentSpeed": 30.7,
+            "min_currentSpeed": 30.0,
+            "max_currentSpeed": 31.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 111,
+            "avg_currentSpeed": 30.817857142857143,
+            "min_currentSpeed": 26.5,
+            "max_currentSpeed": 35.5,
+            "sample_count": 280
+          },
+          {
+            "cluster": 51,
+            "avg_currentSpeed": 30.941176470588236,
+            "min_currentSpeed": 27.0,
+            "max_currentSpeed": 34.5,
+            "sample_count": 102
+          },
+          {
+            "cluster": 70,
+            "avg_currentSpeed": 30.989795918367346,
+            "min_currentSpeed": 28.5,
+            "max_currentSpeed": 34.0,
+            "sample_count": 49
+          },
+          {
+            "cluster": 198,
+            "avg_currentSpeed": 31.02777777777778,
+            "min_currentSpeed": 31.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 36
+          },
+          {
+            "cluster": 21,
+            "avg_currentSpeed": 31.08076923076923,
+            "min_currentSpeed": 25.5,
+            "max_currentSpeed": 35.0,
+            "sample_count": 130
+          },
+          {
+            "cluster": 88,
+            "avg_currentSpeed": 31.221698113207548,
+            "min_currentSpeed": 27.0,
+            "max_currentSpeed": 35.0,
+            "sample_count": 106
+          },
+          {
+            "cluster": 264,
+            "avg_currentSpeed": 31.25,
+            "min_currentSpeed": 31.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 16
+          },
+          {
+            "cluster": 232,
+            "avg_currentSpeed": 31.727272727272727,
+            "min_currentSpeed": 31.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 11
+          },
+          {
+            "cluster": 83,
+            "avg_currentSpeed": 32.0,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 30
+          },
+          {
+            "cluster": 95,
+            "avg_currentSpeed": 32.0,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 15
+          },
+          {
+            "cluster": 208,
+            "avg_currentSpeed": 32.0,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 14
+          },
+          {
+            "cluster": 256,
+            "avg_currentSpeed": 32.0,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 11
+          },
+          {
+            "cluster": 101,
+            "avg_currentSpeed": 32.0,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 32.0,
+            "sample_count": 30
+          },
+          {
+            "cluster": 215,
+            "avg_currentSpeed": 32.09375,
+            "min_currentSpeed": 31.0,
+            "max_currentSpeed": 33.5,
+            "sample_count": 32
+          },
+          {
+            "cluster": 107,
+            "avg_currentSpeed": 32.20175438596491,
+            "min_currentSpeed": 29.0,
+            "max_currentSpeed": 36.5,
+            "sample_count": 114
+          },
+          {
+            "cluster": 254,
+            "avg_currentSpeed": 32.22222222222222,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 32.5,
+            "sample_count": 18
+          },
+          {
+            "cluster": 67,
+            "avg_currentSpeed": 32.46078431372549,
+            "min_currentSpeed": 28.0,
+            "max_currentSpeed": 37.5,
+            "sample_count": 204
+          },
+          {
+            "cluster": 42,
+            "avg_currentSpeed": 32.6125,
+            "min_currentSpeed": 26.5,
+            "max_currentSpeed": 37.5,
+            "sample_count": 240
+          },
+          {
+            "cluster": 220,
+            "avg_currentSpeed": 32.63636363636363,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 33.0,
+            "sample_count": 33
+          },
+          {
+            "cluster": 50,
+            "avg_currentSpeed": 32.73853211009175,
+            "min_currentSpeed": 29.0,
+            "max_currentSpeed": 37.0,
+            "sample_count": 218
+          },
+          {
+            "cluster": 137,
+            "avg_currentSpeed": 32.8,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 33.0,
+            "sample_count": 15
+          },
+          {
+            "cluster": 211,
+            "avg_currentSpeed": 32.975,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 34.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 120,
+            "avg_currentSpeed": 33.0,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 33.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 260,
+            "avg_currentSpeed": 33.0,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 33.0,
+            "sample_count": 30
+          },
+          {
+            "cluster": 116,
+            "avg_currentSpeed": 33.0,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 33.0,
+            "sample_count": 42
+          },
+          {
+            "cluster": 117,
+            "avg_currentSpeed": 33.0,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 33.0,
+            "sample_count": 22
+          },
+          {
+            "cluster": 11,
+            "avg_currentSpeed": 33.0177304964539,
+            "min_currentSpeed": 28.5,
+            "max_currentSpeed": 38.0,
+            "sample_count": 141
+          },
+          {
+            "cluster": 121,
+            "avg_currentSpeed": 33.3125,
+            "min_currentSpeed": 32.0,
+            "max_currentSpeed": 34.5,
+            "sample_count": 16
+          },
+          {
+            "cluster": 52,
+            "avg_currentSpeed": 33.35897435897436,
+            "min_currentSpeed": 29.0,
+            "max_currentSpeed": 38.0,
+            "sample_count": 117
+          },
+          {
+            "cluster": 136,
+            "avg_currentSpeed": 33.359154929577464,
+            "min_currentSpeed": 30.0,
+            "max_currentSpeed": 35.5,
+            "sample_count": 71
+          },
+          {
+            "cluster": 77,
+            "avg_currentSpeed": 33.527027027027025,
+            "min_currentSpeed": 30.5,
+            "max_currentSpeed": 36.0,
+            "sample_count": 111
+          },
+          {
+            "cluster": 229,
+            "avg_currentSpeed": 33.666666666666664,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 34.0,
+            "sample_count": 15
+          },
+          {
+            "cluster": 7,
+            "avg_currentSpeed": 33.84698275862069,
+            "min_currentSpeed": 30.0,
+            "max_currentSpeed": 36.5,
+            "sample_count": 232
+          },
+          {
+            "cluster": 19,
+            "avg_currentSpeed": 33.888392857142854,
+            "min_currentSpeed": 30.5,
+            "max_currentSpeed": 36.5,
+            "sample_count": 112
+          },
+          {
+            "cluster": 81,
+            "avg_currentSpeed": 33.95909090909091,
+            "min_currentSpeed": 31.0,
+            "max_currentSpeed": 36.5,
+            "sample_count": 110
+          },
+          {
+            "cluster": 35,
+            "avg_currentSpeed": 34.0,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 34.0,
+            "sample_count": 54
+          },
+          {
+            "cluster": 56,
+            "avg_currentSpeed": 34.0,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 34.0,
+            "sample_count": 44
+          },
+          {
+            "cluster": 47,
+            "avg_currentSpeed": 34.0,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 34.0,
+            "sample_count": 25
+          },
+          {
+            "cluster": 30,
+            "avg_currentSpeed": 34.0,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 34.0,
+            "sample_count": 90
+          },
+          {
+            "cluster": 58,
+            "avg_currentSpeed": 34.19672131147541,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 35.0,
+            "sample_count": 61
+          },
+          {
+            "cluster": 59,
+            "avg_currentSpeed": 34.23557692307692,
+            "min_currentSpeed": 31.0,
+            "max_currentSpeed": 37.5,
+            "sample_count": 104
+          },
+          {
+            "cluster": 124,
+            "avg_currentSpeed": 34.25190839694657,
+            "min_currentSpeed": 30.0,
+            "max_currentSpeed": 40.5,
+            "sample_count": 131
+          },
+          {
+            "cluster": 205,
+            "avg_currentSpeed": 34.38235294117647,
+            "min_currentSpeed": 32.5,
+            "max_currentSpeed": 36.5,
+            "sample_count": 51
+          },
+          {
+            "cluster": 219,
+            "avg_currentSpeed": 34.58,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 25
+          },
+          {
+            "cluster": 235,
+            "avg_currentSpeed": 34.629629629629626,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 27
+          },
+          {
+            "cluster": 108,
+            "avg_currentSpeed": 34.705882352941174,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 35.0,
+            "sample_count": 34
+          },
+          {
+            "cluster": 223,
+            "avg_currentSpeed": 35.0,
+            "min_currentSpeed": 35.0,
+            "max_currentSpeed": 35.0,
+            "sample_count": 44
+          },
+          {
+            "cluster": 225,
+            "avg_currentSpeed": 35.0,
+            "min_currentSpeed": 35.0,
+            "max_currentSpeed": 35.0,
+            "sample_count": 48
+          },
+          {
+            "cluster": 238,
+            "avg_currentSpeed": 35.0,
+            "min_currentSpeed": 35.0,
+            "max_currentSpeed": 35.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 32,
+            "avg_currentSpeed": 35.247368421052634,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 38.5,
+            "sample_count": 95
+          },
+          {
+            "cluster": 66,
+            "avg_currentSpeed": 35.47435897435897,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 38.0,
+            "sample_count": 78
+          },
+          {
+            "cluster": 132,
+            "avg_currentSpeed": 35.48717948717949,
+            "min_currentSpeed": 35.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 39
+          },
+          {
+            "cluster": 99,
+            "avg_currentSpeed": 35.78688524590164,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 37.0,
+            "sample_count": 61
+          },
+          {
+            "cluster": 202,
+            "avg_currentSpeed": 35.80952380952381,
+            "min_currentSpeed": 35.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 222,
+            "avg_currentSpeed": 36.0,
+            "min_currentSpeed": 36.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 40
+          },
+          {
+            "cluster": 201,
+            "avg_currentSpeed": 36.0,
+            "min_currentSpeed": 36.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 18
+          },
+          {
+            "cluster": 234,
+            "avg_currentSpeed": 36.0,
+            "min_currentSpeed": 36.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 36
+          },
+          {
+            "cluster": 199,
+            "avg_currentSpeed": 36.0,
+            "min_currentSpeed": 36.0,
+            "max_currentSpeed": 36.0,
+            "sample_count": 26
+          },
+          {
+            "cluster": 241,
+            "avg_currentSpeed": 36.15625,
+            "min_currentSpeed": 35.5,
+            "max_currentSpeed": 37.0,
+            "sample_count": 16
+          },
+          {
+            "cluster": 10,
+            "avg_currentSpeed": 36.19018151815182,
+            "min_currentSpeed": 25.0,
+            "max_currentSpeed": 43.5,
+            "sample_count": 1212
+          },
+          {
+            "cluster": 102,
+            "avg_currentSpeed": 36.225,
+            "min_currentSpeed": 32.5,
+            "max_currentSpeed": 39.0,
+            "sample_count": 140
+          },
+          {
+            "cluster": 257,
+            "avg_currentSpeed": 36.45454545454545,
+            "min_currentSpeed": 36.0,
+            "max_currentSpeed": 37.0,
+            "sample_count": 11
+          },
+          {
+            "cluster": 73,
+            "avg_currentSpeed": 36.5,
+            "min_currentSpeed": 36.5,
+            "max_currentSpeed": 36.5,
+            "sample_count": 53
+          },
+          {
+            "cluster": 29,
+            "avg_currentSpeed": 36.541469194312796,
+            "min_currentSpeed": 30.0,
+            "max_currentSpeed": 43.5,
+            "sample_count": 422
+          },
+          {
+            "cluster": 259,
+            "avg_currentSpeed": 36.766666666666666,
+            "min_currentSpeed": 36.0,
+            "max_currentSpeed": 37.5,
+            "sample_count": 15
+          },
+          {
+            "cluster": 49,
+            "avg_currentSpeed": 36.80128205128205,
+            "min_currentSpeed": 32.5,
+            "max_currentSpeed": 41.5,
+            "sample_count": 78
+          },
+          {
+            "cluster": 242,
+            "avg_currentSpeed": 37.0,
+            "min_currentSpeed": 37.0,
+            "max_currentSpeed": 37.0,
+            "sample_count": 13
+          },
+          {
+            "cluster": 227,
+            "avg_currentSpeed": 37.03703703703704,
+            "min_currentSpeed": 37.0,
+            "max_currentSpeed": 38.0,
+            "sample_count": 27
+          },
+          {
+            "cluster": 37,
+            "avg_currentSpeed": 37.13157894736842,
+            "min_currentSpeed": 33.0,
+            "max_currentSpeed": 41.5,
+            "sample_count": 76
+          },
+          {
+            "cluster": 217,
+            "avg_currentSpeed": 37.22222222222222,
+            "min_currentSpeed": 36.5,
+            "max_currentSpeed": 38.0,
+            "sample_count": 18
+          },
+          {
+            "cluster": 105,
+            "avg_currentSpeed": 37.266666666666666,
+            "min_currentSpeed": 35.5,
+            "max_currentSpeed": 39.5,
+            "sample_count": 135
+          },
+          {
+            "cluster": 38,
+            "avg_currentSpeed": 37.49308755760369,
+            "min_currentSpeed": 34.0,
+            "max_currentSpeed": 45.0,
+            "sample_count": 217
+          },
+          {
+            "cluster": 142,
+            "avg_currentSpeed": 37.5,
+            "min_currentSpeed": 37.5,
+            "max_currentSpeed": 37.5,
+            "sample_count": 32
+          },
+          {
+            "cluster": 89,
+            "avg_currentSpeed": 37.5,
+            "min_currentSpeed": 37.5,
+            "max_currentSpeed": 37.5,
+            "sample_count": 59
+          },
+          {
+            "cluster": 269,
+            "avg_currentSpeed": 37.5,
+            "min_currentSpeed": 37.0,
+            "max_currentSpeed": 38.0,
+            "sample_count": 5
+          },
+          {
+            "cluster": 9,
+            "avg_currentSpeed": 37.985074626865675,
+            "min_currentSpeed": 36.0,
+            "max_currentSpeed": 38.0,
+            "sample_count": 134
+          },
+          {
+            "cluster": 127,
+            "avg_currentSpeed": 38.37301587301587,
+            "min_currentSpeed": 36.5,
+            "max_currentSpeed": 38.5,
+            "sample_count": 63
+          },
+          {
+            "cluster": 138,
+            "avg_currentSpeed": 38.5,
+            "min_currentSpeed": 38.5,
+            "max_currentSpeed": 38.5,
+            "sample_count": 30
+          },
+          {
+            "cluster": 207,
+            "avg_currentSpeed": 38.67307692307692,
+            "min_currentSpeed": 37.5,
+            "max_currentSpeed": 39.5,
+            "sample_count": 26
+          },
+          {
+            "cluster": 212,
+            "avg_currentSpeed": 38.729166666666664,
+            "min_currentSpeed": 38.0,
+            "max_currentSpeed": 39.5,
+            "sample_count": 24
+          },
+          {
+            "cluster": 128,
+            "avg_currentSpeed": 38.81,
+            "min_currentSpeed": 37.5,
+            "max_currentSpeed": 40.5,
+            "sample_count": 50
+          },
+          {
+            "cluster": 270,
+            "avg_currentSpeed": 39.0,
+            "min_currentSpeed": 39.0,
+            "max_currentSpeed": 39.0,
+            "sample_count": 18
+          },
+          {
+            "cluster": 221,
+            "avg_currentSpeed": 39.19230769230769,
+            "min_currentSpeed": 38.0,
+            "max_currentSpeed": 40.5,
+            "sample_count": 26
+          },
+          {
+            "cluster": 139,
+            "avg_currentSpeed": 39.54794520547945,
+            "min_currentSpeed": 37.0,
+            "max_currentSpeed": 42.5,
+            "sample_count": 73
+          },
+          {
+            "cluster": 236,
+            "avg_currentSpeed": 39.891891891891895,
+            "min_currentSpeed": 38.0,
+            "max_currentSpeed": 41.0,
+            "sample_count": 37
+          },
+          {
+            "cluster": 209,
+            "avg_currentSpeed": 40.0,
+            "min_currentSpeed": 40.0,
+            "max_currentSpeed": 40.0,
+            "sample_count": 26
+          },
+          {
+            "cluster": 233,
+            "avg_currentSpeed": 40.06060606060606,
+            "min_currentSpeed": 39.0,
+            "max_currentSpeed": 41.5,
+            "sample_count": 33
+          },
+          {
+            "cluster": 224,
+            "avg_currentSpeed": 40.4375,
+            "min_currentSpeed": 39.0,
+            "max_currentSpeed": 42.5,
+            "sample_count": 24
+          },
+          {
+            "cluster": 3,
+            "avg_currentSpeed": 40.460365682137834,
+            "min_currentSpeed": 22.0,
+            "max_currentSpeed": 57.0,
+            "sample_count": 17775
+          },
+          {
+            "cluster": 23,
+            "avg_currentSpeed": 40.607142857142854,
+            "min_currentSpeed": 35.0,
+            "max_currentSpeed": 49.0,
+            "sample_count": 252
+          },
+          {
+            "cluster": 40,
+            "avg_currentSpeed": 40.95132743362832,
+            "min_currentSpeed": 34.5,
+            "max_currentSpeed": 48.0,
+            "sample_count": 113
+          },
+          {
+            "cluster": 246,
+            "avg_currentSpeed": 41.0,
+            "min_currentSpeed": 41.0,
+            "max_currentSpeed": 41.0,
+            "sample_count": 40
+          },
+          {
+            "cluster": 243,
+            "avg_currentSpeed": 41.0,
+            "min_currentSpeed": 41.0,
+            "max_currentSpeed": 41.0,
+            "sample_count": 13
+          },
+          {
+            "cluster": 226,
+            "avg_currentSpeed": 41.06666666666667,
+            "min_currentSpeed": 41.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 15
+          },
+          {
+            "cluster": 53,
+            "avg_currentSpeed": 41.19382504288165,
+            "min_currentSpeed": 35.0,
+            "max_currentSpeed": 46.5,
+            "sample_count": 583
+          },
+          {
+            "cluster": 46,
+            "avg_currentSpeed": 41.21153846153846,
+            "min_currentSpeed": 37.0,
+            "max_currentSpeed": 44.5,
+            "sample_count": 260
+          },
+          {
+            "cluster": 115,
+            "avg_currentSpeed": 41.375,
+            "min_currentSpeed": 38.5,
+            "max_currentSpeed": 44.0,
+            "sample_count": 84
+          },
+          {
+            "cluster": 123,
+            "avg_currentSpeed": 41.87179487179487,
+            "min_currentSpeed": 41.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 39
+          },
+          {
+            "cluster": 144,
+            "avg_currentSpeed": 42.0,
+            "min_currentSpeed": 42.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 63
+          },
+          {
+            "cluster": 125,
+            "avg_currentSpeed": 42.0,
+            "min_currentSpeed": 42.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 64
+          },
+          {
+            "cluster": 130,
+            "avg_currentSpeed": 42.0,
+            "min_currentSpeed": 42.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 35
+          },
+          {
+            "cluster": 133,
+            "avg_currentSpeed": 42.0,
+            "min_currentSpeed": 42.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 72
+          },
+          {
+            "cluster": 131,
+            "avg_currentSpeed": 42.0,
+            "min_currentSpeed": 42.0,
+            "max_currentSpeed": 42.0,
+            "sample_count": 75
+          },
+          {
+            "cluster": 91,
+            "avg_currentSpeed": 42.733333333333334,
+            "min_currentSpeed": 40.0,
+            "max_currentSpeed": 45.0,
+            "sample_count": 30
+          },
+          {
+            "cluster": 146,
+            "avg_currentSpeed": 42.81132075471698,
+            "min_currentSpeed": 41.0,
+            "max_currentSpeed": 43.0,
+            "sample_count": 53
+          },
+          {
+            "cluster": 104,
+            "avg_currentSpeed": 42.92424242424242,
+            "min_currentSpeed": 41.5,
+            "max_currentSpeed": 44.5,
+            "sample_count": 33
+          },
+          {
+            "cluster": 84,
+            "avg_currentSpeed": 43.0,
+            "min_currentSpeed": 43.0,
+            "max_currentSpeed": 43.0,
+            "sample_count": 59
+          },
+          {
+            "cluster": 96,
+            "avg_currentSpeed": 43.0,
+            "min_currentSpeed": 43.0,
+            "max_currentSpeed": 43.0,
+            "sample_count": 58
+          },
+          {
+            "cluster": 110,
+            "avg_currentSpeed": 43.08695652173913,
+            "min_currentSpeed": 42.0,
+            "max_currentSpeed": 44.0,
+            "sample_count": 23
+          },
+          {
+            "cluster": 248,
+            "avg_currentSpeed": 43.5,
+            "min_currentSpeed": 43.5,
+            "max_currentSpeed": 43.5,
+            "sample_count": 14
+          },
+          {
+            "cluster": 210,
+            "avg_currentSpeed": 44.0,
+            "min_currentSpeed": 44.0,
+            "max_currentSpeed": 44.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 252,
+            "avg_currentSpeed": 44.0,
+            "min_currentSpeed": 44.0,
+            "max_currentSpeed": 44.0,
+            "sample_count": 19
+          },
+          {
+            "cluster": 267,
+            "avg_currentSpeed": 44.56410256410256,
+            "min_currentSpeed": 43.0,
+            "max_currentSpeed": 45.0,
+            "sample_count": 39
+          },
+          {
+            "cluster": 250,
+            "avg_currentSpeed": 45.0,
+            "min_currentSpeed": 45.0,
+            "max_currentSpeed": 45.0,
+            "sample_count": 23
+          },
+          {
+            "cluster": 85,
+            "avg_currentSpeed": 45.0,
+            "min_currentSpeed": 45.0,
+            "max_currentSpeed": 45.0,
+            "sample_count": 433
+          },
+          {
+            "cluster": 80,
+            "avg_currentSpeed": 45.15294117647059,
+            "min_currentSpeed": 40.0,
+            "max_currentSpeed": 49.0,
+            "sample_count": 85
+          },
+          {
+            "cluster": 134,
+            "avg_currentSpeed": 45.1978021978022,
+            "min_currentSpeed": 45.0,
+            "max_currentSpeed": 46.0,
+            "sample_count": 182
+          },
+          {
+            "cluster": 87,
+            "avg_currentSpeed": 45.5,
+            "min_currentSpeed": 45.5,
+            "max_currentSpeed": 45.5,
+            "sample_count": 142
+          },
+          {
+            "cluster": 247,
+            "avg_currentSpeed": 45.5,
+            "min_currentSpeed": 45.5,
+            "max_currentSpeed": 45.5,
+            "sample_count": 40
+          },
+          {
+            "cluster": 228,
+            "avg_currentSpeed": 45.52597402597402,
+            "min_currentSpeed": 43.5,
+            "max_currentSpeed": 47.0,
+            "sample_count": 77
+          },
+          {
+            "cluster": 57,
+            "avg_currentSpeed": 45.99579831932773,
+            "min_currentSpeed": 45.5,
+            "max_currentSpeed": 46.0,
+            "sample_count": 119
+          },
+          {
+            "cluster": 251,
+            "avg_currentSpeed": 46.0,
+            "min_currentSpeed": 46.0,
+            "max_currentSpeed": 46.0,
+            "sample_count": 20
+          },
+          {
+            "cluster": 64,
+            "avg_currentSpeed": 46.004629629629626,
+            "min_currentSpeed": 46.0,
+            "max_currentSpeed": 46.5,
+            "sample_count": 108
+          },
+          {
+            "cluster": 240,
+            "avg_currentSpeed": 46.10526315789474,
+            "min_currentSpeed": 45.5,
+            "max_currentSpeed": 47.5,
+            "sample_count": 76
+          },
+          {
+            "cluster": 249,
+            "avg_currentSpeed": 47.0,
+            "min_currentSpeed": 47.0,
+            "max_currentSpeed": 47.0,
+            "sample_count": 21
+          },
+          {
+            "cluster": 93,
+            "avg_currentSpeed": 47.0,
+            "min_currentSpeed": 47.0,
+            "max_currentSpeed": 47.0,
+            "sample_count": 314
+          },
+          {
+            "cluster": 213,
+            "avg_currentSpeed": 47.14102564102564,
+            "min_currentSpeed": 44.0,
+            "max_currentSpeed": 48.5,
+            "sample_count": 39
+          },
+          {
+            "cluster": 27,
+            "avg_currentSpeed": 47.583333333333336,
+            "min_currentSpeed": 44.5,
+            "max_currentSpeed": 50.0,
+            "sample_count": 276
+          },
+          {
+            "cluster": 78,
+            "avg_currentSpeed": 47.96666666666667,
+            "min_currentSpeed": 45.5,
+            "max_currentSpeed": 50.0,
+            "sample_count": 135
+          },
+          {
+            "cluster": 135,
+            "avg_currentSpeed": 48.0,
+            "min_currentSpeed": 48.0,
+            "max_currentSpeed": 48.0,
+            "sample_count": 84
+          },
+          {
+            "cluster": 140,
+            "avg_currentSpeed": 48.5,
+            "min_currentSpeed": 48.5,
+            "max_currentSpeed": 48.5,
+            "sample_count": 38
+          },
+          {
+            "cluster": 230,
+            "avg_currentSpeed": 48.93827160493827,
+            "min_currentSpeed": 47.0,
+            "max_currentSpeed": 52.0,
+            "sample_count": 81
+          },
+          {
+            "cluster": 25,
+            "avg_currentSpeed": 49.0,
+            "min_currentSpeed": 49.0,
+            "max_currentSpeed": 49.0,
+            "sample_count": 103
+          },
+          {
+            "cluster": 253,
+            "avg_currentSpeed": 49.0,
+            "min_currentSpeed": 49.0,
+            "max_currentSpeed": 49.0,
+            "sample_count": 56
+          },
+          {
+            "cluster": 62,
+            "avg_currentSpeed": 49.009009009009006,
+            "min_currentSpeed": 49.0,
+            "max_currentSpeed": 50.0,
+            "sample_count": 111
+          },
+          {
+            "cluster": 68,
+            "avg_currentSpeed": 49.00909090909091,
+            "min_currentSpeed": 49.0,
+            "max_currentSpeed": 50.0,
+            "sample_count": 110
+          },
+          {
+            "cluster": 36,
+            "avg_currentSpeed": 49.00917431192661,
+            "min_currentSpeed": 49.0,
+            "max_currentSpeed": 50.0,
+            "sample_count": 109
+          },
+          {
+            "cluster": 6,
+            "avg_currentSpeed": 50.00769230769231,
+            "min_currentSpeed": 50.0,
+            "max_currentSpeed": 50.5,
+            "sample_count": 65
+          },
+          {
+            "cluster": 214,
+            "avg_currentSpeed": 51.0,
+            "min_currentSpeed": 51.0,
+            "max_currentSpeed": 51.0,
+            "sample_count": 31
+          },
+          {
+            "cluster": 26,
+            "avg_currentSpeed": 51.08878504672897,
+            "min_currentSpeed": 47.5,
+            "max_currentSpeed": 54.0,
+            "sample_count": 214
+          },
+          {
+            "cluster": 245,
+            "avg_currentSpeed": 51.5,
+            "min_currentSpeed": 51.5,
+            "max_currentSpeed": 51.5,
+            "sample_count": 46
+          },
+          {
+            "cluster": 218,
+            "avg_currentSpeed": 51.921052631578945,
+            "min_currentSpeed": 51.5,
+            "max_currentSpeed": 52.5,
+            "sample_count": 76
+          },
+          {
+            "cluster": 74,
+            "avg_currentSpeed": 52.015151515151516,
+            "min_currentSpeed": 52.0,
+            "max_currentSpeed": 54.0,
+            "sample_count": 132
+          },
+          {
+            "cluster": 145,
+            "avg_currentSpeed": 54.0,
+            "min_currentSpeed": 54.0,
+            "max_currentSpeed": 54.0,
+            "sample_count": 45
+          },
+          {
+            "cluster": 262,
+            "avg_currentSpeed": 54.407407407407405,
+            "min_currentSpeed": 53.0,
+            "max_currentSpeed": 56.0,
+            "sample_count": 27
+          },
+          {
+            "cluster": 141,
+            "avg_currentSpeed": 55.5,
+            "min_currentSpeed": 55.5,
+            "max_currentSpeed": 55.5,
+            "sample_count": 82
+          },
+          {
+            "cluster": 203,
+            "avg_currentSpeed": 57.0,
+            "min_currentSpeed": 57.0,
+            "max_currentSpeed": 57.0,
+            "sample_count": 63
+          },
+          {
+            "cluster": 266,
+            "avg_currentSpeed": 61.791666666666664,
+            "min_currentSpeed": 61.0,
+            "max_currentSpeed": 63.0,
+            "sample_count": 12
+          },
+          {
+            "cluster": 12,
+            "avg_currentSpeed": 62.670967741935485,
+            "min_currentSpeed": 57.0,
+            "max_currentSpeed": 73.0,
+            "sample_count": 155
+          },
+          {
+            "cluster": 45,
+            "avg_currentSpeed": 62.97931034482759,
+            "min_currentSpeed": 62.0,
+            "max_currentSpeed": 65.0,
+            "sample_count": 290
+          },
+          {
+            "cluster": 1,
+            "avg_currentSpeed": 64.00719424460432,
+            "min_currentSpeed": 64.0,
+            "max_currentSpeed": 65.0,
+            "sample_count": 139
+          },
+          {
+            "cluster": 54,
+            "avg_currentSpeed": 64.00719424460432,
+            "min_currentSpeed": 64.0,
+            "max_currentSpeed": 65.0,
+            "sample_count": 139
+          },
+          {
+            "cluster": 216,
+            "avg_currentSpeed": 67.77083333333333,
+            "min_currentSpeed": 65.0,
+            "max_currentSpeed": 70.5,
+            "sample_count": 48
+          },
+          {
+            "cluster": 43,
+            "avg_currentSpeed": 69.01351351351352,
+            "min_currentSpeed": 69.0,
+            "max_currentSpeed": 70.5,
+            "sample_count": 111
+          },
+          {
+            "cluster": 94,
+            "avg_currentSpeed": 71.0,
+            "min_currentSpeed": 71.0,
+            "max_currentSpeed": 71.0,
+            "sample_count": 143
+          },
+          {
+            "cluster": 106,
+            "avg_currentSpeed": 71.0,
+            "min_currentSpeed": 71.0,
+            "max_currentSpeed": 71.0,
+            "sample_count": 140
+          },
+          {
+            "cluster": 20,
+            "avg_currentSpeed": 74.01377952755905,
+            "min_currentSpeed": 74.0,
+            "max_currentSpeed": 76.0,
+            "sample_count": 1016
+          },
+          {
+            "cluster": 272,
+            "avg_currentSpeed": 77.5,
+            "min_currentSpeed": 77.5,
+            "max_currentSpeed": 77.5,
+            "sample_count": 12
+          },
+          {
+            "cluster": 31,
+            "avg_currentSpeed": 77.51315789473684,
+            "min_currentSpeed": 77.5,
+            "max_currentSpeed": 79.0,
+            "sample_count": 228
+          },
+          {
+            "cluster": 63,
+            "avg_currentSpeed": 79.00943396226415,
+            "min_currentSpeed": 79.0,
+            "max_currentSpeed": 80.0,
+            "sample_count": 212
+          }
+        ]
+      },
+      "agglomerative": {
+        "method": "AgglomerativeClustering",
+        "used_features": [
+          "speedLimitRatio",
+          "crossTime",
+          "trafficVolume",
+          "congestionIndex",
+          "occupancy",
+          "relativeCongestionIndex",
+          "freeFlowSpeed",
+          "lengthKm",
+          "route_distance_m",
+          "curvatureIndex"
+        ],
+        "cluster_sizes": {
+          "0": 69583,
+          "1": 5724,
+          "2": 26552,
+          "3": 23581,
+          "4": 34232,
+          "5": 35489
+        },
+        "final_metrics": {
+          "n_clusters": 6,
+          "fit_samples": 20000,
+          "inertia": 444774.4571079061,
+          "silhouette": 0.36012386842999394,
+          "davies_bouldin": 0.9272838612689284,
+          "calinski_harabasz": 133440.476854944,
+          "mae": 0.28188708948472413,
+          "mse": 0.22790130052003532,
+          "rmse": 0.4773900926077492,
+          "rae": 0.41973141939007036,
+          "rrse": 0.4773900926077491
+        },
+        "internal_evaluation": {
+          "silhouette": 0.36012386842999394,
+          "davies_bouldin": 0.9272838612689284,
+          "calinski_harabasz": 133440.476854944
+        },
+        "external_evaluation": {
+          "reference_label_column": "speed_cluster_rule",
+          "ari": 0.36921184794703427,
+          "nmi": 0.4931727481953743,
+          "fmi": 0.5229192593218916,
+          "f_measure": 0.5093115469955142,
+          "entropy": 1.0714912788482451
+        },
+        "overall_evaluation": {
+          "n_rows": 195161,
+          "n_features": 10,
+          "cluster_size_min": 5724,
+          "cluster_size_max": 69583,
+          "mae": 0.28188708948472413,
+          "rmse": 0.4773900926077492
+        },
+        "semantic_mapping": {
+          "3": "A",
+          "4": "B",
+          "0": "C",
+          "1": "D",
+          "5": "E",
+          "2": "F"
+        },
+        "semantic_profile": [
+          {
+            "cluster": 3,
+            "semantic_label": "A",
+            "semantic_definition": "<= 10 km/h",
+            "avg_currentSpeed": 0.0,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 0.0,
+            "sample_count": 23581
+          },
+          {
+            "cluster": 4,
+            "semantic_label": "B",
+            "semantic_definition": "> 10 và <= 25 km/h",
+            "avg_currentSpeed": 18.47144484692685,
+            "min_currentSpeed": 3.0,
+            "max_currentSpeed": 44.5,
+            "sample_count": 34232
+          },
+          {
+            "cluster": 0,
+            "semantic_label": "C",
+            "semantic_definition": "> 25 và <= 30 km/h",
+            "avg_currentSpeed": 24.768291105586133,
+            "min_currentSpeed": 11.5,
+            "max_currentSpeed": 52.0,
+            "sample_count": 69583
+          },
+          {
+            "cluster": 1,
+            "semantic_label": "D",
+            "semantic_definition": "> 30 và <= 40 km/h",
+            "avg_currentSpeed": 30.75672606568833,
+            "min_currentSpeed": 0.0,
+            "max_currentSpeed": 52.5,
+            "sample_count": 5724
+          },
+          {
+            "cluster": 5,
+            "semantic_label": "E",
+            "semantic_definition": "> 40 và <= 60 km/h",
+            "avg_currentSpeed": 33.86502860041139,
+            "min_currentSpeed": 14.5,
+            "max_currentSpeed": 67.0,
+            "sample_count": 35489
+          },
+          {
+            "cluster": 2,
+            "semantic_label": "F",
+            "semantic_definition": "> 60 km/h",
+            "avg_currentSpeed": 44.24476498945465,
+            "min_currentSpeed": 17.5,
+            "max_currentSpeed": 80.0,
+            "sample_count": 26552
+          }
+        ]
+      }
+    }
+  }
+}
