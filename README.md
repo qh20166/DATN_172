@@ -4,7 +4,7 @@
 
 ---
 
-## 📚 Thông Tin Đồ Án
+## Thông Tin Đồ Án
 
 | Thông Tin | Chi Tiết |
 |-----------|---------|
@@ -13,7 +13,7 @@
 | **Loại** | Đồ Án Tốt Nghiệp |
 | **Mã Đề Tài** | 172 |
 
-### 👨‍🎓 Nhóm Thực Hiện
+### Nhóm Thực Hiện
 
 **Sinh Viên:**
 - **Mai Huy Hiệp** (2211045)
@@ -27,7 +27,7 @@
 
 ---
 
-## 📋 Mục Lục
+## Mục Lục
 
 - [Giới Thiệu](#giới-thiệu)
 - [Cấu Trúc Dự Án](#cấu-trúc-dự-án)
@@ -39,7 +39,7 @@
 
 ---
 
-## 🎯 Giới Thiệu
+## Giới Thiệu
 
 **DATN_172** là một dự án toàn diện về **phân tích và dự báo lưu lượng giao thông** sử dụng các kỹ thuật gom cụm dữ liệu (Clustering) và Machine Learning. Dự án bao gồm:
 
@@ -49,7 +49,7 @@
 -  **Web Frontend**: React/Vite - Giao diện web cho bản đồ, phân tích và tương tác người dùng
 -  **Mobile App**: Android Studio (Java) - Ứng dụng di động cho người dùng cuối
 
-### 🎯 Mục Tiêu
+### Mục Tiêu
 
 Xây dựng một hệ thống thông minh để:
 1. Thu thập dữ liệu giao thông từ các API bên thứ ba (TomTom, HERE, Mapbox)
@@ -69,7 +69,7 @@ Xây dựng một hệ thống thông minh để:
 
 ---
 
-## 📁 Cấu Trúc Dự Án
+## Cấu Trúc Dự Án
 
 ```
 DATN_172/
@@ -142,7 +142,7 @@ DATN_172/
 
 ---
 
-## 🛠️ Công Nghệ Sử Dụng
+## Công Nghệ Sử Dụng
 
 ### Backend & Machine Learning
 
@@ -169,7 +169,7 @@ DATN_172/
 
 ---
 
-## 💻 Yêu Cầu Hệ Thống
+## Yêu Cầu Hệ Thống
 
 ### Backend & Data Processing
 
@@ -200,7 +200,7 @@ DATN_172/
 
 ---
 
-## 🚀 Cài Đặt
+## Cài Đặt
 
 ### 1. Clone Repository
 
@@ -296,11 +296,11 @@ cd TraffiGo
 
 ---
 
-## 📖 Sử Dụng
+## Sử Dụng
 
 ### Chạy Thu Thập Dữ Liệu
 
-#### 1️⃣ Thu Thập Dữ Liệu Tĩnh (Static Data)
+#### 1 Thu Thập Dữ Liệu Tĩnh (Static Data)
 
 ```bash
 cd DATA
@@ -311,14 +311,14 @@ cd src
 python src/h.py static
 ```
 
-#### 2️⃣ Thu Thập Dữ Liệu Động (Dynamic Data)
+#### 2 Thu Thập Dữ Liệu Động (Dynamic Data)
 
 ```bash
 # Thu thập dữ liệu động thời gian thực
 python src/h.py dynamic
 ```
 
-#### 3️⃣ Chạy Tự Động (Auto Mode - Mỗi 15 phút)
+#### 3 Chạy Tự Động (Auto Mode - Mỗi 15 phút)
 
 ```bash
 # Chạy orchestrator (quản lý khóa API & định kỳ 15 phút)
@@ -395,10 +395,10 @@ adb shell am start -n com.traffigo/.MainActivity
 
 ---
 
-## 📊 Cấu Trúc Thư Mục Chi Tiết
+## Cấu Trúc Thư Mục Chi Tiết
 
 ### DATN/ - Backend & ML Model
-# 🔬 Model 1 – Feature Selection
+#  Model 1 – Feature Selection
 
 Model 1 nghiên cứu ảnh hưởng của việc lựa chọn đặc trưng đối với chất lượng phân cụm.
 
@@ -460,7 +460,7 @@ Sinh báo cáo đánh giá:
 
 ---
 
-# 🔬 Model 2 – Hyperparameter Optimization
+#  Model 2 – Hyperparameter Optimization
 
 Model 2 sử dụng toàn bộ tập đặc trưng sau tiền xử lý và tập trung vào việc tìm kiếm tham số tối ưu cho từng thuật toán.
 
@@ -503,7 +503,7 @@ Lưu trữ các hình ảnh kết quả:
 
 ---
 
-# 🧠 Các Thuật Toán Sử Dụng
+# Các Thuật Toán Sử Dụng
 
 ## Clustering Algorithms
 
@@ -524,7 +524,7 @@ Lưu trữ các hình ảnh kết quả:
 
 ---
 
-# 📊 Đánh Giá Mô Hình
+# Đánh Giá Mô Hình
 
 ## Internal Evaluation
 
@@ -540,7 +540,7 @@ Lưu trữ các hình ảnh kết quả:
 
 ---
 
-# 🚀 Cách Chạy Chương Trình
+# Cách Chạy Chương Trình
 
 ## Model 1
 
@@ -560,7 +560,7 @@ python3 main2.py
 
 ---
 
-# 📈 Kết Quả Đầu Ra
+# Kết Quả Đầu Ra
 
 Sau khi chạy chương trình, hệ thống sinh ra:
 
@@ -616,7 +616,7 @@ Sau khi chạy chương trình, hệ thống sinh ra:
 
 ---
 
-## 🧪 Testing
+## Testing
 
 ### Test Backend Models
 
@@ -641,7 +641,7 @@ cd TraffiGo
 
 ---
 
-## 📝 Tài Liệu Bổ Sung
+## Tài Liệu Bổ Sung
 
 - [DATA/README.md](DATA/README.md) - Thông tin về datasets và API
 - [DATN_BE/ML_README.md](DATN_BE/ML_README.md) - Tài liệu liên quan backend và ML integration
