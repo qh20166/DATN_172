@@ -43,11 +43,11 @@
 
 **DATN_172** là một dự án toàn diện về **phân tích và dự báo lưu lượng giao thông** sử dụng các kỹ thuật gom cụm dữ liệu (Clustering) và Machine Learning. Dự án bao gồm:
 
-- 🐍 **Backend/ML Model**: Python - Xử lý dữ liệu, Clustering và Machine Learning
-- 📊 **Data Processing**: Tiền xử lý, làm sạch và phân tích dữ liệu giao thông
-- 🌐 **Web Backend**: Node.js/Express - API, xác thực, xử lý logic nghiệp vụ và tích hợp dữ liệu
-- ⚛️ **Web Frontend**: React/Vite - Giao diện web cho bản đồ, phân tích và tương tác người dùng
-- 📱 **Mobile App**: Android Studio (Java) - Ứng dụng di động cho người dùng cuối
+-  **Backend/ML Model**: Python - Xử lý dữ liệu, Clustering và Machine Learning
+-  **Data Processing**: Tiền xử lý, làm sạch và phân tích dữ liệu giao thông
+-  **Web Backend**: Node.js/Express - API, xác thực, xử lý logic nghiệp vụ và tích hợp dữ liệu
+-  **Web Frontend**: React/Vite - Giao diện web cho bản đồ, phân tích và tương tác người dùng
+-  **Mobile App**: Android Studio (Java) - Ứng dụng di động cho người dùng cuối
 
 ### 🎯 Mục Tiêu
 
@@ -74,7 +74,7 @@ Xây dựng một hệ thống thông minh để:
 ```
 DATN_172/
 │
-├── DATN/                          # 🐍 Backend - Machine Learning & API
+├── DATN/                          # Backend - Machine Learning & API
 │   ├── main.py                    # Entry point chính
 │   ├── clustering.py              # Thuật toán clustering (K-Means, etc)
 │   ├── traffic.py                 # Mô hình dự báo giao thông
@@ -87,7 +87,7 @@ DATN_172/
 │   ├── data.csv                   # Dữ liệu mẫu
 │   └── processed/                 # Thư mục dữ liệu đã xử lý
 │
-├── DATA/                          # 📊 Data Processing & Datasets
+├── DATA/                          # Data Processing & Datasets
 │   ├── main.py                    # Script xử lý dữ liệu chính
 │   ├── README.md                  # Hướng dẫn về dataset
 │   ├── data/                      # Thư mục chứa raw datasets
@@ -96,7 +96,7 @@ DATN_172/
 │   │   └── h.py                   # Data Collector - thu thập dữ liệu động/tĩnh
 │   └── DATN/                      # Tài liệu/config liên quan
 │
-├── DATN_BE/                       # 🌐 Web Backend - Node.js/Express API
+├── DATN_BE/                       # Web Backend - Node.js/Express API
 │   ├── src/                        # Source code backend
 │   │   ├── controllers/            # Xử lý request/response
 │   │   ├── routes/                 # Định nghĩa API routes
@@ -108,7 +108,7 @@ DATN_172/
 │   ├── fly.toml                    # Cấu hình triển khai Fly.io
 │   └── postman_collection.json     # Bộ test API bằng Postman
 
-├── DATN_FE/                       # ⚛️ Web Frontend - React/Vite
+├── DATN_FE/                       # Web Frontend - React/Vite
 │   ├── src/                        # Source code giao diện
 │   │   ├── components/             # Thành phần UI tái sử dụng
 │   │   ├── pages/                  # Các màn hình/chức năng chính
@@ -120,7 +120,7 @@ DATN_172/
 │   ├── index.html                  # File HTML gốc
 │   └── vite.config.js              # Cấu hình Vite
 
-├── TraffiGo/                      # 📱 Mobile App - Android Studio
+├── TraffiGo/                      # Mobile App - Android Studio
 │   ├── app/                       # Module ứng dụng Android
 │   ├── gradle/                    # Gradle wrapper scripts
 │   ├── build.gradle.kts           # Build configuration (root)
