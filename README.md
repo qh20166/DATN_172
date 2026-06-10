@@ -74,18 +74,25 @@ Xây dựng một hệ thống thông minh để:
 ```
 DATN_172/
 │
-├── DATN/                          # Backend - Machine Learning & API
-│   ├── main.py                    # Entry point chính
-│   ├── clustering.py              # Thuật toán clustering (K-Means, etc)
-│   ├── traffic.py                 # Mô hình dự báo giao thông
-│   ├── feature_selection.py       # Lựa chọn đặc trưng
-│   ├── preprocessing.py           # Tiền xử lý dữ liệu
-│   ├── config.py                  # Cấu hình hệ thống
-│   ├── reporting.py               # Tạo report kết quả
-│   ├── rule_based.py              # Luật dựa trên heuristic
-│   ├── io_utils.py                # Utility input/output
-│   ├── data.csv                   # Dữ liệu mẫu
-│   └── processed/                 # Thư mục dữ liệu đã xử lý
+├── DATN/── Model 2
+|    |           ├── data.csv
+|    |           ├── main2.py
+|    |           └── main2_figure/
+|    |
+|   Model 1
+│   ├── clustering.py
+│   ├── config.py
+│   ├── data.csv
+│   ├── feature_selection.py
+│   ├── io_utils.py
+│   ├── main.py
+│   ├── preprocessing.py
+│   ├── reporting.py
+│   ├── rule_based.py
+│   ├── traffic.py
+│   └── processed/
+│
+│
 │
 ├── DATA/                          # Data Processing & Datasets
 │   ├── main.py                    # Script xử lý dữ liệu chính
@@ -481,6 +488,6 @@ cd TraffiGo
 
 ---
 
-**Last Updated**: 2026-05-11
+
 
 **Năm Học**: 2025-2026
