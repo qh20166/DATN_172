@@ -398,17 +398,181 @@ adb shell am start -n com.traffigo/.MainActivity
 ## 📊 Cấu Trúc Thư Mục Chi Tiết
 
 ### DATN/ - Backend & ML Model
+# 🔬 Model 1 – Feature Selection
 
-- **main.py**: Điểm khởi đầu chính, orchestrate các thành phần
-- **clustering.py**: Triển khai clustering algorithms (K-Means, DBSCAN, etc)
-- **traffic.py**: Mô hình dự báo lưu lượng giao thông chính
-- **feature_selection.py**: Lựa chọn đặc trưng quan trọng
-- **preprocessing.py**: Làm sạch, chuẩn hóa dữ liệu
-- **config.py**: Cấu hình parameters, hyperparameters
-- **reporting.py**: Tạo báo cáo kết quả phân tích
-- **rule_based.py**: Hệ thống luật dựa trên heuristic
-- **io_utils.py**: Các utility cho I/O operations
-- **processed/**: Thư mục chứa dữ liệu sau khi xử lý
+Model 1 nghiên cứu ảnh hưởng của việc lựa chọn đặc trưng đối với chất lượng phân cụm.
+
+## Quy trình
+
+```text
+Dữ liệu
+    ↓
+Preprocessing
+    ↓
+Feature Selection
+(Random Forest + Mutual Information)
+    ↓
+Clustering
+    ↓
+Evaluation
+```
+
+## Chức năng các tệp
+
+### preprocessing.py
+
+Tiền xử lý dữ liệu:
+
+* Làm sạch dữ liệu.
+* Xử lý giá trị thiếu.
+* Loại bỏ thuộc tính phương sai thấp.
+* Loại bỏ thuộc tính tương quan cao.
+* Chuẩn hóa dữ liệu.
+
+### feature_selection.py
+
+Lựa chọn đặc trưng bằng:
+
+* Random Forest Importance
+* Mutual Information
+
+### clustering.py
+
+Triển khai các thuật toán:
+
+* KMeans
+* MiniBatchKMeans
+* Gaussian Mixture Model (GMM)
+* DBSCAN
+* Agglomerative Clustering
+
+### reporting.py
+
+Sinh báo cáo đánh giá:
+
+* Silhouette Score
+* Davies-Bouldin Index
+* Calinski-Harabasz Index
+
+### main.py
+
+Điều khiển toàn bộ pipeline của Model 1.
+
+---
+
+# 🔬 Model 2 – Hyperparameter Optimization
+
+Model 2 sử dụng toàn bộ tập đặc trưng sau tiền xử lý và tập trung vào việc tìm kiếm tham số tối ưu cho từng thuật toán.
+
+## Quy trình
+
+```text
+Dữ liệu
+    ↓
+Preprocessing
+    ↓
+Tìm tham số tối ưu
+    ↓
+Clustering
+    ↓
+Evaluation
+```
+
+## Nội dung
+
+### main2.py
+
+Thực hiện:
+
+* Elbow Method cho KMeans và MiniBatchKMeans.
+* AIC/BIC cho Gaussian Mixture Model.
+* Tìm eps cho DBSCAN.
+* Chạy mô hình với tham số tối ưu.
+* So sánh kết quả giữa các thuật toán.
+
+### main2_figure/
+
+Lưu trữ các hình ảnh kết quả:
+
+* Elbow Curve
+* AIC/BIC Curve
+* PCA Visualization
+* Cluster Distribution
+* Radar Chart
+* Evaluation Charts
+
+---
+
+# 🧠 Các Thuật Toán Sử Dụng
+
+## Clustering Algorithms
+
+* KMeans
+* MiniBatchKMeans
+* Gaussian Mixture Model (GMM)
+* DBSCAN
+* Agglomerative Clustering
+
+## Feature Selection Methods
+
+* Random Forest Feature Importance
+* Mutual Information
+
+## Dimensionality Reduction
+
+* PCA (Principal Component Analysis)
+
+---
+
+# 📊 Đánh Giá Mô Hình
+
+## Internal Evaluation
+
+* Silhouette Score
+* Davies-Bouldin Index
+* Calinski-Harabasz Index
+
+## Relative Evaluation
+
+* PCA Visualization
+* Cluster Distribution
+* Radar Analysis
+
+---
+
+# 🚀 Cách Chạy Chương Trình
+
+## Model 1
+
+```bash
+cd "Model 1"
+
+python3 main.py
+```
+
+## Model 2
+
+```bash
+cd "Model 2"
+
+python3 main2.py
+```
+
+---
+
+# 📈 Kết Quả Đầu Ra
+
+Sau khi chạy chương trình, hệ thống sinh ra:
+
+* Dữ liệu sau tiền xử lý.
+* Kết quả phân cụm.
+* Các chỉ số đánh giá mô hình.
+* PCA Visualization.
+* Cluster Distribution.
+* Radar Analysis.
+* Các biểu đồ đánh giá phục vụ phân tích và so sánh mô hình.
+
+---
 
 ### DATN_BE/ - Web Backend
 
